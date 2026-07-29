@@ -317,12 +317,16 @@
   .month-label{font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:var(--fg3); margin:30px 0 10px; padding-top:18px; border-top:1px solid var(--stroke2);}
 
   /* ===== 2-week flight tabs (Twenty Five Select refresh cadence: one flight visible at a time) ===== */
-  .flight-tabs{display:flex; gap:6px; margin:16px 0 14px;}
-  .flight-tab{font-family:var(--fluent-font); font-weight:600; font-size:12.5px; color:var(--fg2); background:var(--bg-card2); border:1px solid var(--stroke2); border-radius:var(--r-pill); padding:7px 16px; cursor:pointer; transition:background .15s ease, color .15s ease, border-color .15s ease; -webkit-user-select:none; user-select:none;}
-  .flight-tab:hover{border-color:var(--accent);}
-  .flight-tab.active{background:var(--accent); color:#fff; border-color:var(--accent);}
+  .flight-tabs, .subject-tabs{display:flex; gap:6px; margin:16px 0 14px; flex-wrap:wrap;}
+  .flight-tab, .subject-tab{font-family:var(--fluent-font); font-weight:600; font-size:12.5px; color:var(--fg2); background:var(--bg-card2); border:1px solid var(--stroke2); border-radius:var(--r-pill); padding:7px 16px; cursor:pointer; transition:background .15s ease, color .15s ease, border-color .15s ease; -webkit-user-select:none; user-select:none;}
+  .flight-tab:hover, .subject-tab:hover{border-color:var(--accent);}
+  .flight-tab.active, .subject-tab.active{background:var(--accent); color:#fff; border-color:var(--accent);}
   .flight-panel{display:none;}
   .flight-panel.flight-active{display:block;}
+  .subject-tabs{margin:0 0 14px;}
+  .subject-tabs-label{font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:var(--fg3); margin:0 0 8px;}
+  .design-options-group[data-active-subject="1"] [data-subject-item="2"]{display:none;}
+  .design-options-group[data-active-subject="2"] [data-subject-item="1"]{display:none;}
 
   /* ===== per-option collapsible detail (prompts + logo/text notes) ===== */
   details.option-detail{margin-top:14px; border-top:1px solid var(--stroke2); padding-top:2px;}
@@ -1692,7 +1696,9 @@
 
       <p class="month-label">Choose a Layout</p>
       <p class="section-sub" style="margin:0 0 16px;">Tap a tab to preview that direction &mdash; only one shows at a time. Its prompts stay tucked behind a toggle until you want them.</p>
-      <div class="design-options-group" id="t1-options">
+      <div class="design-options-group" id="t1-options" data-active-subject="1">
+      <p class="subject-tabs-label">Designing for</p>
+      <div class="subject-tabs"><button class="subject-tab active" data-subject="1" onclick="showSubjectTab('t1','1')">Athlete &middot; Track &amp; Field</button><button class="subject-tab" data-subject="2" onclick="showSubjectTab('t1','2')">Coach &middot; Soccer</button></div>
       <div class="option-tabs"><button class="option-tab" data-option="A" onclick="showOptionTab('t1','A')">Option A <span class="tab-name">Card Overlay</span><span class="tab-check">&#10003;</span></button><button class="option-tab" data-option="B" onclick="showOptionTab('t1','B')">Option B <span class="tab-name">Statement, proof-stat band</span><span class="tab-check">&#10003;</span></button><button class="option-tab" data-option="C" onclick="showOptionTab('t1','C')">Option C <span class="tab-name">Rotated Stamp, dynamic</span><span class="tab-check">&#10003;</span></button></div>
       <div class="design-option" data-option="A">
         <div class="design-option-head">
@@ -1700,13 +1706,13 @@
           <button class="choose-btn" onclick="chooseDesign('t1','A')">Choose This Design</button>
         </div>
       <div class="tk-set">
-        <div class="tk-unit" style="--accent:var(--ts-gold);"><div class="tk-canvas r-square">
+        <div class="tk-unit" data-subject-item="1" style="--accent:var(--ts-gold);"><div class="tk-canvas r-square">
           <div class="tk-zone tk-logo" style="top:4%; left:4%; right:auto; width:26%; height:6%;"><span class="tk-label">Logo</span></div>
           <div class="tk-zone tk-image" style="top:0; left:0; right:0; bottom:0; border-radius:0; z-index:0;"></div>
           <div class="tk-zone" style="top:14%; right:5%; width:38%; height:32%; background:rgba(20,20,24,.9);"><span class="tk-label" style="color:#fff;">Verification card</span></div>
           <div class="tk-zone" style="bottom:5%; height:22%; background:rgba(0,0,0,.72); flex-direction:column; z-index:1;"><span class="tk-label" style="color:var(--ts-gold); font-size:9.5px;">Real Recruiting. No Noise.</span><span class="tk-label" style="font-weight:400; text-transform:none; font-size:8px; margin-top:3px; color:#D6D6DC;">Every account, manually approved.</span></div>
         </div><p class="tk-caption"><b>1080&times;1080</b> &middot; gold (athlete)</p></div>
-        <div class="tk-unit" style="--accent:var(--ts-blue);"><div class="tk-canvas r-portrait">
+        <div class="tk-unit" data-subject-item="2" style="--accent:var(--ts-blue);"><div class="tk-canvas r-portrait">
           <div class="tk-zone tk-logo" style="top:3%; left:4%; right:auto; width:30%; height:4.5%;"><span class="tk-label">Logo</span></div>
           <div class="tk-zone tk-image" style="top:0; left:0; right:0; bottom:0; border-radius:0; z-index:0;"></div>
           <div class="tk-zone" style="top:10%; left:5%; right:5%; height:20%; background:rgba(20,20,24,.9);"><span class="tk-label" style="color:#fff;">Verification card</span></div>
@@ -1720,7 +1726,8 @@
         </div><p class="tk-caption"><b>1080&times;1920</b> &middot; either accent</p></div>
       </div>
       <details class="option-detail"><summary>Prompts &amp; layout notes<span class="toggle">+</span></summary><div class="option-detail-body">
-      <p class="option-c-note">This is the concept's original composition &mdash; same prompt sets (both athlete and coach versions) as the concept cards above, reproduced here so everything about this layout lives in one place.</p>
+      <p class="option-c-note">This is the concept's original composition &mdash; same prompt sets (both athlete and coach versions) as the concept cards above, reproduced here so everything about this layout lives in one place. Only the version matching "Designing for" above is shown; toggle it to see the other.</p>
+      <div data-subject-item="1">
       <p style="font-weight:700; font-size:11px; text-transform:uppercase; letter-spacing:.03em; margin:14px 0 6px; color:var(--ts-gold);">Athlete version (gold)</p>
       <div class="prompt-row">
         <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic photo of a young Black female student-athlete in track &amp; field competition wear, standing on a rubberized running track, calm confident expression looking slightly off-camera (not smiling-at-camera stock cliche), natural late-afternoon light with a warm gold rim light, editorial sports-lifestyle photography style. Athlete positioned in the left two-thirds of the frame. Leave a clear empty vertical panel on the right third of the frame for a card overlay. Square 1:1 format. No text, no logos, no UI elements.</p></details>
@@ -1728,6 +1735,8 @@
         <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic Black female track &amp; field athlete on the running track, same warm-gold rim lighting, calm confident expression, editorial sports-lifestyle style. Reframe for a tall 9:16 canvas: full-body athlete fills the middle third of the frame. Leave a clear empty panel across the upper third of the frame for the card overlay, and a second empty band across the very bottom for headline + CTA. No text, no logos, no UI elements.</p></details>
       </div>
       <p class="comp-note">Compositing note: place the real Verification process grid (ID upload, admin review, verified badge, active moderation) into the reserved panel &mdash; this is the trust proof point, not a UI demo. Reskin guide: see the concept card above &mdash; swap sport + athlete each time this recurs.</p>
+      </div>
+      <div data-subject-item="2">
       <p style="font-weight:700; font-size:11px; text-transform:uppercase; letter-spacing:.03em; margin:16px 0 6px; color:var(--ts-blue);">Coach version (blue)</p>
       <div class="prompt-row">
         <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic photo of a middle-aged Latino coach in a team polo on a soccer sideline, arms crossed, calm evaluating expression looking toward the field, natural outdoor light with a cool blue ambient tone, editorial sports-recruiting photography style. Coach positioned left-of-center. Leave a clear empty vertical panel on the right third of the frame for a card overlay. Square 1:1 format. No text, no logos, no UI elements.</p></details>
@@ -1735,6 +1744,7 @@
         <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic Latino coach on the soccer sideline, same cool-blue ambient lighting, calm evaluating expression, editorial sports-recruiting style. Reframe for a tall 9:16 canvas: full-body coach fills the lower two-thirds of the frame. Leave a clear empty panel across the upper third of the frame for the card overlay, plus a narrow band near the top for a headline. No text, no logos, no UI elements.</p></details>
       </div>
       <p class="comp-note">Compositing note: same Verification asset file as the athlete version, different caption and CTA &mdash; one real screenshot, two audiences. Reskin guide: see the concept card above &mdash; swap sport + coach each time this recurs.</p>
+      </div>
       <p class="logo-note"><b>Logo:</b> top-left corner across all three ratios, scaling down slightly as the canvas gets taller &mdash; keep it clear of the verification card on the right.</p>
       <p class="text-note"><b>Text boxes:</b> real box &mdash; the bottom band (black, ~72% opacity) is an actual scrim across all three ratios; keep it behind the headline and subtext. The "Verification card" panel is a real UI screenshot placement, not text.</p>
       
@@ -1747,12 +1757,12 @@
           <button class="choose-btn" onclick="chooseDesign('t1','B')">Choose This Design</button>
         </div>
       <div class="tk-set">
-        <div class="tk-unit" style="--accent:var(--ts-gold);"><div class="tk-canvas r-square">
+        <div class="tk-unit" data-subject-item="1" style="--accent:var(--ts-gold);"><div class="tk-canvas r-square">
           <div class="tk-zone tk-logo" style="top:4%; left:4%; right:auto; width:26%; height:6%;"><span class="tk-label">Logo</span></div>
           <div class="tk-zone tk-image" style="top:0; left:0; right:0; bottom:0; border-radius:0; z-index:0;"></div>
           <div class="tk-zone" style="bottom:5%; height:24%; background:rgba(0,0,0,.72); flex-direction:column; z-index:1;"><span class="tk-label" style="color:var(--ts-gold); font-size:9.5px;">Real Recruiting. No Noise.</span><span class="tk-label" style="font-weight:400; text-transform:none; font-size:7px; margin-top:3px; color:#D6D6DC;">100% ID Verified &middot; &lt;48h Approval</span></div>
         </div><p class="tk-caption"><b>1080&times;1080</b> &middot; gold (athlete)</p></div>
-        <div class="tk-unit" style="--accent:var(--ts-blue);"><div class="tk-canvas r-portrait">
+        <div class="tk-unit" data-subject-item="2" style="--accent:var(--ts-blue);"><div class="tk-canvas r-portrait">
           <div class="tk-zone tk-logo" style="top:3%; left:4%; right:auto; width:30%; height:4.5%;"><span class="tk-label">Logo</span></div>
           <div class="tk-zone tk-image" style="top:0; left:0; right:0; bottom:0; border-radius:0; z-index:0;"></div>
           <div class="tk-zone" style="bottom:4%; height:20%; background:rgba(0,0,0,.72); flex-direction:column; z-index:1;"><span class="tk-label" style="color:var(--ts-blue); font-size:9px;">Real Recruiting. No Noise.</span><span class="tk-label" style="font-weight:400; text-transform:none; font-size:6.5px; margin-top:3px; color:#D6D6DC;">$0 for Coaches &middot; &lt;48h Approval</span></div>
@@ -1764,6 +1774,7 @@
         </div><p class="tk-caption"><b>1080&times;1920</b> &middot; either accent</p></div>
       </div>
       <details class="option-detail"><summary>Prompts &amp; layout notes<span class="toggle">+</span></summary><div class="option-detail-body">
+      <p class="option-c-note">Athlete prompt shown below; the coach version reuses this same photo family with a color/copy swap (see compositing note) rather than a separate render.</p>
       <div class="prompt-row">
         <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic photo of a young Black female track &amp; field athlete on a running track, calm confident expression, natural late-afternoon light with a warm gold rim light, editorial sports-lifestyle photography style, filling the entire frame edge to edge. Leave a wide empty band across the bottom third of the frame, dark and semi-transparent, for a headline, tagline, and a small proof-stat row &mdash; no floating card this time. Square 1:1 format. No text, no logos, no UI elements.</p></details>
         <details class="prompt"><summary>1080&times;1350<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic track &amp; field athlete, same warm-gold rim lighting, full-bleed. Reframe for a taller 4:5 canvas: athlete fills the upper two-thirds of the frame. Leave a deeper dark semi-transparent band across the bottom for headline, tagline, and proof-stat row. No text, no logos, no UI elements.</p></details>
@@ -1783,14 +1794,14 @@
         </div>
       <p class="option-c-note">A tilted seal-style verification stamp overlaps a diagonal color block cutting the frame corner to corner &mdash; the stamp reads as official, not decorative.</p>
       <div class="tk-set">
-        <div class="tk-unit" style="--accent:var(--ts-gold);"><div class="tk-canvas r-square tk-dyn">
+        <div class="tk-unit" data-subject-item="1" style="--accent:var(--ts-gold);"><div class="tk-canvas r-square tk-dyn">
           <div style="position:absolute; inset:0; clip-path:polygon(0 0,62% 0,38% 100%,0 100%); background:#0B0B0E;"></div>
           <div style="position:absolute; inset:0; clip-path:polygon(64% 0,100% 0,100% 100%,40% 100%); background:linear-gradient(160deg, var(--ts-gold), #7a5c1e);"></div>
           <div class="tk-zone tk-logo" style="top:4%; left:4%; right:auto; width:26%; height:6%; border-color:rgba(255,255,255,.4);"><span class="tk-label" style="color:#fff;">Logo</span></div>
           <div class="tk-badge-round" style="width:34%; aspect-ratio:1/1; top:34%; left:33%; transform:rotate(-16deg); background:#0B0B0E; border:2px dashed var(--ts-gold); flex-direction:column;"><span style="font-size:6.5px; font-weight:800; color:var(--ts-gold); letter-spacing:.05em;">VERIFIED</span></div>
           <div style="position:absolute; bottom:6%; left:8%; right:8%; text-align:center; z-index:2;"><span class="tk-label" style="font-size:9px; color:#fff;">Real Recruiting. No Noise.</span></div>
         </div><p class="tk-caption"><b>1080&times;1080</b></p></div>
-        <div class="tk-unit" style="--accent:var(--ts-blue);"><div class="tk-canvas r-portrait tk-dyn">
+        <div class="tk-unit" data-subject-item="2" style="--accent:var(--ts-blue);"><div class="tk-canvas r-portrait tk-dyn">
           <div style="position:absolute; inset:0; clip-path:polygon(0 0,62% 0,38% 100%,0 100%); background:#0B0B0E;"></div>
           <div style="position:absolute; inset:0; clip-path:polygon(64% 0,100% 0,100% 100%,40% 100%); background:linear-gradient(160deg, var(--ts-blue), #1c3f8a);"></div>
           <div class="tk-zone tk-logo" style="top:3%; left:4%; right:auto; width:30%; height:4.5%; border-color:rgba(255,255,255,.4);"><span class="tk-label" style="color:#fff;">Logo</span></div>
@@ -1806,6 +1817,7 @@
         </div><p class="tk-caption"><b>1080&times;1920</b></p></div>
       </div>
       <details class="option-detail"><summary>Prompts &amp; layout notes<span class="toggle">+</span></summary><div class="option-detail-body">
+      <p class="option-c-note">One shared graphic prompt, colored gold for the athlete version and blue for the coach version (see the reframe note below) &mdash; not two separate renders.</p>
       <div class="prompt-row">
         <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A stylized near-black background split by a sharp diagonal color-block seam running corner to corner, warm gold on one side of the seam fading to deep charcoal. Centered on the seam, reserve a circular dashed-border badge shape tilted at a slight angle, like an official verification stamp. Bold graphic sports-tech aesthetic, no photography, no gradients beyond the described diagonal blocks. Square 1:1 format. No text, no logos, no UI elements.</p></details>
         <details class="prompt"><summary>1080&times;1350<span class="toggle">+</span></summary><p class="prompt-body">Same diagonal color-block seam and tilted circular badge reservation, same warm gold-to-charcoal palette. Reframe for a taller 4:5 canvas: seam angle steepened slightly, badge shape shifted upper-center. No text, no logos, no UI elements.</p></details>
@@ -1937,7 +1949,9 @@
 
       <p class="month-label">Choose a Layout</p>
       <p class="section-sub" style="margin:0 0 16px;">Tap a tab to preview that direction &mdash; only one shows at a time. Its prompts stay tucked behind a toggle until you want them.</p>
-      <div class="design-options-group" id="t2-options">
+      <div class="design-options-group" id="t2-options" data-active-subject="1">
+      <p class="subject-tabs-label">Designing for</p>
+      <div class="subject-tabs"><button class="subject-tab active" data-subject="1" onclick="showSubjectTab('t2','1')">Coach &middot; Football</button><button class="subject-tab" data-subject="2" onclick="showSubjectTab('t2','2')">Athlete &middot; Swimming</button></div>
       <div class="option-tabs"><button class="option-tab" data-option="A" onclick="showOptionTab('t2','A')">Option A <span class="tab-name">Card Overlay</span><span class="tab-check">&#10003;</span></button><button class="option-tab" data-option="B" onclick="showOptionTab('t2','B')">Option B <span class="tab-name">Split, screenshot / photo</span><span class="tab-check">&#10003;</span></button><button class="option-tab" data-option="C" onclick="showOptionTab('t2','C')">Option C <span class="tab-name">Starburst Radar, dynamic</span><span class="tab-check">&#10003;</span></button></div>
       <div class="design-option" data-option="A">
         <div class="design-option-head">
@@ -1945,19 +1959,19 @@
           <button class="choose-btn" onclick="chooseDesign('t2','A')">Choose This Design</button>
         </div>
       <div class="tk-set">
-        <div class="tk-unit" style="--accent:var(--ts-blue);"><div class="tk-canvas r-square">
+        <div class="tk-unit" data-subject-item="1" style="--accent:var(--ts-blue);"><div class="tk-canvas r-square">
           <div class="tk-zone tk-logo" style="top:4%; left:4%; right:auto; width:26%; height:6%;"><span class="tk-label">Logo</span></div>
           <div class="tk-zone tk-image" style="top:0; left:0; right:0; bottom:0; border-radius:0; z-index:0;"></div>
           <div class="tk-zone" style="top:14%; right:5%; width:38%; height:32%; background:rgba(20,20,24,.9);"><span class="tk-label" style="color:#fff;">Match Factors card</span></div>
           <div class="tk-zone" style="bottom:5%; height:22%; background:rgba(0,0,0,.72); flex-direction:column; z-index:1;"><span class="tk-label" style="color:var(--ts-blue); font-size:9.5px;">See Why It Matched.</span><span class="tk-label" style="font-weight:400; text-transform:none; font-size:8px; margin-top:3px; color:#D6D6DC;">No black box. Real signals, explained.</span></div>
         </div><p class="tk-caption"><b>1080&times;1080</b> &middot; coach, blue</p></div>
-        <div class="tk-unit" style="--accent:var(--ts-blue);"><div class="tk-canvas r-portrait">
+        <div class="tk-unit" data-subject-item="1" style="--accent:var(--ts-blue);"><div class="tk-canvas r-portrait">
           <div class="tk-zone tk-logo" style="top:3%; left:4%; right:auto; width:30%; height:4.5%;"><span class="tk-label">Logo</span></div>
           <div class="tk-zone tk-image" style="top:0; left:0; right:0; bottom:0; border-radius:0; z-index:0;"></div>
           <div class="tk-zone" style="top:10%; left:5%; right:5%; height:20%; background:rgba(20,20,24,.9);"><span class="tk-label" style="color:#fff;">Match Factors card</span></div>
           <div class="tk-zone" style="bottom:4%; height:18%; background:rgba(0,0,0,.72); flex-direction:column; z-index:1;"><span class="tk-label" style="color:var(--ts-blue); font-size:8.5px;">See Why It Matched.</span></div>
         </div><p class="tk-caption"><b>1080&times;1350</b> &middot; coach, blue</p></div>
-        <div class="tk-unit" style="--accent:var(--ts-gold);"><div class="tk-canvas r-story">
+        <div class="tk-unit" data-subject-item="2" style="--accent:var(--ts-gold);"><div class="tk-canvas r-story">
           <div class="tk-zone tk-logo" style="top:3%; left:5%; right:auto; width:34%; height:3.5%;"><span class="tk-label">Logo</span></div>
           <div class="tk-zone tk-image" style="top:0; left:0; right:0; bottom:0; border-radius:0; z-index:0;"></div>
           <div class="tk-zone" style="top:38%; right:6%; width:38%; height:20%; background:rgba(20,20,24,.9);"><span class="tk-label" style="color:#fff; font-size:7.5px;">Match Preview card</span></div>
@@ -1965,7 +1979,8 @@
         </div><p class="tk-caption"><b>1080&times;1920</b> &middot; athlete companion, gold</p></div>
       </div>
       <details class="option-detail"><summary>Prompts &amp; layout notes<span class="toggle">+</span></summary><div class="option-detail-body">
-      <p class="option-c-note">This is the concept's original composition &mdash; same prompt sets as the concept cards above, reproduced here so everything about this layout lives in one place.</p>
+      <p class="option-c-note">This is the concept's original composition &mdash; same prompt sets as the concept cards above, reproduced here so everything about this layout lives in one place. Only the version matching "Designing for" above is shown; toggle it to see the other.</p>
+      <div data-subject-item="1">
       <p style="font-weight:700; font-size:11px; text-transform:uppercase; letter-spacing:.03em; margin:14px 0 6px; color:var(--ts-blue);">Coach version (blue, lead)</p>
       <div class="prompt-row">
         <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic photo of a Black male football coach holding a tablet on a sideline, focused expression looking down at the screen, natural outdoor light with a cool blue ambient tone, editorial sports-recruiting photography style. Coach positioned left-of-center. Leave a clear empty rectangular panel over and beside the tablet for a card overlay. Square 1:1 format. No visible screen content, no text, no logos, no UI elements.</p></details>
@@ -1973,6 +1988,8 @@
         <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic Black male football coach with a tablet on a sideline, same cool-blue ambient lighting, editorial sports-recruiting style. Reframe for a tall 9:16 canvas: full-body coach fills the lower two-thirds of the frame. Leave a deep empty band across the top third of the frame for a card overlay plus a headline, and keep the tablet screen area empty for a smaller card. No visible screen content, no text, no logos, no UI elements.</p></details>
       </div>
       <p class="comp-note">Compositing note: place the real Match Factors card + 3-tier legend onto/beside the tablet &mdash; this proves the AI match isn't a black box. Reskin guide: see the concept card above &mdash; swap sport and ethnicity each time this recurs.</p>
+      </div>
+      <div data-subject-item="2">
       <p style="font-weight:700; font-size:11px; text-transform:uppercase; letter-spacing:.03em; margin:16px 0 6px; color:var(--ts-gold);">Athlete version (gold, companion)</p>
       <div class="prompt-row">
         <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic photo of a young white female swimmer walking away from camera through a stadium tunnel toward bright daylight at the far end, a swim bag with cap and goggles clipped to it over one shoulder, natural warm sunlight spilling in from the exit, editorial sports-lifestyle photography style. Athlete positioned center-left, walking toward the light. Leave a clear empty rectangular panel on the right side of the frame, floating at chest height, for a card overlay. Square 1:1 format. No text, no logos, no UI elements.</p></details>
@@ -1980,6 +1997,7 @@
         <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic swimmer walking through the tunnel toward daylight. Reframe for a tall 9:16 canvas: athlete smaller and centered in the middle third of the frame to emphasize the tunnel's length, light at the far end. Leave a floating empty card panel beside the athlete, plus a deep empty band across the very bottom for headline, tagline, and CTA. No text, no logos, no UI elements.</p></details>
       </div>
       <p class="comp-note">Compositing note: place the real Athlete Match Preview card (avatar, verified checkmark, match %, stat grid, match-reason text) into the floating panel exactly as it renders in-product. Reskin guide: see the concept card above &mdash; swap the sport-specific gear detail and athlete each time this recurs.</p>
+      </div>
       <p class="logo-note"><b>Logo:</b> top-left corner across all three ratios, scaling down slightly as the canvas gets taller.</p>
       <p class="text-note"><b>Text boxes:</b> real box &mdash; the bottom band (black, ~72% opacity) is an actual scrim across all three ratios; keep it behind the headline and subtext. The "Match Factors"/"Match Preview" panels are real UI screenshot placements, not text.</p>
       
@@ -1992,19 +2010,19 @@
           <button class="choose-btn" onclick="chooseDesign('t2','B')">Choose This Design</button>
         </div>
       <div class="tk-set">
-        <div class="tk-unit" style="--accent:var(--ts-blue);"><div class="tk-canvas r-square">
+        <div class="tk-unit" data-subject-item="1" style="--accent:var(--ts-blue);"><div class="tk-canvas r-square">
           <div class="tk-zone tk-logo" style="top:4%; right:4%; left:auto; width:26%; height:6%;"><span class="tk-label">Logo</span></div>
           <div class="tk-zone tk-image" style="top:0; left:0; width:48%; bottom:0; right:auto; border-radius:0; z-index:0;"></div>
           <div class="tk-zone" style="top:8%; left:54%; width:40%; height:46%; background:rgba(20,20,24,.9);"><span class="tk-label" style="color:#fff; font-size:7.5px;">Match Factors card</span></div>
           <div class="tk-zone" style="bottom:6%; left:54%; right:6%; height:16%; flex-direction:column;"><span class="tk-label" style="color:var(--ts-blue); font-size:8px;">See Why It Matched.</span></div>
         </div><p class="tk-caption"><b>1080&times;1080</b> &middot; coach, blue</p></div>
-        <div class="tk-unit" style="--accent:var(--ts-blue);"><div class="tk-canvas r-portrait">
+        <div class="tk-unit" data-subject-item="1" style="--accent:var(--ts-blue);"><div class="tk-canvas r-portrait">
           <div class="tk-zone tk-logo" style="top:3%; right:4%; left:auto; width:30%; height:4.5%;"><span class="tk-label">Logo</span></div>
           <div class="tk-zone tk-image" style="top:0; left:0; right:0; height:46%; bottom:auto; border-radius:0; z-index:0;"></div>
           <div class="tk-zone" style="top:50%; left:8%; right:8%; height:32%; background:rgba(20,20,24,.9);"><span class="tk-label" style="color:#fff; font-size:7.5px;">Match Factors card</span></div>
           <div class="tk-zone" style="bottom:4%; height:12%; flex-direction:column;"><span class="tk-label" style="color:var(--ts-blue); font-size:8px;">See Why It Matched.</span></div>
         </div><p class="tk-caption"><b>1080&times;1350</b> &middot; coach, blue</p></div>
-        <div class="tk-unit" style="--accent:var(--ts-gold);"><div class="tk-canvas r-story">
+        <div class="tk-unit" data-subject-item="2" style="--accent:var(--ts-gold);"><div class="tk-canvas r-story">
           <div class="tk-zone tk-logo" style="top:3%; left:5%; right:auto; width:34%; height:3.5%;"><span class="tk-label">Logo</span></div>
           <div class="tk-zone tk-image" style="top:0; left:0; right:0; height:42%; bottom:auto; border-radius:0; z-index:0;"></div>
           <div class="tk-zone" style="top:46%; left:8%; right:8%; height:26%; background:rgba(20,20,24,.9);"><span class="tk-label" style="color:#fff; font-size:7px;">Match Preview card</span></div>
@@ -2012,6 +2030,7 @@
         </div><p class="tk-caption"><b>1080&times;1920</b> &middot; athlete companion, gold</p></div>
       </div>
       <details class="option-detail"><summary>Prompts &amp; layout notes<span class="toggle">+</span></summary><div class="option-detail-body">
+      <p class="option-c-note">Coach prompt shown below; the athlete companion reuses this same split-frame layout with the tunnel-walk photo instead.</p>
       <div class="prompt-row">
         <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic photo of the same Black male football coach in athletic sideline gear seated at a laptop under stadium lights, reviewing player information, cool blue evening ambient light, editorial sports-recruiting photography style. Coach and laptop occupy the left half of the frame only; leave the right half of the frame completely empty and dark for a UI screenshot placement. Square 1:1 format. No text, no logos, no UI elements.</p></details>
         <details class="prompt"><summary>1080&times;1350<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic coach-at-laptop scene, same cool-blue lighting. Reframe for a taller 4:5 canvas: coach fills the top half of the frame. Leave the bottom half completely empty and dark for a UI screenshot placement. No text, no logos, no UI elements.</p></details>
@@ -2031,19 +2050,19 @@
         </div>
       <p class="option-c-note">The Match Factors card sits at the center of a radiating burst, like a radar ping locking onto a result &mdash; the match feels found, not just displayed.</p>
       <div class="tk-set">
-        <div class="tk-unit" style="--accent:var(--ts-blue);"><div class="tk-canvas r-square tk-dyn" style="background:#0B0B0E;">
+        <div class="tk-unit" data-subject-item="1" style="--accent:var(--ts-blue);"><div class="tk-canvas r-square tk-dyn" style="background:#0B0B0E;">
           <div style="position:absolute; inset:0; background:repeating-conic-gradient(color-mix(in srgb, var(--ts-blue) 22%, transparent) 0deg 2deg, transparent 2deg 14deg);"></div>
           <div class="tk-zone tk-logo" style="top:4%; left:4%; right:auto; width:26%; height:6%; border-color:rgba(255,255,255,.35);"><span class="tk-label" style="color:#fff;">Logo</span></div>
           <div style="position:absolute; top:30%; left:26%; right:26%; height:36%; background:rgba(20,20,24,.92); border:1px solid var(--ts-blue); border-radius:4px; display:flex; align-items:center; justify-content:center; z-index:2; box-shadow:0 0 22px color-mix(in srgb, var(--ts-blue) 45%, transparent);"><span class="tk-label" style="color:#fff; font-size:7px;">Match Factors card</span></div>
           <div style="position:absolute; bottom:6%; left:8%; right:8%; text-align:center; z-index:2;"><span class="tk-label" style="font-size:9px; color:var(--ts-blue);">See Why It Matched.</span></div>
         </div><p class="tk-caption"><b>1080&times;1080</b></p></div>
-        <div class="tk-unit" style="--accent:var(--ts-blue);"><div class="tk-canvas r-portrait tk-dyn" style="background:#0B0B0E;">
+        <div class="tk-unit" data-subject-item="1" style="--accent:var(--ts-blue);"><div class="tk-canvas r-portrait tk-dyn" style="background:#0B0B0E;">
           <div style="position:absolute; inset:0; background:repeating-conic-gradient(color-mix(in srgb, var(--ts-blue) 22%, transparent) 0deg 2deg, transparent 2deg 14deg);"></div>
           <div class="tk-zone tk-logo" style="top:3%; left:4%; right:auto; width:30%; height:4.5%; border-color:rgba(255,255,255,.35);"><span class="tk-label" style="color:#fff;">Logo</span></div>
           <div style="position:absolute; top:28%; left:20%; right:20%; height:32%; background:rgba(20,20,24,.92); border:1px solid var(--ts-blue); border-radius:4px; display:flex; align-items:center; justify-content:center; z-index:2; box-shadow:0 0 22px color-mix(in srgb, var(--ts-blue) 45%, transparent);"><span class="tk-label" style="color:#fff; font-size:6.5px;">Match Factors card</span></div>
           <div style="position:absolute; bottom:5%; left:8%; right:8%; text-align:center; z-index:2;"><span class="tk-label" style="font-size:8.5px; color:var(--ts-blue);">See Why It Matched.</span></div>
         </div><p class="tk-caption"><b>1080&times;1350</b></p></div>
-        <div class="tk-unit" style="--accent:var(--ts-gold);"><div class="tk-canvas r-story tk-dyn" style="background:#0B0B0E;">
+        <div class="tk-unit" data-subject-item="2" style="--accent:var(--ts-gold);"><div class="tk-canvas r-story tk-dyn" style="background:#0B0B0E;">
           <div style="position:absolute; inset:0; background:repeating-conic-gradient(color-mix(in srgb, var(--ts-gold) 22%, transparent) 0deg 2deg, transparent 2deg 14deg);"></div>
           <div class="tk-zone tk-logo" style="top:3%; left:5%; right:auto; width:34%; height:3.5%; border-color:rgba(255,255,255,.35);"><span class="tk-label" style="color:#fff;">Logo</span></div>
           <div style="position:absolute; top:26%; left:16%; right:16%; height:28%; background:rgba(20,20,24,.92); border:1px solid var(--ts-gold); border-radius:4px; display:flex; align-items:center; justify-content:center; z-index:2; box-shadow:0 0 22px color-mix(in srgb, var(--ts-gold) 45%, transparent);"><span class="tk-label" style="color:#fff; font-size:6px;">Match Preview card</span></div>
@@ -2182,7 +2201,9 @@
 
       <p class="month-label">Choose a Layout</p>
       <p class="section-sub" style="margin:0 0 16px;">Tap a tab to preview that direction &mdash; only one shows at a time. Its prompts stay tucked behind a toggle until you want them.</p>
-      <div class="design-options-group" id="t3-options">
+      <div class="design-options-group" id="t3-options" data-active-subject="1">
+      <p class="subject-tabs-label">Designing for</p>
+      <div class="subject-tabs"><button class="subject-tab active" data-subject="1" onclick="showSubjectTab('t3','1')">Athlete &middot; Cross Country</button><button class="subject-tab" data-subject="2" onclick="showSubjectTab('t3','2')">Coach &middot; Basketball</button></div>
       <div class="option-tabs"><button class="option-tab" data-option="A" onclick="showOptionTab('t3','A')">Option A <span class="tab-name">Product Flat-Lay</span><span class="tab-check">&#10003;</span></button><button class="option-tab" data-option="B" onclick="showOptionTab('t3','B')">Option B <span class="tab-name">Card Overlay, athlete on-field</span><span class="tab-check">&#10003;</span></button><button class="option-tab" data-option="C" onclick="showOptionTab('t3','C')">Option C <span class="tab-name">Scattered Unbox, dynamic</span><span class="tab-check">&#10003;</span></button></div>
       <div class="design-option" data-option="A">
         <div class="design-option-head">
@@ -2190,26 +2211,27 @@
           <button class="choose-btn" onclick="chooseDesign('t3','A')">Choose This Design</button>
         </div>
       <div class="tk-set">
-        <div class="tk-unit" style="--accent:var(--ts-gold);"><div class="tk-canvas r-square">
+        <div class="tk-unit" data-subject-item="1" style="--accent:var(--ts-gold);"><div class="tk-canvas r-square">
           <div class="tk-zone tk-image" style="top:0; left:0; right:0; bottom:0; border-radius:0; z-index:0;"></div>
           <div class="tk-zone tk-logo" style="top:4%; left:4%; right:auto; width:26%; height:6%;"><span class="tk-label">Logo</span></div>
           <div class="tk-zone" style="top:40%; right:6%; width:26%; height:20%; background:rgba(20,20,24,.9);"><span class="tk-label" style="color:#fff; font-size:7.5px;">Profile card, on phone</span></div>
           <div class="tk-zone" style="bottom:5%; height:20%; background:rgba(0,0,0,.72); flex-direction:column; z-index:1;"><span class="tk-label" style="color:var(--ts-gold); font-size:9px;">More Than a Profile.</span></div>
         </div><p class="tk-caption"><b>1080&times;1080</b> &middot; swag-bag flat-lay</p></div>
-        <div class="tk-unit" style="--accent:var(--ts-gold);"><div class="tk-canvas r-portrait">
+        <div class="tk-unit" data-subject-item="1" style="--accent:var(--ts-gold);"><div class="tk-canvas r-portrait">
           <div class="tk-zone tk-image" style="top:0; left:0; right:0; bottom:0; border-radius:0; z-index:0;"></div>
           <div class="tk-zone tk-logo" style="top:3%; left:4%; right:auto; width:30%; height:4.5%;"><span class="tk-label">Logo</span></div>
           <div class="tk-zone" style="top:52%; left:8%; width:34%; height:14%; background:rgba(20,20,24,.9);"><span class="tk-label" style="color:#fff; font-size:7px;">Profile card</span></div>
           <div class="tk-zone" style="bottom:4%; height:16%; background:rgba(0,0,0,.72); flex-direction:column; z-index:1;"><span class="tk-label" style="color:var(--ts-gold); font-size:8px;">More Than a Profile.</span></div>
         </div><p class="tk-caption"><b>1080&times;1350</b> &middot; bag top, phone below</p></div>
-        <div class="tk-unit" style="--accent:var(--ts-blue);"><div class="tk-canvas r-story">
+        <div class="tk-unit" data-subject-item="2" style="--accent:var(--ts-blue);"><div class="tk-canvas r-story">
           <div class="tk-zone tk-image" style="top:0; left:0; right:0; bottom:0; border-radius:0; z-index:0;"></div>
           <div class="tk-zone tk-logo" style="top:3%; right:5%; left:auto; width:34%; height:3.5%;"><span class="tk-label">Logo</span></div>
           <div class="tk-zone" style="bottom:3%; height:16%; background:rgba(0,0,0,.72); flex-direction:column; z-index:1;"><span class="tk-label" style="color:var(--ts-blue); font-size:7.5px;">Free Forever Comes With a Polo</span></div>
         </div><p class="tk-caption"><b>1080&times;1920</b> &middot; coach-polo companion</p></div>
       </div>
       <details class="option-detail"><summary>Prompts &amp; layout notes<span class="toggle">+</span></summary><div class="option-detail-body">
-      <p class="option-c-note">This is the concept's original composition &mdash; same prompt sets as the concept cards above, reproduced here so everything about this layout lives in one place.</p>
+      <p class="option-c-note">This is the concept's original composition &mdash; same prompt sets as the concept cards above, reproduced here so everything about this layout lives in one place. Only the version matching "Designing for" above is shown; toggle it to see the other.</p>
+      <div data-subject-item="1">
       <p style="font-weight:700; font-size:11px; text-transform:uppercase; letter-spacing:.03em; margin:14px 0 6px; color:var(--ts-gold);">Athlete version (gold)</p>
       <div class="prompt-row">
         <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic overhead flat-lay of an opened canvas swag bag on a wood desk, athletic gear partially spilling out (a volleyball, a drawstring pouch, folded apparel — no visible brand marks or logos), a smartphone propped against a books stack beside it with its screen angled toward camera but blank, warm gold desk-lamp lighting, cozy bedroom-desk editorial photography style. Bag positioned left-of-center, phone right-of-center. Leave the phone's screen area completely empty for a UI card overlay. Square 1:1 format. No text, no logos, no visible UI.</p></details>
@@ -2217,6 +2239,8 @@
         <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic concept, reframed as a tall 9:16 vertical stack: swag bag contents at the top third, the propped phone with empty screen area in the middle third, a deep empty band at the bottom third for headline, tagline, and CTA stacked. Warm gold desk-lamp lighting throughout. No text, no logos, no visible UI.</p></details>
       </div>
       <p class="comp-note">Compositing note: the real verified-profile card goes on the phone screen; the real Quarter Athletic logo (unmodified) can appear on the physical merch itself since it's real product packaging, not an AI-invented mark. Reskin guide: see the concept card above &mdash; swap the visible sport item each time this recurs.</p>
+      </div>
+      <div data-subject-item="2">
       <p style="font-weight:700; font-size:11px; text-transform:uppercase; letter-spacing:.03em; margin:16px 0 6px; color:var(--ts-blue);">Coach version (blue)</p>
       <div class="prompt-row">
         <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic photo of an Asian-American male basketball coach in a solid-color polo shirt (no visible logo) standing courtside holding a tablet at waist height, relaxed confident posture, natural indoor gym light with a cool blue ambient tone, editorial sports-recruiting photography style. Coach positioned center-frame. Leave a clear empty panel beside the tablet for a card overlay, and reserve the polo's left chest area completely blank for a logo. Square 1:1 format. No text, no logos, no UI elements.</p></details>
@@ -2224,6 +2248,7 @@
         <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic basketball coach in a polo with a tablet. Reframe for a tall 9:16 canvas: full-body coach fills the middle third of the frame. Leave a deep empty band across the top for a card overlay plus headline, and a second empty band at the very bottom for tagline and CTA. Keep the polo's chest area blank for a logo. No text, no logos, no UI elements.</p></details>
       </div>
       <p class="comp-note">Compositing note: the real Quarter Athletic logo goes on the polo's reserved chest space afterward &mdash; never AI-generated onto the garment. Reskin guide: see the concept card above &mdash; swap sport and ethnicity each time this recurs.</p>
+      </div>
       <p class="logo-note"><b>Logo:</b> top-left corner on the square and portrait (swag-bag) crops; shifts to top-right on the 9:16 story crop (the coach-polo companion).</p>
       <p class="text-note"><b>Text boxes:</b> real box &mdash; the bottom band (black, ~72% opacity) is an actual scrim across all three ratios; keep it behind the headline. The "Profile card"/"Verification card" panels are real UI screenshot placements, not text.</p>
       
@@ -2236,19 +2261,19 @@
           <button class="choose-btn" onclick="chooseDesign('t3','B')">Choose This Design</button>
         </div>
       <div class="tk-set">
-        <div class="tk-unit" style="--accent:var(--ts-gold);"><div class="tk-canvas r-square">
+        <div class="tk-unit" data-subject-item="1" style="--accent:var(--ts-gold);"><div class="tk-canvas r-square">
           <div class="tk-zone tk-logo" style="top:4%; left:4%; right:auto; width:26%; height:6%;"><span class="tk-label">Logo</span></div>
           <div class="tk-zone tk-image" style="top:0; left:0; right:0; bottom:0; border-radius:0; z-index:0;"></div>
           <div class="tk-zone" style="top:14%; right:5%; width:34%; height:22%; background:rgba(20,20,24,.9);"><span class="tk-label" style="color:#fff; font-size:7.5px;">Verified profile card</span></div>
           <div class="tk-zone" style="bottom:5%; height:20%; background:rgba(0,0,0,.72); flex-direction:column; z-index:1;"><span class="tk-label" style="color:var(--ts-gold); font-size:9px;">More Than a Profile.</span></div>
         </div><p class="tk-caption"><b>1080&times;1080</b> &middot; athlete on field</p></div>
-        <div class="tk-unit" style="--accent:var(--ts-gold);"><div class="tk-canvas r-portrait">
+        <div class="tk-unit" data-subject-item="1" style="--accent:var(--ts-gold);"><div class="tk-canvas r-portrait">
           <div class="tk-zone tk-logo" style="top:3%; left:4%; right:auto; width:30%; height:4.5%;"><span class="tk-label">Logo</span></div>
           <div class="tk-zone tk-image" style="top:0; left:0; right:0; bottom:0; border-radius:0; z-index:0;"></div>
           <div class="tk-zone" style="top:10%; left:5%; right:5%; height:18%; background:rgba(20,20,24,.9);"><span class="tk-label" style="color:#fff; font-size:7px;">Verified profile card</span></div>
           <div class="tk-zone" style="bottom:4%; height:16%; background:rgba(0,0,0,.72); flex-direction:column; z-index:1;"><span class="tk-label" style="color:var(--ts-gold); font-size:8px;">More Than a Profile.</span></div>
         </div><p class="tk-caption"><b>1080&times;1350</b> &middot; athlete on field</p></div>
-        <div class="tk-unit" style="--accent:var(--ts-blue);"><div class="tk-canvas r-story">
+        <div class="tk-unit" data-subject-item="2" style="--accent:var(--ts-blue);"><div class="tk-canvas r-story">
           <div class="tk-zone tk-logo" style="top:3%; right:5%; left:auto; width:34%; height:3.5%;"><span class="tk-label">Logo</span></div>
           <div class="tk-zone tk-image" style="top:0; left:0; right:0; bottom:0; border-radius:0; z-index:0;"></div>
           <div class="tk-zone" style="top:38%; left:6%; width:34%; height:16%; background:rgba(20,20,24,.9);"><span class="tk-label" style="color:#fff; font-size:7px;">Coach + polo</span></div>
@@ -2256,10 +2281,11 @@
         </div><p class="tk-caption"><b>1080&times;1920</b> &middot; coach-polo companion</p></div>
       </div>
       <details class="option-detail"><summary>Prompts &amp; layout notes<span class="toggle">+</span></summary><div class="option-detail-body">
+      <p class="option-c-note">The square/portrait ratios are the athlete version; the 9:16 story ratio is the coach-polo companion &mdash; each toggles with "Designing for" above.</p>
       <div class="prompt-row">
-        <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic photo of a young Black male cross country runner on a wooded trail, mid-stride, confident expression, warm golden-hour light, editorial sports-lifestyle photography style, filling the entire frame edge to edge. Leave a clear empty panel in the upper-right quadrant for a verified-profile card overlay, and a dark semi-transparent band across the bottom for headline text. Square 1:1 format. No text, no logos, no UI elements.</p></details>
-        <details class="prompt"><summary>1080&times;1350<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic cross country runner, same golden-hour lighting, full-bleed. Reframe for a taller 4:5 canvas: athlete fills the frame, empty panel for a card overlay in the upper third, dark band at the very bottom for headline. No text, no logos, no UI elements.</p></details>
-        <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic photo of an Asian-American male basketball coach on the sideline wearing a Quarter Athletic polo (chest area left blank for a logo), tablet in hand, cool blue evening light, editorial sports-recruiting photography style. Full-bleed vertical composition. Leave an empty panel mid-frame for a "coach + polo" card overlay, and a dark band at the bottom for headline and CTA. No text, no logos, no UI elements.</p></details>
+        <details class="prompt" data-subject-item="1"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic photo of a young Black male cross country runner on a wooded trail, mid-stride, confident expression, warm golden-hour light, editorial sports-lifestyle photography style, filling the entire frame edge to edge. Leave a clear empty panel in the upper-right quadrant for a verified-profile card overlay, and a dark semi-transparent band across the bottom for headline text. Square 1:1 format. No text, no logos, no UI elements.</p></details>
+        <details class="prompt" data-subject-item="1"><summary>1080&times;1350<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic cross country runner, same golden-hour lighting, full-bleed. Reframe for a taller 4:5 canvas: athlete fills the frame, empty panel for a card overlay in the upper third, dark band at the very bottom for headline. No text, no logos, no UI elements.</p></details>
+        <details class="prompt" data-subject-item="2"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic photo of an Asian-American male basketball coach on the sideline wearing a Quarter Athletic polo (chest area left blank for a logo), tablet in hand, cool blue evening light, editorial sports-recruiting photography style. Full-bleed vertical composition. Leave an empty panel mid-frame for a "coach + polo" card overlay, and a dark band at the bottom for headline and CTA. No text, no logos, no UI elements.</p></details>
       </div>
       <p class="comp-note">Compositing note: the real Verified profile card (gold) drops onto the athlete frames; the coach-polo variant reuses the same production family established in Month 1&ndash;2's coach concepts. Reskin guide: see the concept cards above &mdash; swap sport and ethnicity for both figures each time this recurs.</p>
       <p class="logo-note"><b>Logo:</b> top-left corner on the square and portrait (athlete-on-field) crops; shifts to top-right on the 9:16 story crop (the coach-polo companion).</p>
@@ -2275,21 +2301,21 @@
         </div>
       <p class="option-c-note">The bag, the profile card, and the shipping tag land at different angles like they just tumbled out onto the desk &mdash; the energy of unboxing something, not a still flat-lay.</p>
       <div class="tk-set">
-        <div class="tk-unit" style="--accent:var(--ts-gold);"><div class="tk-canvas r-square tk-dyn" style="background:#0B0B0E;">
+        <div class="tk-unit" data-subject-item="1" style="--accent:var(--ts-gold);"><div class="tk-canvas r-square tk-dyn" style="background:#0B0B0E;">
           <div class="tk-zone tk-logo" style="top:4%; left:4%; right:auto; width:26%; height:6%; border-color:rgba(255,255,255,.35);"><span class="tk-label" style="color:#fff;">Logo</span></div>
           <div class="tk-card-float" style="width:36%; height:28%; top:14%; left:8%; transform:rotate(-13deg); background:color-mix(in srgb, var(--ts-gold) 22%, #141418);"><span class="tk-label" style="font-size:6.5px; color:var(--ts-gold);">Swag bag</span></div>
           <div class="tk-card-float" style="width:30%; height:22%; top:40%; right:8%; transform:rotate(10deg); z-index:2; background:#fff;"><span class="tk-label" style="font-size:6px; color:#0B0B0E; text-transform:none; font-weight:400;">Verified card</span></div>
           <div class="tk-card-float" style="width:22%; height:14%; bottom:8%; left:18%; transform:rotate(6deg); z-index:3; background:var(--ts-gold);"><span class="tk-label" style="font-size:6px; color:#0B0B0E;">Tag</span></div>
           <div style="position:absolute; top:52%; left:6%; right:38%; z-index:1;"><span class="tk-label" style="font-size:8.5px; color:var(--ts-gold);">More Than a Profile.</span></div>
         </div><p class="tk-caption"><b>1080&times;1080</b></p></div>
-        <div class="tk-unit" style="--accent:var(--ts-gold);"><div class="tk-canvas r-portrait tk-dyn" style="background:#0B0B0E;">
+        <div class="tk-unit" data-subject-item="1" style="--accent:var(--ts-gold);"><div class="tk-canvas r-portrait tk-dyn" style="background:#0B0B0E;">
           <div class="tk-zone tk-logo" style="top:3%; left:4%; right:auto; width:30%; height:4.5%; border-color:rgba(255,255,255,.35);"><span class="tk-label" style="color:#fff;">Logo</span></div>
           <div class="tk-card-float" style="width:44%; height:20%; top:12%; left:8%; transform:rotate(-13deg); background:color-mix(in srgb, var(--ts-gold) 22%, #141418);"><span class="tk-label" style="font-size:6.5px; color:var(--ts-gold);">Swag bag</span></div>
           <div class="tk-card-float" style="width:38%; height:16%; top:34%; right:8%; transform:rotate(10deg); z-index:2; background:#fff;"><span class="tk-label" style="font-size:6px; color:#0B0B0E; text-transform:none; font-weight:400;">Verified card</span></div>
           <div class="tk-card-float" style="width:28%; height:10%; top:52%; left:18%; transform:rotate(6deg); z-index:3; background:var(--ts-gold);"><span class="tk-label" style="font-size:6px; color:#0B0B0E;">Tag</span></div>
           <div style="position:absolute; bottom:6%; left:8%; right:8%; text-align:center; z-index:1;"><span class="tk-label" style="font-size:8px; color:var(--ts-gold);">More Than a Profile.</span></div>
         </div><p class="tk-caption"><b>1080&times;1350</b></p></div>
-        <div class="tk-unit" style="--accent:var(--ts-blue);"><div class="tk-canvas r-story tk-dyn" style="background:#0B0B0E;">
+        <div class="tk-unit" data-subject-item="2" style="--accent:var(--ts-blue);"><div class="tk-canvas r-story tk-dyn" style="background:#0B0B0E;">
           <div class="tk-zone tk-logo" style="top:3%; left:5%; right:auto; width:34%; height:3.5%; border-color:rgba(255,255,255,.35);"><span class="tk-label" style="color:#fff;">Logo</span></div>
           <div class="tk-card-float" style="width:48%; height:14%; top:10%; left:8%; transform:rotate(-11deg); background:color-mix(in srgb, var(--ts-blue) 22%, #141418);"><span class="tk-label" style="font-size:6px; color:var(--ts-blue);">Coach polo</span></div>
           <div class="tk-card-float" style="width:40%; height:12%; top:26%; right:8%; transform:rotate(8deg); z-index:2; background:#fff;"><span class="tk-label" style="font-size:6px; color:#0B0B0E; text-transform:none; font-weight:400;">Dashboard card</span></div>
@@ -2297,10 +2323,11 @@
         </div><p class="tk-caption"><b>1080&times;1920</b> &middot; coach-polo companion</p></div>
       </div>
       <details class="option-detail"><summary>Prompts &amp; layout notes<span class="toggle">+</span></summary><div class="option-detail-body">
+      <p class="option-c-note">The square/portrait ratios are the athlete version; the 9:16 story ratio is the coach-polo companion &mdash; each toggles with "Designing for" above.</p>
       <div class="prompt-row">
-        <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A stylized near-black background with three product elements photographed as if mid-fall or freshly scattered: a canvas swag bag tilted at a diagonal angle, a white verification-card shape tilted the opposite direction and overlapping slightly, and a small tag-shaped element tilted a third way, all with soft dramatic shadows suggesting they just landed, warm gold rim lighting on the bag. Bold graphic product-photography aesthetic, energetic composition. Square 1:1 format. No text, no logos, no UI elements.</p></details>
-        <details class="prompt"><summary>1080&times;1350<span class="toggle">+</span></summary><p class="prompt-body">Same scattered-unbox composition, same three tilted elements and warm gold rim lighting. Reframe for a taller 4:5 canvas: elements stacked with more vertical spread, bag near the top, card and tag lower. No text, no logos, no UI elements.</p></details>
-        <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same scattered-unbox composition. Reframe for a tall 9:16 canvas: two tilted elements only (a coach-polo garment shape and a dashboard-card shape), cool blue rim lighting instead of gold, positioned in the upper two-thirds with deep empty space at the bottom for headline, tagline, and CTA. No text, no logos, no UI elements.</p></details>
+        <details class="prompt" data-subject-item="1"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A stylized near-black background with three product elements photographed as if mid-fall or freshly scattered: a canvas swag bag tilted at a diagonal angle, a white verification-card shape tilted the opposite direction and overlapping slightly, and a small tag-shaped element tilted a third way, all with soft dramatic shadows suggesting they just landed, warm gold rim lighting on the bag. Bold graphic product-photography aesthetic, energetic composition. Square 1:1 format. No text, no logos, no UI elements.</p></details>
+        <details class="prompt" data-subject-item="1"><summary>1080&times;1350<span class="toggle">+</span></summary><p class="prompt-body">Same scattered-unbox composition, same three tilted elements and warm gold rim lighting. Reframe for a taller 4:5 canvas: elements stacked with more vertical spread, bag near the top, card and tag lower. No text, no logos, no UI elements.</p></details>
+        <details class="prompt" data-subject-item="2"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same scattered-unbox composition. Reframe for a tall 9:16 canvas: two tilted elements only (a coach-polo garment shape and a dashboard-card shape), cool blue rim lighting instead of gold, positioned in the upper two-thirds with deep empty space at the bottom for headline, tagline, and CTA. No text, no logos, no UI elements.</p></details>
       </div>
       <p class="comp-note">Compositing note: the real verification card, dashboard card, and physical merch photography drop into the tilted element reservations &mdash; the AI render provides only the shadow/lighting staging, never the card content itself.</p>
       <p class="logo-note"><b>Logo:</b> top-left corner across all three ratios, tucked above the scattered card elements.</p>
@@ -2428,7 +2455,9 @@
 
       <p class="month-label">Choose a Layout</p>
       <p class="section-sub" style="margin:0 0 16px;">Tap a tab to preview that direction &mdash; only one shows at a time. Its prompts stay tucked behind a toggle until you want them.</p>
-      <div class="design-options-group" id="t4-options">
+      <div class="design-options-group" id="t4-options" data-active-subject="1">
+      <p class="subject-tabs-label">Designing for</p>
+      <div class="subject-tabs"><button class="subject-tab active" data-subject="1" onclick="showSubjectTab('t4','1')">Coach &middot; Tennis</button><button class="subject-tab" data-subject="2" onclick="showSubjectTab('t4','2')">Corporate / AD</button></div>
       <div class="option-tabs"><button class="option-tab" data-option="A" onclick="showOptionTab('t4','A')">Option A <span class="tab-name">Workspace</span><span class="tab-check">&#10003;</span></button><button class="option-tab" data-option="B" onclick="showOptionTab('t4','B')">Option B <span class="tab-name">Card Overlay, coach portrait</span><span class="tab-check">&#10003;</span></button><button class="option-tab" data-option="C" onclick="showOptionTab('t4','C')">Option C <span class="tab-name">Cascading Windows, dynamic</span><span class="tab-check">&#10003;</span></button></div>
       <div class="design-option" data-option="A">
         <div class="design-option-head">
@@ -2436,20 +2465,20 @@
           <button class="choose-btn" onclick="chooseDesign('t4','A')">Choose This Design</button>
         </div>
       <div class="tk-set">
-        <div class="tk-unit" style="--accent:var(--ts-blue);"><div class="tk-canvas r-square">
+        <div class="tk-unit" data-subject-item="1" style="--accent:var(--ts-blue);"><div class="tk-canvas r-square">
           <div class="tk-zone tk-logo" style="top:4%; right:4%; left:auto; width:26%; height:6%;"><span class="tk-label">Logo</span></div>
           <div class="tk-zone tk-image" style="top:0; left:0; right:0; bottom:0; border-radius:0; z-index:0;"></div>
           <div class="tk-zone" style="top:16%; left:8%; width:34%; height:24%; background:rgba(20,20,24,.9);"><span class="tk-label" style="color:#fff;">Laptop screen</span></div>
           <div class="tk-zone" style="top:44%; left:46%; width:24%; height:18%; background:rgba(20,20,24,.9);"><span class="tk-label" style="color:#fff; font-size:7.5px;">Tablet screen</span></div>
           <div class="tk-zone" style="bottom:5%; height:20%; background:rgba(0,0,0,.72); flex-direction:column; z-index:1;"><span class="tk-label" style="color:var(--ts-blue); font-size:9px;">Free, Forever. Built to Scale.</span></div>
         </div><p class="tk-caption"><b>1080&times;1080</b> &middot; single-coach desk</p></div>
-        <div class="tk-unit" style="--accent:var(--ts-blue);"><div class="tk-canvas r-portrait">
+        <div class="tk-unit" data-subject-item="1" style="--accent:var(--ts-blue);"><div class="tk-canvas r-portrait">
           <div class="tk-zone tk-logo" style="top:3%; right:4%; left:auto; width:30%; height:4.5%;"><span class="tk-label">Logo</span></div>
           <div class="tk-zone tk-image" style="top:0; left:0; right:0; bottom:0; border-radius:0; z-index:0;"></div>
           <div class="tk-zone" style="top:14%; left:8%; right:8%; height:22%; background:rgba(20,20,24,.9);"><span class="tk-label" style="color:#fff;">Laptop / monitor</span></div>
           <div class="tk-zone" style="bottom:4%; height:16%; background:rgba(0,0,0,.72); flex-direction:column; z-index:1;"><span class="tk-label" style="color:var(--ts-blue); font-size:8px;">Free, Forever. Built to Scale.</span></div>
         </div><p class="tk-caption"><b>1080&times;1350</b> &middot; single-coach desk</p></div>
-        <div class="tk-unit" style="--accent:var(--ts-blue);"><div class="tk-canvas r-story">
+        <div class="tk-unit" data-subject-item="2" style="--accent:var(--ts-blue);"><div class="tk-canvas r-story">
           <div class="tk-zone tk-logo" style="top:3%; left:5%; right:auto; width:34%; height:3.5%;"><span class="tk-label">Logo</span></div>
           <div class="tk-zone tk-image" style="top:0; left:0; right:0; bottom:0; border-radius:0; z-index:0;"></div>
           <div class="tk-zone" style="top:10%; left:8%; right:8%; height:18%; background:rgba(20,20,24,.9);"><span class="tk-label" style="color:#fff; font-size:7.5px;">Wall monitor</span></div>
@@ -2457,7 +2486,8 @@
         </div><p class="tk-caption"><b>1080&times;1920</b> &middot; department war-room</p></div>
       </div>
       <details class="option-detail"><summary>Prompts &amp; layout notes<span class="toggle">+</span></summary><div class="option-detail-body">
-      <p class="option-c-note">This is the concept's original composition &mdash; same prompt sets as the concept cards above, reproduced here so everything about this layout lives in one place.</p>
+      <p class="option-c-note">This is the concept's original composition &mdash; same prompt sets as the concept cards above, reproduced here so everything about this layout lives in one place. Only the version matching "Designing for" above is shown; toggle it to see the other.</p>
+      <div data-subject-item="1">
       <p style="font-weight:700; font-size:11px; text-transform:uppercase; letter-spacing:.03em; margin:14px 0 6px; color:var(--ts-blue);">Coach version (single-coach desk)</p>
       <div class="prompt-row">
         <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic overhead flat-lay of a modern recruiting workspace: an open laptop showing a blank dark dashboard screen, a tablet propped beside it with a blank dark screen, a closed notebook labeled nothing, a black coffee mug, and a pen, arranged on a dark wood desk, moody cool blue ambient lighting from an unseen window, premium SaaS-office editorial photography style. Leave both the laptop and tablet screens completely empty for UI overlays. Square 1:1 format. No text, no logos, no UI elements.</p></details>
@@ -2465,6 +2495,8 @@
         <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic recruiting-workspace concept, reframed as a tall 9:16 vertical arrangement: laptop at the top third, tablet in the middle third, notebook and coffee at the bottom third, all under the same cool blue ambient lighting. Leave both screens empty for UI overlays, plus a deep empty band at the very bottom for headline, tagline, and CTA. No text, no logos, no UI elements.</p></details>
       </div>
       <p class="comp-note">Compositing note: place a real coach-dashboard screenshot on the laptop and the real Verification card on the tablet &mdash; never fabricate either screen.</p>
+      </div>
+      <div data-subject-item="2">
       <p style="font-weight:700; font-size:11px; text-transform:uppercase; letter-spacing:.03em; margin:16px 0 6px; color:var(--ts-blue);">Corporate / AD version (department war-room)</p>
       <div class="prompt-row">
         <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic wide shot of a modern athletic-department recruiting office: three desks with laptops (blank dark screens), a large wall-mounted monitor with a blank dark screen, two people working at their desks in the middle distance in business-casual attire &mdash; one a woman with natural Black hairstyle, one a man with light skin tone &mdash; dark wood and navy color palette, cool blue overhead lighting, premium institutional-office editorial photography style. Room fills the frame symmetrically. Leave the wall monitor's screen completely empty for a UI overlay, and a wide empty band across the bottom of the frame for a headline. Square 1:1 format. No text, no logos, no UI elements, faces not clearly identifiable (turned away or in shadow).</p></details>
@@ -2472,6 +2504,7 @@
         <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic recruiting-office concept, reframed as a tall 9:16 canvas looking across the room from a lower angle: wall monitor prominent in the upper half, desks and desk-lamps receding below it. Leave the monitor screen empty for a UI overlay, and a deep empty band at the very bottom for headline, tagline, and CTA. No text, no logos, no UI elements, faces not clearly identifiable.</p></details>
       </div>
       <p class="comp-note">Compositing note: place a real coach-dashboard or admin-view screenshot on the wall monitor &mdash; never fabricate the UI. Reskin guide: vary the two staff members' apparent gender, build, and skin tone each time this recurs.</p>
+      </div>
       <p class="logo-note"><b>Logo:</b> top-right corner on the square and portrait crops; shifts to top-left on the 9:16 story crop (department war-room).</p>
       <p class="text-note"><b>Text boxes:</b> real box &mdash; the bottom band (black, ~72% opacity) is an actual scrim across all three ratios; keep it behind the headline. The "Laptop screen"/"Tablet screen"/"Wall monitor" panels are real UI screenshot placements, not text.</p>
       
@@ -2484,19 +2517,19 @@
           <button class="choose-btn" onclick="chooseDesign('t4','B')">Choose This Design</button>
         </div>
       <div class="tk-set">
-        <div class="tk-unit" style="--accent:var(--ts-blue);"><div class="tk-canvas r-square">
+        <div class="tk-unit" data-subject-item="1" style="--accent:var(--ts-blue);"><div class="tk-canvas r-square">
           <div class="tk-zone tk-logo" style="top:4%; left:4%; right:auto; width:26%; height:6%;"><span class="tk-label">Logo</span></div>
           <div class="tk-zone tk-image" style="top:0; left:0; right:0; bottom:0; border-radius:0; z-index:0;"></div>
           <div class="tk-zone" style="top:14%; right:5%; width:36%; height:26%; background:rgba(20,20,24,.9);"><span class="tk-label" style="color:#fff; font-size:7.5px;">Coach dashboard card</span></div>
           <div class="tk-zone" style="bottom:5%; height:20%; background:rgba(0,0,0,.72); flex-direction:column; z-index:1;"><span class="tk-label" style="color:var(--ts-blue); font-size:9px;">Free, Forever. Built to Scale.</span></div>
         </div><p class="tk-caption"><b>1080&times;1080</b> &middot; coach portrait</p></div>
-        <div class="tk-unit" style="--accent:var(--ts-blue);"><div class="tk-canvas r-portrait">
+        <div class="tk-unit" data-subject-item="1" style="--accent:var(--ts-blue);"><div class="tk-canvas r-portrait">
           <div class="tk-zone tk-logo" style="top:3%; left:4%; right:auto; width:30%; height:4.5%;"><span class="tk-label">Logo</span></div>
           <div class="tk-zone tk-image" style="top:0; left:0; right:0; bottom:0; border-radius:0; z-index:0;"></div>
           <div class="tk-zone" style="top:10%; left:5%; right:5%; height:20%; background:rgba(20,20,24,.9);"><span class="tk-label" style="color:#fff; font-size:7.5px;">Coach dashboard card</span></div>
           <div class="tk-zone" style="bottom:4%; height:16%; background:rgba(0,0,0,.72); flex-direction:column; z-index:1;"><span class="tk-label" style="color:var(--ts-blue); font-size:8px;">Free, Forever. Built to Scale.</span></div>
         </div><p class="tk-caption"><b>1080&times;1350</b> &middot; coach portrait</p></div>
-        <div class="tk-unit" style="--accent:var(--ts-blue);"><div class="tk-canvas r-story">
+        <div class="tk-unit" data-subject-item="2" style="--accent:var(--ts-blue);"><div class="tk-canvas r-story">
           <div class="tk-zone tk-logo" style="top:3%; left:5%; right:auto; width:34%; height:3.5%;"><span class="tk-label">Logo</span></div>
           <div class="tk-zone tk-image" style="top:0; left:0; right:0; bottom:0; border-radius:0; z-index:0;"></div>
           <div class="tk-zone" style="top:38%; right:6%; width:36%; height:20%; background:rgba(20,20,24,.9);"><span class="tk-label" style="color:#fff; font-size:7px;">Admin dashboard card</span></div>
@@ -2504,10 +2537,11 @@
         </div><p class="tk-caption"><b>1080&times;1920</b> &middot; AD/institution portrait</p></div>
       </div>
       <details class="option-detail"><summary>Prompts &amp; layout notes<span class="toggle">+</span></summary><div class="option-detail-body">
+      <p class="option-c-note">The square/portrait ratios are the coach version; the 9:16 story ratio is the AD/institution companion &mdash; each toggles with "Designing for" above.</p>
       <div class="prompt-row">
-        <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic photo of a South Asian male tennis coach in business-casual attire standing in a modern office, arms relaxed, confident posture, cool blue institutional lighting, editorial premium-SaaS photography style, filling the entire frame edge to edge. Leave a clear empty panel in the upper-right quadrant for a dashboard card overlay, and a dark semi-transparent band across the bottom for headline text. Square 1:1 format. No text, no logos, no UI elements.</p></details>
-        <details class="prompt"><summary>1080&times;1350<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic coach-portrait photo, same cool blue lighting, full-bleed. Reframe for a taller 4:5 canvas: empty panel for a card overlay in the upper third, dark band at the very bottom for headline. No text, no logos, no UI elements.</p></details>
-        <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic photo of a Black female athletic director with natural hair, in business-casual attire, in an institutional office setting, standing near a desk, cool blue lighting, editorial premium-office photography style. Full-bleed vertical composition. Leave an empty panel mid-frame for an admin dashboard card overlay, and a dark band at the bottom for headline and CTA. No text, no logos, no UI elements, face not clearly identifiable.</p></details>
+        <details class="prompt" data-subject-item="1"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic photo of a South Asian male tennis coach in business-casual attire standing in a modern office, arms relaxed, confident posture, cool blue institutional lighting, editorial premium-SaaS photography style, filling the entire frame edge to edge. Leave a clear empty panel in the upper-right quadrant for a dashboard card overlay, and a dark semi-transparent band across the bottom for headline text. Square 1:1 format. No text, no logos, no UI elements.</p></details>
+        <details class="prompt" data-subject-item="1"><summary>1080&times;1350<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic coach-portrait photo, same cool blue lighting, full-bleed. Reframe for a taller 4:5 canvas: empty panel for a card overlay in the upper third, dark band at the very bottom for headline. No text, no logos, no UI elements.</p></details>
+        <details class="prompt" data-subject-item="2"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic photo of a Black female athletic director with natural hair, in business-casual attire, in an institutional office setting, standing near a desk, cool blue lighting, editorial premium-office photography style. Full-bleed vertical composition. Leave an empty panel mid-frame for an admin dashboard card overlay, and a dark band at the bottom for headline and CTA. No text, no logos, no UI elements, face not clearly identifiable.</p></details>
       </div>
       <p class="comp-note">Compositing note: the real coach or admin dashboard screenshot drops into the reserved card panel &mdash; never fabricate the UI. Reskin guide: see the concept cards above &mdash; swap sport, gender, and ethnicity for both figures each time this recurs.</p>
       <p class="logo-note"><b>Logo:</b> top-left corner across all three ratios, scaling down slightly as the canvas gets taller.</p>
@@ -2828,6 +2862,15 @@
     });
     group.querySelectorAll('.design-option').forEach(function(el){
       el.classList.toggle('tab-active', el.getAttribute('data-option') === option);
+    });
+  }
+
+  function showSubjectTab(monthId, subject){
+    var group = document.getElementById(monthId + '-options');
+    if(!group) return;
+    group.setAttribute('data-active-subject', subject);
+    group.querySelectorAll('.subject-tab').forEach(function(btn){
+      btn.classList.toggle('active', btn.getAttribute('data-subject') === subject);
     });
   }
 
