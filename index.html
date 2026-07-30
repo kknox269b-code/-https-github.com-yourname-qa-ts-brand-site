@@ -1,3 +1,4 @@
+<meta charset="utf-8">
 <title>Quarter Athletic — From a Quarter to a Standard</title>
 <style>
   /* ===== Fluent 2 design tokens (light/dark) ===== */
@@ -312,6 +313,9 @@
   .chosen-note{font-size:11.5px; color:var(--fg3); font-weight:400; display:none;}
   .chosen-note b{color:var(--accent); font-weight:600;}
   .month-has-selection .chosen-note{display:block;}
+  .active-layout-note{font-size:12px; color:var(--fg3); margin:-6px 0 16px; font-weight:400;}
+  .active-layout-note a{color:var(--accent); font-weight:600; text-decoration:none;}
+  .active-layout-note a:hover{text-decoration:underline;}
 
   /* ===== month section labels (scannable structure inside each month) ===== */
   .month-label{font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:var(--fg3); margin:30px 0 10px; padding-top:18px; border-top:1px solid var(--stroke2);}
@@ -1608,6 +1612,7 @@
       </div>
 
       <p class="month-label">The Concept</p>
+      <p class="active-layout-note" id="t1-active-layout"></p>
       <div class="hero-post">
         <p class="hp-label">Flagship ad &middot; runs in both gold and blue versions</p>
         <h4 class="hp-headline">Real Recruiting. No Noise.</h4>
@@ -1861,6 +1866,7 @@
       </div>
 
       <p class="month-label">The Concept</p>
+      <p class="active-layout-note" id="t2-active-layout"></p>
       <div class="hero-post">
         <p class="hp-label">Flagship ad &middot; Hero Statement</p>
         <h4 class="hp-headline">See Why It Matched.</h4>
@@ -2113,6 +2119,7 @@
       </div>
 
       <p class="month-label">The Concept</p>
+      <p class="active-layout-note" id="t3-active-layout"></p>
       <div class="hero-post">
         <p class="hp-label">Flagship ad &middot; Hero Statement</p>
         <h4 class="hp-headline">More Than a Profile.</h4>
@@ -2367,6 +2374,7 @@
       </div>
 
       <p class="month-label">The Concept</p>
+      <p class="active-layout-note" id="t4-active-layout"></p>
       <div class="hero-post">
         <p class="hp-label">Flagship ad &middot; Hero Statement</p>
         <h4 class="hp-headline">Free, Forever. Built to Scale.</h4>
@@ -2623,6 +2631,7 @@
       </div>
 
       <p class="month-label">The Concept</p>
+      <p class="active-layout-note" id="t5-active-layout"></p>
       <div class="hero-post">
         <p class="hp-label">Flagship ad &middot; Hero Statement</p>
         <h4 class="hp-headline">What Recruiting Should Have Been.</h4>
@@ -2908,6 +2917,19 @@
     group.classList.toggle('month-has-selection', !!chosen);
     var note = group.querySelector('.chosen-note b');
     if(note) note.textContent = chosen ? ('Option ' + chosen) : '';
+
+    var activeLayoutNote = document.getElementById(monthId + '-active-layout');
+    if(activeLayoutNote){
+      var activeOption = chosen || 'A';
+      var tabNameEl = group.querySelector('.option-tab[data-option="' + activeOption + '"] .tab-name');
+      var name = tabNameEl ? tabNameEl.textContent : '';
+      var linkText = 'Option ' + activeOption + (name ? (' — ' + name) : '');
+      if(chosen){
+        activeLayoutNote.innerHTML = 'Prompts below match your chosen layout: <a href="#' + monthId + '-options" onclick="showOptionTab(\'' + monthId + '\',\'' + activeOption + '\')">' + linkText + '</a>. Change it in Choose a Layout.';
+      }else{
+        activeLayoutNote.innerHTML = 'Prompts below are the default layout, <a href="#' + monthId + '-options" onclick="showOptionTab(\'' + monthId + '\',\'' + activeOption + '\')">' + linkText + '</a>. Pick a different one in Choose a Layout if you want another direction.';
+      }
+    }
   }
 
   function initAllSelections(){
