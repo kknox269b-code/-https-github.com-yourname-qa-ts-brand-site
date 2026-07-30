@@ -511,7 +511,7 @@
       </div>
 
       <p class="month-label">Choose a Layout</p>
-      <p class="section-sub" style="margin:0 0 16px;">Tap a tab to preview that direction &mdash; only one shows at a time. Its prompts stay tucked behind a toggle until you want them.</p>
+      <p class="section-sub" style="margin:0 0 16px;">Tap a tab to preview a direction.</p>
       <div class="design-options-group" id="m1-options">
       <div class="option-tabs"><button class="option-tab" data-option="A" onclick="showOptionTab('m1','A')">Option A <span class="tab-name">Statement</span><span class="tab-check">&#10003;</span></button><button class="option-tab" data-option="B" onclick="showOptionTab('m1','B')">Option B <span class="tab-name">Split</span><span class="tab-check">&#10003;</span></button><button class="option-tab" data-option="C" onclick="showOptionTab('m1','C')">Option C <span class="tab-name">Diagonal Slice, dynamic</span><span class="tab-check">&#10003;</span></button></div>
       <div class="design-option" data-option="A">
@@ -537,15 +537,14 @@
         </div><p class="tk-caption"><b>1080&times;1920</b></p></div>
       </div>
       <details class="option-detail"><summary>Prompts &amp; layout notes<span class="toggle">+</span></summary><div class="option-detail-body">
-      <p class="option-c-note">This is the concept's original composition &mdash; same prompt set as the concept card above, reproduced here so everything about this layout lives in one place.</p>
       <div class="prompt-row">
         <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic 3D render of a translucent grey ghost-mannequin athlete in a rugby kit, walking toward camera through a stadium tunnel, low and centered in frame. The tunnel lighting transitions across the frame — grainy, warm, slightly desaturated sodium-vapor light on the left side fading into clean, cool, modern stadium light on the right, as if the tunnel itself changes era halfway through. A single quarter coin rests on the tunnel floor in the immediate foreground, slightly out of focus, catching a glint of the modern light. Leave a wide empty band across the bottom third of the frame, and a narrow empty strip at the very top for a logo. Square 1:1 format. No text, no logos, no crests.</p></details>
         <details class="prompt"><summary>1080&times;1350<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic ghost-mannequin athlete walking through the same grain-to-clean lit tunnel, same coin on the ground in the foreground. Reframe for a taller 4:5 canvas: more headroom above the mannequin so the tunnel's ceiling and lighting rig are visible, mannequin positioned in the lower half of the frame. Deepen the empty band across the bottom for a headline and tagline stacked. Narrow empty strip at the top for a logo. No text, no logos, no crests.</p></details>
         <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic ghost-mannequin athlete and tunnel concept, grain-to-clean lighting transition. Reframe for a tall 9:16 canvas: the tunnel recedes further into the background, mannequin smaller and centered in the middle third of the frame to emphasize the tunnel's length and the passage from old light to new. The coin is larger and more prominent in the extreme foreground, bottom of frame, slightly blurred. Leave a deep empty band across the very bottom for a headline, tagline, and CTA stacked, plus a narrow strip at the top for a logo. No text, no logos, no crests.</p></details>
       </div>
       <p class="comp-note">Compositing note: QA wordmark goes in the reserved top strip on all three ratios &mdash; never let the AI attempt the logo itself.</p>
-      <p class="logo-note"><b>Logo:</b> top-left corner across all three ratios, scaling down slightly as the canvas gets taller.</p>
-      <p class="text-note"><b>Text boxes:</b> real box &mdash; the bottom band (white, ~94% opacity) is an actual panel across all three ratios; keep it behind both the headline and subtext in the final composite.</p>
+      <p class="logo-note"><b>Logo:</b> top-left, scaling down on taller ratios.</p>
+      <p class="text-note"><b>Text boxes:</b> real box &mdash; bottom band (white, ~94% opacity), keep it behind the headline/subtext.</p>
 
       </div></details>
       </div>
@@ -582,8 +581,8 @@
         <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic ghost-mannequin and coin in the tunnel. Reframe for a tall 9:16 canvas: mannequin fills the top 42% of the frame, full width. Leave a deep lower portion of the frame as the soft tunnel wall for headline, tagline, and CTA stacked. No text, no logos, no crests.</p></details>
       </div>
       <p class="comp-note">Compositing note: same reserved-logo and coin rules as Option A &mdash; QA wordmark composited in afterward, never AI-generated.</p>
-      <p class="logo-note"><b>Logo:</b> top-right corner on the square and portrait image half; shifts to top-left on the 9:16 story crop, where the image band sits full-width at the top instead of on the left.</p>
-      <p class="text-note"><b>Text boxes:</b> mixed &mdash; the headline ("It Started With a Quarter.") has no background and sits directly on the out-of-focus tunnel wall, that's grid-only. The subtext line below it does have a real panel (white, ~50% opacity) &mdash; keep that one. Same split across all three ratios.</p>
+      <p class="logo-note"><b>Logo:</b> top-right on square/portrait; shifts to top-left on the 9:16 crop (image band goes full-width).</p>
+      <p class="text-note"><b>Text boxes:</b> mixed &mdash; headline is grid-only (sits on the tunnel wall); subtext below has a real white ~50% panel. Same split across ratios.</p>
       
       </div></details>
       </div>
@@ -624,8 +623,8 @@
         <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic ghost-mannequin and tunnel. Reframe for a tall 9:16 canvas: steepen the diagonal further so the wedge's lower point sits about 48% down the left edge, giving the solid navy triangle roughly half the frame for headline, tagline, and CTA. No text, no logos, no crests.</p></details>
       </div>
       <p class="comp-note">Compositing note: the rotated coin badge and QA logo are composited in post at the reserved positions &mdash; never let the AI attempt either.</p>
-      <p class="logo-note"><b>Logo:</b> top-left corner on the upper wedge (the render side), across all three ratios &mdash; keep it clear of the diagonal seam and the rotated coin badge below it.</p>
-      <p class="text-note"><b>Text boxes:</b> grid only &mdash; the headline has no separate panel; it sits directly on the solid accent-color wedge (that wedge color itself is real and part of the design, just no extra box behind the type).</p>
+      <p class="logo-note"><b>Logo:</b> top-left on the upper wedge, clear of the seam and coin badge.</p>
+      <p class="text-note"><b>Text boxes:</b> grid only &mdash; headline sits directly on the accent-color wedge, no separate panel.</p>
       
       </div></details>
       </div>
@@ -703,7 +702,7 @@
       </div>
 
       <p class="month-label">Choose a Layout</p>
-      <p class="section-sub" style="margin:0 0 16px;">Tap a tab to preview that direction &mdash; only one shows at a time. Its prompts stay tucked behind a toggle until you want them.</p>
+      <p class="section-sub" style="margin:0 0 16px;">Tap a tab to preview a direction.</p>
       <div class="design-options-group" id="m2-options">
       <div class="option-tabs"><button class="option-tab" data-option="A" onclick="showOptionTab('m2','A')">Option A <span class="tab-name">Split</span><span class="tab-check">&#10003;</span></button><button class="option-tab" data-option="B" onclick="showOptionTab('m2','B')">Option B <span class="tab-name">Statement</span><span class="tab-check">&#10003;</span></button><button class="option-tab" data-option="C" onclick="showOptionTab('m2','C')">Option C <span class="tab-name">Card Stack, dynamic</span><span class="tab-check">&#10003;</span></button></div>
       <div class="design-option" data-option="A">
@@ -732,7 +731,6 @@
         </div><p class="tk-caption"><b>1080&times;1920</b></p></div>
       </div>
       <details class="option-detail"><summary>Prompts &amp; layout notes<span class="toggle">+</span></summary><div class="option-detail-body">
-      <p class="option-c-note">This is the concept's original composition &mdash; same prompt sets as the concept cards above, reproduced here so everything about this layout lives in one place.</p>
       <p style="font-weight:700; font-size:11px; text-transform:uppercase; letter-spacing:.03em; margin:14px 0 6px; color:var(--fg3);">Rugby</p>
       <div class="prompt-row">
         <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic overhead flat-lay of fabric swatches, a colored pencil, and a rough kit sketch on butcher paper, arranged on the left half of the frame on a wood studio table, soft natural window light. On the right half of the same frame, a photorealistic 3D ghost-mannequin torso in the finished solid-color rugby kit, lit to match the same soft natural light, as if the sketch and the finished product share the same table. Leave a narrow empty band across the bottom of the frame for a headline. Square 1:1 format. No text, no logos, no crests, no legible sketch labeling.</p></details>
@@ -747,8 +745,8 @@
         <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic concept, reframed as a tall 9:16 vertical stack: stick-stringing hands at the very top third, a close detail of the finished strung pocket in the middle third, the full-body ghost-mannequin lacrosse athlete in the lower third, all under matched soft natural light as one continuous surface. Leave a narrow empty band between each section for a small headline element, and a deeper empty band at the very bottom for a tagline and CTA. No text, no logos, no crests, no visible brand marks on the stick.</p></details>
       </div>
       <p class="comp-note">Compositing note: reserve blank space on the mannequin's chest for the QA logo &mdash; same rule, no exceptions for a new sport.</p>
-      <p class="logo-note"><b>Logo:</b> top-right corner on the square and portrait image half; shifts to top-left on the 9:16 story crop, where the image band runs full-width at the top instead of on the left.</p>
-      <p class="text-note"><b>Text boxes:</b> mixed &mdash; the headline ("Your Program. Your Kit.") has no background and sits directly on the text-panel side of the split, that's grid-only. The line beneath it does have a real panel (white, ~50% opacity) &mdash; keep that one. Consistent across all three ratios.</p>
+      <p class="logo-note"><b>Logo:</b> top-right on square/portrait; shifts to top-left on the 9:16 crop (image band goes full-width).</p>
+      <p class="text-note"><b>Text boxes:</b> mixed &mdash; headline is grid-only (sits on the text-panel side); the line beneath has a real white ~50% panel. Consistent across ratios.</p>
       
       </div></details>
       </div>
@@ -782,8 +780,8 @@
         <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic ghost-mannequin torso. Reframe for a tall 9:16 canvas: mannequin centered in the middle third of the frame. Leave a deep empty band across the very bottom for headline, tagline, and CTA stacked. No text, no logos, no crests.</p></details>
       </div>
       <p class="comp-note">Compositing note: reserve blank space on the mannequin's chest for the QA logo, same rule as every other concept.</p>
-      <p class="logo-note"><b>Logo:</b> top-left corner across all three ratios, scaling down slightly as the canvas gets taller.</p>
-      <p class="text-note"><b>Text boxes:</b> real box &mdash; the bottom band (white, ~94% opacity) is an actual panel across all three ratios; keep it behind both the headline and subtext in the final composite.</p>
+      <p class="logo-note"><b>Logo:</b> top-left, scaling down on taller ratios.</p>
+      <p class="text-note"><b>Text boxes:</b> real box &mdash; bottom band (white, ~94% opacity), keep it behind the headline/subtext.</p>
       
       </div></details>
       </div>
@@ -824,8 +822,8 @@
         <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic fanned card arrangement. Reframe for a tall 9:16 canvas: the fan sits in the lower half of the frame. Leave a deep empty band across the top for a headline, tagline, and CTA stacked. No text, no logos, no crests, no legible labeling.</p></details>
       </div>
       <p class="comp-note">Compositing note: the finished jersey card should show blank chest space for the QA logo &mdash; composited afterward, never AI-generated.</p>
-      <p class="logo-note"><b>Logo:</b> top-left corner across all three ratios, sitting above the fanned card stack, clear of every card's rotation.</p>
-      <p class="text-note"><b>Text boxes:</b> grid only &mdash; the headline floats directly above the card fan with no panel behind it. The "Swatch"/"Sketch"/"Final Kit" labels inside the fanned cards are just planning labels identifying which physical item goes in each card, not copy that appears in the ad.</p>
+      <p class="logo-note"><b>Logo:</b> top-left, above the card fan, clear of rotation.</p>
+      <p class="text-note"><b>Text boxes:</b> grid only &mdash; headline floats above the fan, no panel. Card labels ("Swatch"/"Sketch"/"Final Kit") are planning labels only, not ad copy.</p>
       
       </div></details>
       </div>
@@ -916,7 +914,7 @@
       </div>
 
       <p class="month-label">Choose a Layout</p>
-      <p class="section-sub" style="margin:0 0 16px;">Tap a tab to preview that direction &mdash; only one shows at a time. Its prompts stay tucked behind a toggle until you want them.</p>
+      <p class="section-sub" style="margin:0 0 16px;">Tap a tab to preview a direction.</p>
       <div class="design-options-group" id="m3-options">
       <div class="option-tabs"><button class="option-tab" data-option="A" onclick="showOptionTab('m3','A')">Option A <span class="tab-name">Type-Led, giant centered stat</span><span class="tab-check">&#10003;</span></button><button class="option-tab" data-option="B" onclick="showOptionTab('m3','B')">Option B <span class="tab-name">Statement, stat folded into the band</span><span class="tab-check">&#10003;</span></button><button class="option-tab" data-option="C" onclick="showOptionTab('m3','C')">Option C <span class="tab-name">Radial Medallion, dynamic</span><span class="tab-check">&#10003;</span></button></div>
       <p class="option-c-note" style="margin-bottom:16px;">Give Back is a type-led concept with no photographic subject &mdash; all three options below can reuse the exact same turf-texture base render from the flagship ad above. What changes between them is purely how the type is composited on top, not a new AI generation.</p>
@@ -954,8 +952,8 @@
         <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic sunlit turf texture and soft golden spotlight concept. Reframe for a tall 9:16 canvas: spotlight positioned in the upper-middle of the frame, a long, quiet, softly shadowed empty expanse of turf filling the lower half of the frame for a large stacked headline, tagline, and CTA. No text, no logos, no numbers, no graphics.</p></details>
       </div>
       <p class="comp-note">Compositing note: this is the one concept built around type, not imagery &mdash; the &ldquo;10%&rdquo; figure is set directly in the reserved spotlight area in post, large, in Inter.</p>
-      <p class="logo-note"><b>Logo:</b> top-left corner across all three ratios, scaling down slightly as the canvas gets taller &mdash; keep it clear of the centered &ldquo;10%&rdquo; stat panel below it.</p>
-      <p class="text-note"><b>Text boxes:</b> mixed &mdash; the big centered &ldquo;10%&rdquo; sits on a real panel (white, ~85% opacity), keep that one behind it. The &ldquo;Back. Every Sale.&rdquo; line beneath has no background &mdash; that's grid-only, direct on the photo.</p>
+      <p class="logo-note"><b>Logo:</b> top-left, scaling down on taller ratios, clear of the centered "10%" panel.</p>
+      <p class="text-note"><b>Text boxes:</b> mixed &mdash; the "10%" sits on a real white ~85% panel; the "Back. Every Sale." line below is grid-only, direct on the photo.</p>
       
       </div></details>
       </div>
@@ -984,8 +982,8 @@
       </div>
       <details class="option-detail"><summary>Prompts &amp; layout notes<span class="toggle">+</span></summary><div class="option-detail-body">
       <p class="option-c-note">Same flagship turf-texture render as Option A &mdash; only the type treatment changes, headline and tagline stacked in a bottom band instead of one giant centered number.</p>
-      <p class="logo-note"><b>Logo:</b> top-left corner across all three ratios, scaling down slightly as the canvas gets taller.</p>
-      <p class="text-note"><b>Text boxes:</b> real box &mdash; the bottom band (white, ~94% opacity) is an actual panel across all three ratios; keep it behind both the headline and subtext in the final composite.</p>
+      <p class="logo-note"><b>Logo:</b> top-left, scaling down on taller ratios.</p>
+      <p class="text-note"><b>Text boxes:</b> real box &mdash; bottom band (white, ~94% opacity), keep it behind the headline/subtext.</p>
       
       </div></details>
       </div>
@@ -1018,8 +1016,8 @@
       </div>
       <details class="option-detail"><summary>Prompts &amp; layout notes<span class="toggle">+</span></summary><div class="option-detail-body">
       <p class="option-c-note">The sunburst is a conic-gradient overlay applied in post over the same flagship render &mdash; still no new AI generation needed.</p>
-      <p class="logo-note"><b>Logo:</b> top-left corner across all three ratios, kept clear of the radial sunburst pattern and the centered medallion.</p>
-      <p class="text-note"><b>Text boxes:</b> mixed &mdash; the round medallion holding &ldquo;10%&rdquo; is a real solid white disc (painted directly, not a wireframe placeholder), keep it. The &ldquo;Back. Every Sale.&rdquo; line beneath has no background &mdash; grid-only, sits on the sunburst pattern directly.</p>
+      <p class="logo-note"><b>Logo:</b> top-left, clear of the sunburst and medallion.</p>
+      <p class="text-note"><b>Text boxes:</b> mixed &mdash; the "10%" medallion is a real solid white disc, keep it. "Back. Every Sale." below is grid-only, on the sunburst directly.</p>
       
       </div></details>
       </div>
@@ -1098,7 +1096,7 @@
       </div>
 
       <p class="month-label">Choose a Layout</p>
-      <p class="section-sub" style="margin:0 0 16px;">Tap a tab to preview that direction &mdash; only one shows at a time. Its prompts stay tucked behind a toggle until you want them.</p>
+      <p class="section-sub" style="margin:0 0 16px;">Tap a tab to preview a direction.</p>
       <div class="design-options-group" id="m4-options">
       <div class="option-tabs"><button class="option-tab" data-option="A" onclick="showOptionTab('m4','A')">Option A <span class="tab-name">Statement, multi-figure variant</span><span class="tab-check">&#10003;</span></button><button class="option-tab" data-option="B" onclick="showOptionTab('m4','B')">Option B <span class="tab-name">Split, single-figure</span><span class="tab-check">&#10003;</span></button><button class="option-tab" data-option="C" onclick="showOptionTab('m4','C')">Option C <span class="tab-name">Ascending Diagonal, dynamic</span><span class="tab-check">&#10003;</span></button></div>
       <div class="design-option" data-option="A">
@@ -1126,7 +1124,6 @@
         </div><p class="tk-caption"><b>1080&times;1920</b></p></div>
       </div>
       <details class="option-detail"><summary>Prompts &amp; layout notes<span class="toggle">+</span></summary><div class="option-detail-body">
-      <p class="option-c-note">This is the concept's original composition &mdash; same prompt set as the concept card above, reproduced here so everything about this layout lives in one place.</p>
       <div class="prompt-row">
         <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic 3D render of two translucent grey ghost-mannequin rugby athletes side by side in the same frame, both in matching solid navy kits, separated by a thin vertical line of light down the center — the mannequin on the left noticeably smaller/younger build, the one on the right an adult build, both in the same dynamic ready stance, lit with the same soft stadium light on a turf field so they read as one continuous scene, not two separate photos. Leave a narrow empty band across the bottom of the frame for a headline. Square 1:1 format. No text, no logos, no crests.</p></details>
         <details class="prompt"><summary>1080&times;1350<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic two-mannequin concept, younger build and adult build in matching kits under matched stadium light. Reframe for a taller 4:5 canvas as a vertical stack instead of side-by-side: younger mannequin in the upper half, adult mannequin in the lower half, separated by a thin horizontal line of light. Leave a narrow empty band between the two for a headline. No text, no logos, no crests.</p></details>
@@ -1140,8 +1137,8 @@
         <tr><td>Lacrosse</td><td>&ldquo;matching solid-color lacrosse jerseys, shoulder pads, and helmets with the visor down&rdquo;</td></tr>
         <tr><td>Baseball</td><td>&ldquo;matching solid-color baseball uniforms and caps, one holding a bat at rest&rdquo;</td></tr>
       </table>
-      <p class="logo-note"><b>Logo:</b> top-left corner across all three ratios, scaling down slightly as the canvas gets taller.</p>
-      <p class="text-note"><b>Text boxes:</b> real box &mdash; the bottom band (white, ~94% opacity) is an actual panel across all three ratios; keep it behind both the headline and subtext in the final composite.</p>
+      <p class="logo-note"><b>Logo:</b> top-left, scaling down on taller ratios.</p>
+      <p class="text-note"><b>Text boxes:</b> real box &mdash; bottom band (white, ~94% opacity), keep it behind the headline/subtext.</p>
       
       </div></details>
       </div>
@@ -1178,8 +1175,8 @@
         <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic single ghost-mannequin athlete. Reframe for a tall 9:16 canvas: mannequin fills the top 42% of the frame, full width. Leave a deep lower portion for headline, tagline, and CTA stacked. No text, no logos, no crests.</p></details>
       </div>
       <p class="comp-note">Compositing note: same reskin guide as the concept card above applies &mdash; swap the kit description to lacrosse pads/helmet or baseball uniform/cap as needed.</p>
-      <p class="logo-note"><b>Logo:</b> top-right corner on the square and portrait image half; shifts to top-left on the 9:16 story crop, where the image band runs full-width at the top instead of on the left.</p>
-      <p class="text-note"><b>Text boxes:</b> mixed &mdash; the headline ("Not a Vendor. A Partner.") has no background and sits directly on the out-of-focus stadium backdrop, that's grid-only. The line beneath it does have a real panel (white, ~50% opacity) &mdash; keep that one. Same split across all three ratios.</p>
+      <p class="logo-note"><b>Logo:</b> top-right on square/portrait; shifts to top-left on the 9:16 crop (image band goes full-width).</p>
+      <p class="text-note"><b>Text boxes:</b> mixed &mdash; headline is grid-only (sits on the stadium backdrop); the line beneath has a real white ~50% panel. Same split across ratios.</p>
       
       </div></details>
       </div>
@@ -1220,8 +1217,8 @@
         <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic three-mannequin ascending-diagonal concept. Reframe for a tall 9:16 canvas: lengthen the diagonal so the youth figure sits low and the adult figure nearly reaches the top of the frame. Leave a narrow empty band across the very top for a headline, tagline, and CTA. No text, no logos, no crests.</p></details>
       </div>
       <p class="comp-note">Compositing note: leave chest space blank on every mannequin for the QA logo, same rule as every other concept, no exceptions for multi-figure compositions.</p>
-      <p class="logo-note"><b>Logo:</b> top-right corner on the square and portrait ratios; shifts to top-left on the 9:16 story crop &mdash; keep it clear of the ascending diagonal card stack in every ratio.</p>
-      <p class="text-note"><b>Text boxes:</b> grid only &mdash; the headline floats at the top with no panel behind it. The Youth/Teen/Adult labels inside the diagonal cards are planning labels identifying which mannequin size goes where, not copy that appears in the ad.</p>
+      <p class="logo-note"><b>Logo:</b> top-right on square/portrait; shifts to top-left on the 9:16 crop, clear of the diagonal card stack.</p>
+      <p class="text-note"><b>Text boxes:</b> grid only &mdash; headline floats at top, no panel. Youth/Teen/Adult card labels are planning labels only, not ad copy.</p>
       
       </div></details>
       </div>
@@ -1300,7 +1297,7 @@
       </div>
 
       <p class="month-label">Choose a Layout</p>
-      <p class="section-sub" style="margin:0 0 16px;">Tap a tab to preview that direction &mdash; only one shows at a time. Its prompts stay tucked behind a toggle until you want them.</p>
+      <p class="section-sub" style="margin:0 0 16px;">Tap a tab to preview a direction.</p>
       <div class="design-options-group" id="m5-options">
       <div class="option-tabs"><button class="option-tab" data-option="A" onclick="showOptionTab('m5','A')">Option A <span class="tab-name">Statement, wide/architectural</span><span class="tab-check">&#10003;</span></button><button class="option-tab" data-option="B" onclick="showOptionTab('m5','B')">Option B <span class="tab-name">Split, grounded alternative</span><span class="tab-check">&#10003;</span></button><button class="option-tab" data-option="C" onclick="showOptionTab('m5','C')">Option C <span class="tab-name">Fractured Mosaic, dynamic</span><span class="tab-check">&#10003;</span></button></div>
       <div class="design-option" data-option="A">
@@ -1324,15 +1321,14 @@
         </div><p class="tk-caption"><b>1080&times;1920</b><br>Deep top band, tiny subject</p></div>
       </div>
       <details class="option-detail"><summary>Prompts &amp; layout notes<span class="toggle">+</span></summary><div class="option-detail-body">
-      <p class="option-c-note">This is the concept's original composition &mdash; same prompt set as the concept card above, reproduced here so everything about this layout lives in one place.</p>
       <div class="prompt-row">
         <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic wide shot of a translucent grey ghost-mannequin rugby athlete standing small and centered within a vast, symmetric industrial space that reads as part manufacturing floor, part stadium concourse — exposed structural beams, repeating overhead lighting rigs receding in a grid toward the mannequin, cool even light, minimal and architectural, sports-brand aesthetic. The mannequin occupies a small fraction of the frame to emphasize the scale of the space around it. Leave a wide empty band across the top of the frame for a headline, and a narrower band across the bottom for a tagline and CTA. Square 1:1 format. No text, no logos, no crests.</p></details>
         <details class="prompt"><summary>1080&times;1350<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic architectural concept — small mannequin within a vast symmetric structural grid, cool even light. Reframe for a taller 4:5 canvas: emphasize the vertical height of the space, structural beams and lighting rigs extending further up the frame, mannequin positioned in the lower third. Leave a wide empty band across the top half of the frame for a headline and tagline stacked. No text, no logos, no crests.</p></details>
         <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic architectural concept, reframed as an extreme tall 9:16 canvas looking up and along the structural grid — beams and lighting rigs stretching far up the frame, mannequin tiny at the very bottom of the frame for scale. Leave a very deep empty vertical space above the mannequin for a stacked headline, tagline, and CTA. No text, no logos, no crests.</p></details>
       </div>
       <p class="comp-note">Compositing note: leave chest space blank for the QA logo; confirm before co-branding Print Athletic or Generational Rugby marks into this placement &mdash; don't assume.</p>
-      <p class="logo-note"><b>Logo:</b> no dedicated corner zone here &mdash; the full-width text band(s) leave no clear space. On the square crop, tuck a small logo bottom-left of the lower copy band; on portrait and story, where one deep band covers most of the frame, place it small in that band's bottom-left corner instead of on the photo itself.</p>
-      <p class="text-note"><b>Text boxes:</b> real box &mdash; every text line here sits on an actual panel. Square crop: two real bands, a white ~94% opacity band for the headline and a lighter white ~70% opacity band for the subtext. Portrait and story crops: one deep white ~94% opacity band holds just the headline (no separate subtext band at those ratios).</p>
+      <p class="logo-note"><b>Logo:</b> no dedicated corner &mdash; full-width bands leave no clear space. Tuck it small, bottom-left of the copy band, on every ratio.</p>
+      <p class="text-note"><b>Text boxes:</b> real box &mdash; square crop has two bands (white ~94% for headline, ~70% for subtext); portrait/story have one deep ~94% band, headline only.</p>
       
       </div></details>
       </div>
@@ -1369,8 +1365,8 @@
         <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic architectural space and small mannequin. Reframe for a tall 9:16 canvas: mannequin and structural grid fill the top 42% of the frame. Leave a deep lower portion for headline, tagline, and CTA stacked. No text, no logos, no crests.</p></details>
       </div>
       <p class="comp-note">Compositing note: leave chest space blank for the QA logo; confirm before co-branding Print Athletic or Generational Rugby marks &mdash; don't assume.</p>
-      <p class="logo-note"><b>Logo:</b> top-right corner on the square and portrait image half; shifts to top-left on the 9:16 story crop, where the image band runs full-width at the top instead of on the left.</p>
-      <p class="text-note"><b>Text boxes:</b> mixed &mdash; the headline ("More Than a Jersey Company.") has no background and sits directly on the empty architectural space, that's grid-only. The line beneath it does have a real panel (white, ~50% opacity) &mdash; keep that one. Same split across all three ratios.</p>
+      <p class="logo-note"><b>Logo:</b> top-right on square/portrait; shifts to top-left on the 9:16 crop (image band goes full-width).</p>
+      <p class="text-note"><b>Text boxes:</b> mixed &mdash; headline is grid-only (sits on the architectural space); the line beneath has a real white ~50% panel. Same split across ratios.</p>
       
       </div></details>
       </div>
@@ -1414,8 +1410,8 @@
         <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic architectural space and small mannequin. Reframe for a tall 9:16 canvas looking up along the structural grid, mannequin tiny at the bottom for scale. No text, no logos, no crests.</p></details>
       </div>
       <p class="comp-note">Compositing note: the fracture-panel seams and tint block are built in Canva/Photoshop from one clean render &mdash; not a separate AI generation per shard.</p>
-      <p class="logo-note"><b>Logo:</b> top-left corner across all three ratios, sitting on the solid accent-color shard so it stays legible against a flat field rather than a busy seam.</p>
-      <p class="text-note"><b>Text boxes:</b> real box &mdash; the headline sits on an actual white panel (~94% opacity) placed across the fracture seams so it reads cleanly regardless of which shard is behind it, consistent across all three ratios.</p>
+      <p class="logo-note"><b>Logo:</b> top-left, on the solid accent shard for legibility against the busy seams.</p>
+      <p class="text-note"><b>Text boxes:</b> real box &mdash; headline sits on a white ~94% panel across the fracture seams, consistent across ratios.</p>
       
       </div></details>
       </div>
@@ -1621,7 +1617,7 @@
           <details class="prompt"><summary>1080&times;1350<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic over-the-shoulder hands-and-phone moment, same Asian-American athlete in a basketball practice jersey, same warm gold desk-lamp light. Reframe for a taller 4:5 canvas: hands and phone fill the lower two-thirds of the frame, table surface and ID card visible above. Leave the phone screen empty for the card overlay, plus a narrow band at the very top for a headline. No text, no logos, no UI elements.</p></details>
           <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic over-the-shoulder hands-and-phone moment. Reframe for a tall 9:16 canvas: hands and phone centered in the middle third of the frame. Leave the phone screen empty for the card overlay, a narrow band at the top for a headline, and a deeper band at the very bottom for tagline and CTA. No text, no logos, no UI elements.</p></details>
         </div>
-        <p class="comp-note">Compositing note: place the real Verification process screen (the in-progress upload/review step, not the finished badge) on the phone &mdash; a different moment in the same flow as the weeks 1&ndash;2 asset. Reskin guide: swap the sleeve/gear detail + athlete each time this concept recurs (e.g. softball / Latina athlete, cross country / white athlete, wrestling / Black athlete) so hands-only shots still carry sport and representation variety.</p>
+        <p class="comp-note">Compositing note: place the real Verification process screen (in-progress upload/review, not the finished badge) on the phone &mdash; a different moment than the weeks 1&ndash;2 asset. Reskin guide: swap the sleeve/gear detail + athlete each recurrence (e.g. softball / Latina athlete).</p>
         <p class="cta-line">CTA: <b>JOIN AS ATHLETE</b></p>
       </div>
 
@@ -1631,11 +1627,11 @@
         <p class="concept-t">Every profile manually reviewed before you ever see it.</p>
         <p class="concept-visual"><b>Visual direction</b>Same trust message as the sideline concept, moved to a desk &mdash; a closer, quieter framing than the wide sideline portrait, cool blue evening light. Rotate this coach's sport, gender, and ethnicity month to month; see the reskin note below.</p>
         <div class="prompt-row">
-          <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic photo of a white female volleyball coach in a team polo seated at a desk reviewing a laptop in the evening, focused calm expression, cool blue ambient lighting from the screen and a nearby lamp, editorial sports-recruiting photography style. Coach positioned left-of-center. Leave a clear empty panel over the laptop screen for a UI card overlay. Square 1:1 format. No visible screen content, no text, no logos, no UI elements.</p></details>
+          <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic photo of a white female volleyball coach in a team polo seated at a desk reviewing a laptop in the evening, focused calm expression, cool blue ambient lighting from the screen and a nearby lamp, editorial sports-recruiting style. Coach positioned left-of-center. Leave a clear empty panel over the laptop screen for a UI card overlay. Square 1:1 format. No visible screen content, no text, no logos, no UI elements.</p></details>
           <details class="prompt"><summary>1080&times;1350<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic coach-at-desk scene, same cool-blue evening lighting. Reframe for a taller 4:5 canvas: coach and laptop fill the lower two-thirds of the frame. Leave a clear empty panel across the upper third for a headline, and keep the laptop screen empty for the card overlay. No visible screen content, no text, no logos, no UI elements.</p></details>
           <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic coach-at-desk scene. Reframe for a tall 9:16 canvas: coach and laptop centered in the middle third of the frame. Leave a deep empty band across the top for a card overlay plus headline, and a second empty band at the very bottom for tagline and CTA. No visible screen content, no text, no logos, no UI elements.</p></details>
         </div>
-        <p class="comp-note">Compositing note: place the real Verification card on the laptop screen &mdash; same asset family as weeks 1&ndash;2, different setting to keep the flight from feeling repeated. Reskin guide: swap sport, gender, and ethnicity each time this concept recurs (e.g. football / Black male coach, tennis / South Asian male coach, gymnastics / Latina coach) so the desk shot doesn't default to one look every cycle.</p>
+        <p class="comp-note">Compositing note: place the real Verification card on the laptop screen &mdash; same asset family as weeks 1&ndash;2, different setting. Reskin guide: swap sport, gender, and ethnicity each recurrence (e.g. football / Black male coach).</p>
         <p class="cta-line">CTA: <b>JOIN AS COACH &mdash; FREE</b></p>
       </div>
 
@@ -1659,7 +1655,7 @@
       </div>
 
       <p class="month-label">Choose a Layout</p>
-      <p class="section-sub" style="margin:0 0 16px;">Tap a tab to preview that direction &mdash; only one shows at a time. Its prompts stay tucked behind a toggle until you want them.</p>
+      <p class="section-sub" style="margin:0 0 16px;">Tap a tab to preview a direction.</p>
       <div class="design-options-group" id="t1-options" data-active-subject="1">
       <p class="subject-tabs-label">Designing for</p>
       <div class="subject-tabs"><button class="subject-tab active" data-subject="1" onclick="showSubjectTab('t1','1')">Athlete &middot; Track &amp; Field</button><button class="subject-tab" data-subject="2" onclick="showSubjectTab('t1','2')">Coach &middot; Soccer</button></div>
@@ -1690,11 +1686,11 @@
         </div><p class="tk-caption"><b>1080&times;1920</b> &middot; either accent</p></div>
       </div>
       <details class="option-detail"><summary>Prompts &amp; layout notes<span class="toggle">+</span></summary><div class="option-detail-body">
-      <p class="option-c-note">This is the concept's original composition &mdash; same prompt sets (both athlete and coach versions) as the concept cards above, reproduced here so everything about this layout lives in one place. Only the version matching "Designing for" above is shown; toggle it to see the other.</p>
+      <p class="option-c-note">Showing the version matching "Designing for" above &mdash; toggle it to see the other.</p>
       <div data-subject-item="1">
       <p style="font-weight:700; font-size:11px; text-transform:uppercase; letter-spacing:.03em; margin:14px 0 6px; color:var(--ts-gold);">Athlete version (gold)</p>
       <div class="prompt-row">
-        <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic photo of a young Black female student-athlete in track &amp; field competition wear, standing on a rubberized running track, calm confident expression looking slightly off-camera (not smiling-at-camera stock cliche), natural late-afternoon light with a warm gold rim light, editorial sports-lifestyle photography style. Athlete positioned in the left two-thirds of the frame. Leave a clear empty vertical panel on the right third of the frame for a card overlay. Square 1:1 format. No text, no logos, no UI elements.</p></details>
+        <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic photo of a young Black female student-athlete in track &amp; field competition wear, standing on a rubberized running track, calm confident expression looking slightly off-camera (not smiling-at-camera stock cliche), natural late-afternoon light with a warm gold rim light, editorial sports-lifestyle style. Athlete positioned in the left two-thirds of the frame. Leave a clear empty vertical panel on the right third of the frame for a card overlay. Square 1:1 format. No text, no logos, no UI elements.</p></details>
         <details class="prompt"><summary>1080&times;1350<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic Black female track &amp; field athlete on the running track, same warm-gold rim lighting, calm confident expression, editorial sports-lifestyle style. Reframe for a taller 4:5 canvas: athlete fills the upper two-thirds of the frame. Leave a clear empty horizontal panel across the bottom third of the frame for the same card overlay. No text, no logos, no UI elements.</p></details>
         <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic Black female track &amp; field athlete on the running track, same warm-gold rim lighting, calm confident expression, editorial sports-lifestyle style. Reframe for a tall 9:16 canvas: full-body athlete fills the middle third of the frame. Leave a clear empty panel across the upper third of the frame for the card overlay, and a second empty band across the very bottom for headline + CTA. No text, no logos, no UI elements.</p></details>
       </div>
@@ -1703,14 +1699,14 @@
       <div data-subject-item="2">
       <p style="font-weight:700; font-size:11px; text-transform:uppercase; letter-spacing:.03em; margin:16px 0 6px; color:var(--ts-blue);">Coach version (blue)</p>
       <div class="prompt-row">
-        <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic photo of a middle-aged Latino coach in a team polo on a soccer sideline, arms crossed, calm evaluating expression looking toward the field, natural outdoor light with a cool blue ambient tone, editorial sports-recruiting photography style. Coach positioned left-of-center. Leave a clear empty vertical panel on the right third of the frame for a card overlay. Square 1:1 format. No text, no logos, no UI elements.</p></details>
+        <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic photo of a middle-aged Latino coach in a team polo on a soccer sideline, arms crossed, calm evaluating expression looking toward the field, natural outdoor light with a cool blue ambient tone, editorial sports-recruiting style. Coach positioned left-of-center. Leave a clear empty vertical panel on the right third of the frame for a card overlay. Square 1:1 format. No text, no logos, no UI elements.</p></details>
         <details class="prompt"><summary>1080&times;1350<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic Latino coach on the soccer sideline, same cool-blue ambient lighting, calm evaluating expression, editorial sports-recruiting style. Reframe for a taller 4:5 canvas: coach centered. Leave a clear empty horizontal panel across the bottom third of the frame for the same card overlay. No text, no logos, no UI elements.</p></details>
         <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic Latino coach on the soccer sideline, same cool-blue ambient lighting, calm evaluating expression, editorial sports-recruiting style. Reframe for a tall 9:16 canvas: full-body coach fills the lower two-thirds of the frame. Leave a clear empty panel across the upper third of the frame for the card overlay, plus a narrow band near the top for a headline. No text, no logos, no UI elements.</p></details>
       </div>
       <p class="comp-note">Compositing note: same Verification asset file as the athlete version, different caption and CTA &mdash; one real screenshot, two audiences. Reskin guide: see the concept card above &mdash; swap sport + coach each time this recurs.</p>
       </div>
-      <p class="logo-note"><b>Logo:</b> top-left corner across all three ratios, scaling down slightly as the canvas gets taller &mdash; keep it clear of the verification card on the right.</p>
-      <p class="text-note"><b>Text boxes:</b> real box &mdash; the bottom band (black, ~72% opacity) is an actual scrim across all three ratios; keep it behind the headline and subtext. The "Verification card" panel is a real UI screenshot placement, not text.</p>
+      <p class="logo-note"><b>Logo:</b> top-left, scaling down on taller ratios, clear of the verification card.</p>
+      <p class="text-note"><b>Text boxes:</b> real box &mdash; black ~72% scrim behind headline/subtext. "Verification card" is a real UI screenshot, not text.</p>
       
       </div></details>
       </div>
@@ -1740,13 +1736,13 @@
       <details class="option-detail"><summary>Prompts &amp; layout notes<span class="toggle">+</span></summary><div class="option-detail-body">
       <p class="option-c-note">Athlete prompt shown below; the coach version reuses this same photo family with a color/copy swap (see compositing note) rather than a separate render.</p>
       <div class="prompt-row">
-        <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic photo of a young Black female track &amp; field athlete on a running track, calm confident expression, natural late-afternoon light with a warm gold rim light, editorial sports-lifestyle photography style, filling the entire frame edge to edge. Leave a wide empty band across the bottom third of the frame, dark and semi-transparent, for a headline, tagline, and a small proof-stat row &mdash; no floating card this time. Square 1:1 format. No text, no logos, no UI elements.</p></details>
+        <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic photo of a young Black female track &amp; field athlete on a running track, calm confident expression, natural late-afternoon light with a warm gold rim light, editorial sports-lifestyle style, filling the entire frame edge to edge. Leave a wide empty band across the bottom third of the frame, dark and semi-transparent, for a headline, tagline, and a small proof-stat row &mdash; no floating card this time. Square 1:1 format. No text, no logos, no UI elements.</p></details>
         <details class="prompt"><summary>1080&times;1350<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic track &amp; field athlete, same warm-gold rim lighting, full-bleed. Reframe for a taller 4:5 canvas: athlete fills the upper two-thirds of the frame. Leave a deeper dark semi-transparent band across the bottom for headline, tagline, and proof-stat row. No text, no logos, no UI elements.</p></details>
         <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic track &amp; field athlete, full-bleed. Reframe for a tall 9:16 canvas: athlete fills the middle two-thirds of the frame. Leave a dark semi-transparent band across the very bottom for headline, tagline, proof-stat row, and CTA stacked. No text, no logos, no UI elements.</p></details>
       </div>
-      <p class="comp-note">Compositing note: for the coach version, swap the warm-gold rim light for cool blue and reuse the Latino soccer coach sideline photo already established &mdash; no floating card, the stat row (100% ID Verified / &lt;48h Approval) carries the proof instead. Reskin guide: see the concept cards above &mdash; both figures rotate sport, gender, and ethnicity together each time this recurs.</p>
-      <p class="logo-note"><b>Logo:</b> top-left corner across all three ratios, scaling down slightly as the canvas gets taller.</p>
-      <p class="text-note"><b>Text boxes:</b> real box &mdash; the bottom band (black, ~72% opacity) is an actual scrim across all three ratios; keep it behind the headline, subtext, and proof-stat row.</p>
+      <p class="comp-note">Compositing note: for the coach version, swap warm-gold for cool blue rim light and reuse the established coach photo &mdash; no floating card, the stat row carries the proof. Reskin guide: see the concept cards above; both figures rotate together each recurrence.</p>
+      <p class="logo-note"><b>Logo:</b> top-left, scaling down on taller ratios.</p>
+      <p class="text-note"><b>Text boxes:</b> real box &mdash; black ~72% scrim behind headline, subtext, and proof-stat row.</p>
       
       </div></details>
       </div>
@@ -1788,8 +1784,8 @@
         <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same diagonal color-block seam composition. Reframe for a tall 9:16 canvas: seam runs nearly vertical corner to corner, badge shape centered in the upper half, deep empty space at the bottom for headline, tagline, and CTA. Use blue-to-charcoal for the coach variant instead of gold. No text, no logos, no UI elements.</p></details>
       </div>
       <p class="comp-note">Compositing note: the "VERIFIED" wordmark inside the badge is set in the compositing pass, not the AI render &mdash; keep the badge interior empty in the prompt output so real type can be dropped in cleanly.</p>
-      <p class="logo-note"><b>Logo:</b> top-left corner across all three ratios, sitting on the dark seam side, clear of the diagonal seam and the tilted verification badge.</p>
-      <p class="text-note"><b>Text boxes:</b> mixed &mdash; the "VERIFIED" badge is a real filled disc (dark, dashed border), keep it. The "Real Recruiting. No Noise." line at the bottom has no background &mdash; grid-only, floats directly on the diagonal color blocks.</p>
+      <p class="logo-note"><b>Logo:</b> top-left, on the dark seam side, clear of the seam and verification badge.</p>
+      <p class="text-note"><b>Text boxes:</b> mixed &mdash; the "VERIFIED" badge is a real filled disc, keep it. "Real Recruiting. No Noise." is grid-only, on the diagonal blocks directly.</p>
       
       </div></details>
       </div>
@@ -1861,11 +1857,11 @@
         <p class="concept-t">Sport, position, GPA, budget &mdash; see exactly what lined up.</p>
         <p class="concept-visual"><b>Visual direction</b>Same transparency message as the sideline concept, moved to a desk &mdash; an overhead flat-lay instead of a tablet-in-hand portrait, cool blue desk light. Rotate this coach's implied sport (via the printed roster) and hand/skin tone month to month; see the reskin note below.</p>
         <div class="prompt-row">
-          <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic overhead flat-lay of an open laptop with a blank dark screen and a printed wrestling weight-class roster on paper beside it, a South Asian coach's hand resting near the paper as if pointing something out, cool blue desk-lamp lighting, editorial sports-recruiting photography style. Leave the laptop screen completely empty for a UI card overlay. Square 1:1 format. No visible screen content, no text, no logos, no UI elements.</p></details>
+          <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic overhead flat-lay of an open laptop with a blank dark screen and a printed wrestling weight-class roster on paper beside it, a South Asian coach's hand resting near the paper as if pointing something out, cool blue desk-lamp lighting, editorial sports-recruiting style. Leave the laptop screen completely empty for a UI card overlay. Square 1:1 format. No visible screen content, no text, no logos, no UI elements.</p></details>
           <details class="prompt"><summary>1080&times;1350<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic overhead flat-lay, same South Asian coach's hand, same cool blue desk-lamp lighting. Reframe for a taller 4:5 canvas: laptop and printed roster fill the upper two-thirds of the frame. Leave the screen empty for the card overlay, plus a narrow empty band at the very bottom for a headline. No visible screen content, no text, no logos, no UI elements.</p></details>
           <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic overhead flat-lay. Reframe for a tall 9:16 canvas: laptop and roster centered in the upper half of the frame. Leave the screen empty for the card overlay, and a deep empty band across the very bottom for headline, tagline, and CTA. No visible screen content, no text, no logos, no UI elements.</p></details>
         </div>
-        <p class="comp-note">Compositing note: place the real Match Factors card + 3-tier legend on the laptop screen &mdash; same asset as weeks 1&ndash;2, new setting so the flight doesn't feel repeated. Reskin guide: swap the roster's implied sport + coach's hand/skin tone each time this concept recurs (e.g. a cross country roster / Black coach's hand, a tennis ladder / white coach's hand) so even a hands-only shot carries variety.</p>
+        <p class="comp-note">Compositing note: place the real Match Factors card + 3-tier legend on the laptop screen &mdash; same asset as weeks 1&ndash;2, new setting. Reskin guide: swap the roster's implied sport + coach's hand/skin tone each recurrence (e.g. a tennis ladder / white coach's hand).</p>
         <p class="cta-line">CTA: <b>TRY THE MATCH TOOL &mdash; FREE FOREVER</b></p>
       </div>
 
@@ -1875,11 +1871,11 @@
         <p class="concept-t">Real signals. No black box, on your side either.</p>
         <p class="concept-visual"><b>Visual direction</b>Same transparency message as the tunnel concept, a quieter close mid-shot instead of a walking scene &mdash; athlete checking a phone on a bench, glove resting beside her, warm gold light. Rotate this athlete's sport and ethnicity month to month; see the reskin note below.</p>
         <div class="prompt-row">
-          <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic photo of a young Latina softball athlete sitting on a bleacher bench, a softball glove resting beside her, looking down at a smartphone with a calm, pleased expression, warm gold late-afternoon light, editorial sports-lifestyle photography style. Athlete positioned center-frame. Leave the phone's screen area completely empty for a UI card overlay. Square 1:1 format. No text, no logos, no UI elements.</p></details>
+          <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic photo of a young Latina softball athlete sitting on a bleacher bench, a softball glove resting beside her, looking down at a smartphone with a calm, pleased expression, warm gold late-afternoon light, editorial sports-lifestyle style. Athlete positioned center-frame. Leave the phone's screen area completely empty for a UI card overlay. Square 1:1 format. No text, no logos, no UI elements.</p></details>
           <details class="prompt"><summary>1080&times;1350<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic Latina softball athlete on a bleacher bench checking a phone, same glove detail, same warm gold light. Reframe for a taller 4:5 canvas: athlete fills the lower two-thirds of the frame, bleachers visible above. Leave the phone screen empty for the card overlay, plus a narrow band at the very top for a headline. No text, no logos, no UI elements.</p></details>
           <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic softball athlete on a bleacher bench checking a phone. Reframe for a tall 9:16 canvas: athlete centered in the middle third of the frame. Leave the phone screen empty for the card overlay, a narrow band at the top for a headline, and a deeper band at the very bottom for tagline and CTA. No text, no logos, no UI elements.</p></details>
         </div>
-        <p class="comp-note">Compositing note: place the real Athlete Match Preview card into the phone screen &mdash; same asset as weeks 1&ndash;2, new setting. Reskin guide: swap the sport-specific prop + athlete each time this concept recurs (e.g. a golf glove / white male athlete, a gymnastics grip bag / Black female athlete) so the bench shot rotates through sports too.</p>
+        <p class="comp-note">Compositing note: place the real Athlete Match Preview card into the phone screen &mdash; same asset as weeks 1&ndash;2, new setting. Reskin guide: swap the sport-specific prop + athlete each recurrence (e.g. a golf glove / white male athlete).</p>
         <p class="cta-line">CTA: <b>PREVIEW YOUR MATCH &mdash; FREE TO SEE</b></p>
       </div>
 
@@ -1903,7 +1899,7 @@
       </div>
 
       <p class="month-label">Choose a Layout</p>
-      <p class="section-sub" style="margin:0 0 16px;">Tap a tab to preview that direction &mdash; only one shows at a time. Its prompts stay tucked behind a toggle until you want them.</p>
+      <p class="section-sub" style="margin:0 0 16px;">Tap a tab to preview a direction.</p>
       <div class="design-options-group" id="t2-options" data-active-subject="1">
       <p class="subject-tabs-label">Designing for</p>
       <div class="subject-tabs"><button class="subject-tab active" data-subject="1" onclick="showSubjectTab('t2','1')">Coach &middot; Football</button><button class="subject-tab" data-subject="2" onclick="showSubjectTab('t2','2')">Athlete &middot; Swimming</button></div>
@@ -1934,11 +1930,11 @@
         </div><p class="tk-caption"><b>1080&times;1920</b> &middot; athlete companion, gold</p></div>
       </div>
       <details class="option-detail"><summary>Prompts &amp; layout notes<span class="toggle">+</span></summary><div class="option-detail-body">
-      <p class="option-c-note">This is the concept's original composition &mdash; same prompt sets as the concept cards above, reproduced here so everything about this layout lives in one place. Only the version matching "Designing for" above is shown; toggle it to see the other.</p>
+      <p class="option-c-note">Showing the version matching "Designing for" above &mdash; toggle it to see the other.</p>
       <div data-subject-item="1">
       <p style="font-weight:700; font-size:11px; text-transform:uppercase; letter-spacing:.03em; margin:14px 0 6px; color:var(--ts-blue);">Coach version (blue, lead)</p>
       <div class="prompt-row">
-        <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic photo of a Black male football coach holding a tablet on a sideline, focused expression looking down at the screen, natural outdoor light with a cool blue ambient tone, editorial sports-recruiting photography style. Coach positioned left-of-center. Leave a clear empty rectangular panel over and beside the tablet for a card overlay. Square 1:1 format. No visible screen content, no text, no logos, no UI elements.</p></details>
+        <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic photo of a Black male football coach holding a tablet on a sideline, focused expression looking down at the screen, natural outdoor light with a cool blue ambient tone, editorial sports-recruiting style. Coach positioned left-of-center. Leave a clear empty rectangular panel over and beside the tablet for a card overlay. Square 1:1 format. No visible screen content, no text, no logos, no UI elements.</p></details>
         <details class="prompt"><summary>1080&times;1350<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic Black male football coach with a tablet on a sideline, same cool-blue ambient lighting, editorial sports-recruiting style. Reframe for a taller 4:5 canvas: full-body coach fills the lower two-thirds of the frame. Leave a clear empty panel across the upper third of the frame for a card overlay. No visible screen content, no text, no logos, no UI elements.</p></details>
         <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic Black male football coach with a tablet on a sideline, same cool-blue ambient lighting, editorial sports-recruiting style. Reframe for a tall 9:16 canvas: full-body coach fills the lower two-thirds of the frame. Leave a deep empty band across the top third of the frame for a card overlay plus a headline, and keep the tablet screen area empty for a smaller card. No visible screen content, no text, no logos, no UI elements.</p></details>
       </div>
@@ -1947,14 +1943,14 @@
       <div data-subject-item="2">
       <p style="font-weight:700; font-size:11px; text-transform:uppercase; letter-spacing:.03em; margin:16px 0 6px; color:var(--ts-gold);">Athlete version (gold, companion)</p>
       <div class="prompt-row">
-        <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic photo of a young white female swimmer walking away from camera through a stadium tunnel toward bright daylight at the far end, a swim bag with cap and goggles clipped to it over one shoulder, natural warm sunlight spilling in from the exit, editorial sports-lifestyle photography style. Athlete positioned center-left, walking toward the light. Leave a clear empty rectangular panel on the right side of the frame, floating at chest height, for a card overlay. Square 1:1 format. No text, no logos, no UI elements.</p></details>
+        <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic photo of a young white female swimmer walking away from camera through a stadium tunnel toward bright daylight at the far end, a swim bag with cap and goggles clipped to it over one shoulder, natural warm sunlight spilling in from the exit, editorial sports-lifestyle style. Athlete positioned center-left, walking toward the light. Leave a clear empty rectangular panel on the right side of the frame, floating at chest height, for a card overlay. Square 1:1 format. No text, no logos, no UI elements.</p></details>
         <details class="prompt"><summary>1080&times;1350<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic swimmer walking through the tunnel toward daylight, same swim bag detail, same warm sunlit exit, editorial sports-lifestyle style. Reframe for a taller 4:5 canvas: athlete fills the lower two-thirds of the frame, tunnel exit and light visible above. Leave a clear empty panel floating beside the athlete, mid-frame, for the same card overlay. No text, no logos, no UI elements.</p></details>
         <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic swimmer walking through the tunnel toward daylight. Reframe for a tall 9:16 canvas: athlete smaller and centered in the middle third of the frame to emphasize the tunnel's length, light at the far end. Leave a floating empty card panel beside the athlete, plus a deep empty band across the very bottom for headline, tagline, and CTA. No text, no logos, no UI elements.</p></details>
       </div>
       <p class="comp-note">Compositing note: place the real Athlete Match Preview card (avatar, verified checkmark, match %, stat grid, match-reason text) into the floating panel exactly as it renders in-product. Reskin guide: see the concept card above &mdash; swap the sport-specific gear detail and athlete each time this recurs.</p>
       </div>
-      <p class="logo-note"><b>Logo:</b> top-left corner across all three ratios, scaling down slightly as the canvas gets taller.</p>
-      <p class="text-note"><b>Text boxes:</b> real box &mdash; the bottom band (black, ~72% opacity) is an actual scrim across all three ratios; keep it behind the headline and subtext. The "Match Factors"/"Match Preview" panels are real UI screenshot placements, not text.</p>
+      <p class="logo-note"><b>Logo:</b> top-left, scaling down on taller ratios.</p>
+      <p class="text-note"><b>Text boxes:</b> real box &mdash; black ~72% scrim behind headline/subtext. "Match Factors"/"Match Preview" panels are real UI screenshots, not text.</p>
       
       </div></details>
       </div>
@@ -1987,13 +1983,13 @@
       <details class="option-detail"><summary>Prompts &amp; layout notes<span class="toggle">+</span></summary><div class="option-detail-body">
       <p class="option-c-note">Coach prompt shown below; the athlete companion reuses this same split-frame layout with the tunnel-walk photo instead.</p>
       <div class="prompt-row">
-        <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic photo of the same Black male football coach in athletic sideline gear seated at a laptop under stadium lights, reviewing player information, cool blue evening ambient light, editorial sports-recruiting photography style. Coach and laptop occupy the left half of the frame only; leave the right half of the frame completely empty and dark for a UI screenshot placement. Square 1:1 format. No text, no logos, no UI elements.</p></details>
+        <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic photo of the same Black male football coach in athletic sideline gear seated at a laptop under stadium lights, reviewing player information, cool blue evening ambient light, editorial sports-recruiting style. Coach and laptop occupy the left half of the frame only; leave the right half of the frame completely empty and dark for a UI screenshot placement. Square 1:1 format. No text, no logos, no UI elements.</p></details>
         <details class="prompt"><summary>1080&times;1350<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic coach-at-laptop scene, same cool-blue lighting. Reframe for a taller 4:5 canvas: coach fills the top half of the frame. Leave the bottom half completely empty and dark for a UI screenshot placement. No text, no logos, no UI elements.</p></details>
         <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic coach-at-laptop scene. Reframe for a tall 9:16 canvas: coach fills the top third of the frame. Leave the middle third empty and dark for a UI screenshot placement, and the bottom third for headline and CTA. No text, no logos, no UI elements.</p></details>
       </div>
       <p class="comp-note">Compositing note: the real Match Factors bar-chart card (blue, coach-side) drops into the empty half/portion as an actual screenshot, not an AI render &mdash; swap to the gold Match Preview card for the athlete-companion variant. Reskin guide: see the concept card above &mdash; swap sport and ethnicity each time this recurs.</p>
-      <p class="logo-note"><b>Logo:</b> top-right corner on the square and portrait image half; shifts to top-left on the 9:16 story crop, where the image band runs full-width at the top instead of on the left.</p>
-      <p class="text-note"><b>Text boxes:</b> grid only &mdash; the headline ("See Why It Matched." / "This Is What Coaches See.") has no background at any ratio; it sits directly on the dark screenshot-placement panel with no separate box behind it. The "Match Factors"/"Match Preview" panels are real UI screenshot placements, not text.</p>
+      <p class="logo-note"><b>Logo:</b> top-right on square/portrait; shifts to top-left on the 9:16 crop (image band goes full-width).</p>
+      <p class="text-note"><b>Text boxes:</b> grid only &mdash; headline sits directly on the dark screenshot panel, no box, at any ratio. "Match Factors"/"Match Preview" panels are real UI screenshots.</p>
       
       </div></details>
       </div>
@@ -2031,8 +2027,8 @@
         <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same dark radiating-ring radar composition. Reframe for a tall 9:16 canvas: glowing panel reservation shifted slightly upper-center, rings elongated vertically to fill the taller frame, deep empty space at the bottom for tagline and CTA. Use warm gold glow instead of blue for the athlete-companion variant. No text, no logos, no UI elements.</p></details>
       </div>
       <p class="comp-note">Compositing note: the real Match Factors card drops into the reserved glowing panel as an actual screenshot &mdash; the conic-ring glow is pure AI background art, never applied to the real UI screenshot itself.</p>
-      <p class="logo-note"><b>Logo:</b> top-left corner across all three ratios, kept clear of the radiating conic-ring glow.</p>
-      <p class="text-note"><b>Text boxes:</b> mixed &mdash; the glowing rectangular UI-card panel at the center is a real element (dark fill, colored border, glow), keep it. The tagline beneath it has no background &mdash; grid-only, sits directly on the conic-ring glow.</p>
+      <p class="logo-note"><b>Logo:</b> top-left, clear of the radiating conic-ring glow.</p>
+      <p class="text-note"><b>Text boxes:</b> mixed &mdash; the glowing UI-card panel is a real element (dark fill, colored border, glow), keep it. The tagline below is grid-only, on the glow directly.</p>
       
       </div></details>
       </div>
@@ -2104,11 +2100,11 @@
         <p class="concept-t">6 &amp; 12-month plans ship real Quarter Athletic gear.</p>
         <p class="concept-visual"><b>Visual direction</b>Same tangible-value message as the swag-bag flat-lay, shown lived-in instead of unboxed &mdash; the gear actually being worn outdoors, golden hour light. Rotate this athlete's sport and ethnicity month to month; see the reskin note below.</p>
         <div class="prompt-row">
-          <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic photo of a young Black male cross country runner wearing a plain solid-color cap and pullover (no visible logos) outdoors on a wooded trail at golden hour, checking a smartphone with a relaxed, pleased expression, warm late-afternoon light, editorial sports-lifestyle photography style. Athlete positioned center-frame. Leave the phone's screen area completely empty for a UI card overlay. Square 1:1 format. No text, no logos, no visible UI.</p></details>
+          <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic photo of a young Black male cross country runner wearing a plain solid-color cap and pullover (no visible logos) outdoors on a wooded trail at golden hour, checking a smartphone with a relaxed, pleased expression, warm late-afternoon light, editorial sports-lifestyle style. Athlete positioned center-frame. Leave the phone's screen area completely empty for a UI card overlay. Square 1:1 format. No text, no logos, no visible UI.</p></details>
           <details class="prompt"><summary>1080&times;1350<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic cross country runner in cap and pullover outdoors, same golden-hour light. Reframe for a taller 4:5 canvas: athlete fills the lower two-thirds of the frame, trail visible above. Leave the phone screen empty for the card overlay, plus a narrow band at the very top for a headline. No text, no logos, no visible UI.</p></details>
           <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic runner in cap and pullover outdoors. Reframe for a tall 9:16 canvas: athlete centered in the middle third of the frame. Leave the phone screen empty for the card overlay, a narrow band at the top for a headline, and a deeper band at the very bottom for tagline and CTA. No text, no logos, no visible UI.</p></details>
         </div>
-        <p class="comp-note">Compositing note: the real verified-profile card goes on the phone screen; the real Quarter Athletic logo can appear on the cap/pullover since it's real product, not an AI-invented mark &mdash; same rule as weeks 1&ndash;2, worn instead of unboxed. Reskin guide: swap sport, setting, and ethnicity each time this concept recurs (e.g. golf / white female athlete, football / Latino athlete) so the worn-gear shot rotates through sports too.</p>
+        <p class="comp-note">Compositing note: the real verified-profile card goes on the phone screen; the real QA logo can appear on the cap/pullover since it's real product, not AI-invented &mdash; worn instead of unboxed, same rule as weeks 1&ndash;2. Reskin guide: swap sport, setting, and ethnicity each recurrence (e.g. golf / white female athlete).</p>
         <p class="cta-line">CTA: <b>SEE FULL PRICING</b></p>
       </div>
 
@@ -2146,7 +2142,7 @@
       </div>
 
       <p class="month-label">Choose a Layout</p>
-      <p class="section-sub" style="margin:0 0 16px;">Tap a tab to preview that direction &mdash; only one shows at a time. Its prompts stay tucked behind a toggle until you want them.</p>
+      <p class="section-sub" style="margin:0 0 16px;">Tap a tab to preview a direction.</p>
       <div class="design-options-group" id="t3-options" data-active-subject="1">
       <p class="subject-tabs-label">Designing for</p>
       <div class="subject-tabs"><button class="subject-tab active" data-subject="1" onclick="showSubjectTab('t3','1')">Athlete &middot; Cross Country</button><button class="subject-tab" data-subject="2" onclick="showSubjectTab('t3','2')">Coach &middot; Basketball</button></div>
@@ -2176,7 +2172,7 @@
         </div><p class="tk-caption"><b>1080&times;1920</b> &middot; coach-polo companion</p></div>
       </div>
       <details class="option-detail"><summary>Prompts &amp; layout notes<span class="toggle">+</span></summary><div class="option-detail-body">
-      <p class="option-c-note">This is the concept's original composition &mdash; same prompt sets as the concept cards above, reproduced here so everything about this layout lives in one place. Only the version matching "Designing for" above is shown; toggle it to see the other.</p>
+      <p class="option-c-note">Showing the version matching "Designing for" above &mdash; toggle it to see the other.</p>
       <div data-subject-item="1">
       <p style="font-weight:700; font-size:11px; text-transform:uppercase; letter-spacing:.03em; margin:14px 0 6px; color:var(--ts-gold);">Athlete version (gold)</p>
       <div class="prompt-row">
@@ -2189,14 +2185,14 @@
       <div data-subject-item="2">
       <p style="font-weight:700; font-size:11px; text-transform:uppercase; letter-spacing:.03em; margin:16px 0 6px; color:var(--ts-blue);">Coach version (blue)</p>
       <div class="prompt-row">
-        <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic photo of an Asian-American male basketball coach in a solid-color polo shirt (no visible logo) standing courtside holding a tablet at waist height, relaxed confident posture, natural indoor gym light with a cool blue ambient tone, editorial sports-recruiting photography style. Coach positioned center-frame. Leave a clear empty panel beside the tablet for a card overlay, and reserve the polo's left chest area completely blank for a logo. Square 1:1 format. No text, no logos, no UI elements.</p></details>
+        <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic photo of an Asian-American male basketball coach in a solid-color polo shirt (no visible logo) standing courtside holding a tablet at waist height, relaxed confident posture, natural indoor gym light with a cool blue ambient tone, editorial sports-recruiting style. Coach positioned center-frame. Leave a clear empty panel beside the tablet for a card overlay, and reserve the polo's left chest area completely blank for a logo. Square 1:1 format. No text, no logos, no UI elements.</p></details>
         <details class="prompt"><summary>1080&times;1350<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic basketball coach in a polo with a tablet, same cool-blue ambient lighting. Reframe for a taller 4:5 canvas: full-body coach fills the lower two-thirds of the frame. Leave a clear empty panel across the upper third for a card overlay, and keep the polo's chest area blank for a logo. No text, no logos, no UI elements.</p></details>
         <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic basketball coach in a polo with a tablet. Reframe for a tall 9:16 canvas: full-body coach fills the middle third of the frame. Leave a deep empty band across the top for a card overlay plus headline, and a second empty band at the very bottom for tagline and CTA. Keep the polo's chest area blank for a logo. No text, no logos, no UI elements.</p></details>
       </div>
       <p class="comp-note">Compositing note: the real Quarter Athletic logo goes on the polo's reserved chest space afterward &mdash; never AI-generated onto the garment. Reskin guide: see the concept card above &mdash; swap sport and ethnicity each time this recurs.</p>
       </div>
-      <p class="logo-note"><b>Logo:</b> top-left corner on the square and portrait (swag-bag) crops; shifts to top-right on the 9:16 story crop (the coach-polo companion).</p>
-      <p class="text-note"><b>Text boxes:</b> real box &mdash; the bottom band (black, ~72% opacity) is an actual scrim across all three ratios; keep it behind the headline. The "Profile card"/"Verification card" panels are real UI screenshot placements, not text.</p>
+      <p class="logo-note"><b>Logo:</b> top-left on the swag-bag crops; shifts to top-right on the coach-polo (9:16) crop.</p>
+      <p class="text-note"><b>Text boxes:</b> real box &mdash; black ~72% scrim behind headline. "Profile card"/"Verification card" panels are real UI screenshots.</p>
       
       </div></details>
       </div>
@@ -2229,13 +2225,13 @@
       <details class="option-detail"><summary>Prompts &amp; layout notes<span class="toggle">+</span></summary><div class="option-detail-body">
       <p class="option-c-note">The square/portrait ratios are the athlete version; the 9:16 story ratio is the coach-polo companion &mdash; each toggles with "Designing for" above.</p>
       <div class="prompt-row">
-        <details class="prompt" data-subject-item="1"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic photo of a young Black male cross country runner on a wooded trail, mid-stride, confident expression, warm golden-hour light, editorial sports-lifestyle photography style, filling the entire frame edge to edge. Leave a clear empty panel in the upper-right quadrant for a verified-profile card overlay, and a dark semi-transparent band across the bottom for headline text. Square 1:1 format. No text, no logos, no UI elements.</p></details>
+        <details class="prompt" data-subject-item="1"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic photo of a young Black male cross country runner on a wooded trail, mid-stride, confident expression, warm golden-hour light, editorial sports-lifestyle style, filling the entire frame edge to edge. Leave a clear empty panel in the upper-right quadrant for a verified-profile card overlay, and a dark semi-transparent band across the bottom for headline text. Square 1:1 format. No text, no logos, no UI elements.</p></details>
         <details class="prompt" data-subject-item="1"><summary>1080&times;1350<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic cross country runner, same golden-hour lighting, full-bleed. Reframe for a taller 4:5 canvas: athlete fills the frame, empty panel for a card overlay in the upper third, dark band at the very bottom for headline. No text, no logos, no UI elements.</p></details>
-        <details class="prompt" data-subject-item="2"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic photo of an Asian-American male basketball coach on the sideline wearing a Quarter Athletic polo (chest area left blank for a logo), tablet in hand, cool blue evening light, editorial sports-recruiting photography style. Full-bleed vertical composition. Leave an empty panel mid-frame for a "coach + polo" card overlay, and a dark band at the bottom for headline and CTA. No text, no logos, no UI elements.</p></details>
+        <details class="prompt" data-subject-item="2"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic photo of an Asian-American male basketball coach on the sideline wearing a Quarter Athletic polo (chest area left blank for a logo), tablet in hand, cool blue evening light, editorial sports-recruiting style. Full-bleed vertical composition. Leave an empty panel mid-frame for a "coach + polo" card overlay, and a dark band at the bottom for headline and CTA. No text, no logos, no UI elements.</p></details>
       </div>
       <p class="comp-note">Compositing note: the real Verified profile card (gold) drops onto the athlete frames; the coach-polo variant reuses the same production family established in Month 1&ndash;2's coach concepts. Reskin guide: see the concept cards above &mdash; swap sport and ethnicity for both figures each time this recurs.</p>
-      <p class="logo-note"><b>Logo:</b> top-left corner on the square and portrait (athlete-on-field) crops; shifts to top-right on the 9:16 story crop (the coach-polo companion).</p>
-      <p class="text-note"><b>Text boxes:</b> real box &mdash; the bottom band (black, ~72% opacity) is an actual scrim across all three ratios; keep it behind the headline. The "Verified profile card"/"Coach + polo" panels are real UI/photo placements, not text.</p>
+      <p class="logo-note"><b>Logo:</b> top-left on the athlete-on-field crops; shifts to top-right on the coach-polo (9:16) crop.</p>
+      <p class="text-note"><b>Text boxes:</b> real box &mdash; black ~72% scrim behind headline. "Verified profile card"/"Coach + polo" panels are real UI/photo placements.</p>
       
       </div></details>
       </div>
@@ -2276,8 +2272,8 @@
         <details class="prompt" data-subject-item="2"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same scattered-unbox composition. Reframe for a tall 9:16 canvas: two tilted elements only (a coach-polo garment shape and a dashboard-card shape), cool blue rim lighting instead of gold, positioned in the upper two-thirds with deep empty space at the bottom for headline, tagline, and CTA. No text, no logos, no UI elements.</p></details>
       </div>
       <p class="comp-note">Compositing note: the real verification card, dashboard card, and physical merch photography drop into the tilted element reservations &mdash; the AI render provides only the shadow/lighting staging, never the card content itself.</p>
-      <p class="logo-note"><b>Logo:</b> top-left corner across all three ratios, tucked above the scattered card elements.</p>
-      <p class="text-note"><b>Text boxes:</b> mixed &mdash; the tilted "Swag bag"/"Verified card"/"Tag" (or "Coach polo"/"Dashboard card") elements are real cards with actual fills, keep them. The headline beneath has no background &mdash; grid-only, sits directly on the dark canvas.</p>
+      <p class="logo-note"><b>Logo:</b> top-left, tucked above the scattered card elements.</p>
+      <p class="text-note"><b>Text boxes:</b> mixed &mdash; tilted "Swag bag"/"Verified card"/"Tag" (or "Coach polo"/"Dashboard card") elements are real cards, keep them. Headline is grid-only, on the dark canvas.</p>
       
       </div></details>
       </div>
@@ -2349,11 +2345,11 @@
         <p class="concept-t">Real athletes. Verified profiles. Still free.</p>
         <p class="concept-visual"><b>Visual direction</b>Same free-at-any-scale message as the workspace flat-lay, shown as a moment of use instead of a static prop shot &mdash; coach on a call at their desk, tablet propped beside them, cool blue light. Rotate this coach's sport, gender, and ethnicity month to month; see the reskin note below.</p>
         <div class="prompt-row">
-          <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic photo of a South Asian male tennis coach at a dark wood desk, phone to his ear mid-conversation, gesturing slightly with his free hand, a tablet propped beside him with a blank dark screen, moody cool blue ambient lighting from an unseen window, premium SaaS-office editorial photography style. Leave the tablet screen completely empty for a UI overlay. Square 1:1 format. No text, no logos, no UI elements.</p></details>
+          <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic photo of a South Asian male tennis coach at a dark wood desk, phone to his ear mid-conversation, gesturing slightly with his free hand, a tablet propped beside him with a blank dark screen, moody cool blue ambient lighting from an unseen window, premium SaaS-office style. Leave the tablet screen completely empty for a UI overlay. Square 1:1 format. No text, no logos, no UI elements.</p></details>
           <details class="prompt"><summary>1080&times;1350<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic coach-on-a-call scene, same cool blue ambient lighting. Reframe for a taller 4:5 canvas: coach and tablet fill the lower two-thirds of the frame. Leave the tablet screen empty for the UI overlay, plus a narrow empty band at the very top for a headline. No text, no logos, no UI elements.</p></details>
           <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic coach-on-a-call scene. Reframe for a tall 9:16 canvas: coach and tablet centered in the middle third of the frame. Leave the tablet screen empty for the UI overlay, a narrow band at the top for a headline, and a deeper band at the very bottom for tagline and CTA. No text, no logos, no UI elements.</p></details>
         </div>
-        <p class="comp-note">Compositing note: place a real roster-list or coach-dashboard screenshot on the tablet &mdash; same asset family as weeks 1&ndash;2, new setting so the flight doesn't feel repeated. Reskin guide: swap sport, gender, and ethnicity each time this concept recurs (e.g. field hockey / white female coach, football / Black male coach) so the desk-call shot rotates too.</p>
+        <p class="comp-note">Compositing note: place a real roster-list or coach-dashboard screenshot on the tablet &mdash; same asset family as weeks 1&ndash;2, new setting. Reskin guide: swap sport, gender, and ethnicity each recurrence (e.g. field hockey / white female coach).</p>
         <p class="cta-line">CTA: <b>JOIN AS COACH &mdash; FREE</b></p>
       </div>
 
@@ -2363,11 +2359,11 @@
         <p class="concept-t">Replace fragmented databases with one verified platform.</p>
         <p class="concept-visual"><b>Visual direction</b>Same institutional-scale message as the wide war-room shot, framed closer this time &mdash; an AD gesturing beside the wall monitor itself, rather than the room in full. Even with the face turned away, the AD's build, hairstyle, and dress should read as a specific, varied person, not a generic silhouette.</p>
         <div class="prompt-row">
-          <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic medium shot of a Black female athletic director with natural hair, in business-casual attire, standing beside a large wall-mounted monitor with a blank dark screen, gesturing toward it as if presenting, dark wood and navy color palette, cool blue overhead lighting, premium institutional-office editorial photography style. Leave the monitor screen completely empty for a UI overlay. Square 1:1 format. No text, no logos, no UI elements, face not clearly identifiable (turned toward the screen).</p></details>
+          <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic medium shot of a Black female athletic director with natural hair, in business-casual attire, standing beside a large wall-mounted monitor with a blank dark screen, gesturing toward it as if presenting, dark wood and navy color palette, cool blue overhead lighting, premium institutional-office style. Leave the monitor screen completely empty for a UI overlay. Square 1:1 format. No text, no logos, no UI elements, face not clearly identifiable (turned toward the screen).</p></details>
           <details class="prompt"><summary>1080&times;1350<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic AD-beside-monitor scene, same cool blue lighting. Reframe for a taller 4:5 canvas: AD and monitor fill the lower two-thirds of the frame. Leave the monitor screen empty for the UI overlay, plus a narrow empty band at the very top for a headline. No text, no logos, no UI elements, face not clearly identifiable.</p></details>
           <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic AD-beside-monitor scene. Reframe for a tall 9:16 canvas: AD and monitor centered in the middle third of the frame. Leave the monitor screen empty for the UI overlay, a narrow band at the top for a headline, and a deeper band at the very bottom for tagline and CTA. No text, no logos, no UI elements, face not clearly identifiable.</p></details>
         </div>
-        <p class="comp-note">Compositing note: place a real admin-view dashboard screenshot on the wall monitor &mdash; same asset family as weeks 1&ndash;2, closer framing so the flight doesn't feel repeated. Reskin guide: vary the AD's apparent gender, build, and ethnicity each time this concept recurs so institutional leadership doesn't default to one look.</p>
+        <p class="comp-note">Compositing note: place a real admin-view dashboard screenshot on the wall monitor &mdash; same asset family as weeks 1&ndash;2, closer framing. Reskin guide: vary the AD's gender, build, and ethnicity each recurrence.</p>
         <p class="cta-line">CTA: <b>CONTACT US</b></p>
       </div>
 
@@ -2391,7 +2387,7 @@
       </div>
 
       <p class="month-label">Choose a Layout</p>
-      <p class="section-sub" style="margin:0 0 16px;">Tap a tab to preview that direction &mdash; only one shows at a time. Its prompts stay tucked behind a toggle until you want them.</p>
+      <p class="section-sub" style="margin:0 0 16px;">Tap a tab to preview a direction.</p>
       <div class="design-options-group" id="t4-options" data-active-subject="1">
       <p class="subject-tabs-label">Designing for</p>
       <div class="subject-tabs"><button class="subject-tab active" data-subject="1" onclick="showSubjectTab('t4','1')">Coach &middot; Tennis</button><button class="subject-tab" data-subject="2" onclick="showSubjectTab('t4','2')">Corporate / AD</button></div>
@@ -2423,11 +2419,11 @@
         </div><p class="tk-caption"><b>1080&times;1920</b> &middot; department war-room</p></div>
       </div>
       <details class="option-detail"><summary>Prompts &amp; layout notes<span class="toggle">+</span></summary><div class="option-detail-body">
-      <p class="option-c-note">This is the concept's original composition &mdash; same prompt sets as the concept cards above, reproduced here so everything about this layout lives in one place. Only the version matching "Designing for" above is shown; toggle it to see the other.</p>
+      <p class="option-c-note">Showing the version matching "Designing for" above &mdash; toggle it to see the other.</p>
       <div data-subject-item="1">
       <p style="font-weight:700; font-size:11px; text-transform:uppercase; letter-spacing:.03em; margin:14px 0 6px; color:var(--ts-blue);">Coach version (single-coach desk)</p>
       <div class="prompt-row">
-        <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic overhead flat-lay of a modern recruiting workspace: an open laptop showing a blank dark dashboard screen, a tablet propped beside it with a blank dark screen, a closed notebook labeled nothing, a black coffee mug, and a pen, arranged on a dark wood desk, moody cool blue ambient lighting from an unseen window, premium SaaS-office editorial photography style. Leave both the laptop and tablet screens completely empty for UI overlays. Square 1:1 format. No text, no logos, no UI elements.</p></details>
+        <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic overhead flat-lay of a modern recruiting workspace: an open laptop showing a blank dark dashboard screen, a tablet propped beside it with a blank dark screen, a closed notebook labeled nothing, a black coffee mug, and a pen, arranged on a dark wood desk, moody cool blue ambient lighting from an unseen window, premium SaaS-office style. Leave both the laptop and tablet screens completely empty for UI overlays. Square 1:1 format. No text, no logos, no UI elements.</p></details>
         <details class="prompt"><summary>1080&times;1350<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic recruiting-workspace flat-lay, same cool blue ambient lighting. Reframe for a taller 4:5 canvas: laptop and notebook in the upper two-thirds, tablet and coffee mug in the lower third. Leave both screens empty for UI overlays, and a narrow empty band at the very bottom for a headline. No text, no logos, no UI elements.</p></details>
         <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic recruiting-workspace concept, reframed as a tall 9:16 vertical arrangement: laptop at the top third, tablet in the middle third, notebook and coffee at the bottom third, all under the same cool blue ambient lighting. Leave both screens empty for UI overlays, plus a deep empty band at the very bottom for headline, tagline, and CTA. No text, no logos, no UI elements.</p></details>
       </div>
@@ -2436,14 +2432,14 @@
       <div data-subject-item="2">
       <p style="font-weight:700; font-size:11px; text-transform:uppercase; letter-spacing:.03em; margin:16px 0 6px; color:var(--ts-blue);">Corporate / AD version (department war-room)</p>
       <div class="prompt-row">
-        <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic wide shot of a modern athletic-department recruiting office: three desks with laptops (blank dark screens), a large wall-mounted monitor with a blank dark screen, two people working at their desks in the middle distance in business-casual attire &mdash; one a woman with natural Black hairstyle, one a man with light skin tone &mdash; dark wood and navy color palette, cool blue overhead lighting, premium institutional-office editorial photography style. Room fills the frame symmetrically. Leave the wall monitor's screen completely empty for a UI overlay, and a wide empty band across the bottom of the frame for a headline. Square 1:1 format. No text, no logos, no UI elements, faces not clearly identifiable (turned away or in shadow).</p></details>
+        <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic wide shot of a modern athletic-department recruiting office: three desks with laptops (blank dark screens), a large wall-mounted monitor with a blank dark screen, two people working at their desks in the middle distance in business-casual attire &mdash; one a woman with natural Black hairstyle, one a man with light skin tone &mdash; dark wood and navy color palette, cool blue overhead lighting, premium institutional-office style. Room fills the frame symmetrically. Leave the wall monitor's screen completely empty for a UI overlay, and a wide empty band across the bottom of the frame for a headline. Square 1:1 format. No text, no logos, no UI elements, faces not clearly identifiable (turned away or in shadow).</p></details>
         <details class="prompt"><summary>1080&times;1350<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic recruiting-office wide shot, same cool blue lighting. Reframe for a taller 4:5 canvas: emphasize more ceiling and the wall monitor's full height, desks in the lower half of the frame. Leave the monitor screen empty for a UI overlay, and a wide empty band across the bottom for a headline and tagline. No text, no logos, no UI elements, faces not clearly identifiable.</p></details>
         <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic recruiting-office concept, reframed as a tall 9:16 canvas looking across the room from a lower angle: wall monitor prominent in the upper half, desks and desk-lamps receding below it. Leave the monitor screen empty for a UI overlay, and a deep empty band at the very bottom for headline, tagline, and CTA. No text, no logos, no UI elements, faces not clearly identifiable.</p></details>
       </div>
       <p class="comp-note">Compositing note: place a real coach-dashboard or admin-view screenshot on the wall monitor &mdash; never fabricate the UI. Reskin guide: vary the two staff members' apparent gender, build, and skin tone each time this recurs.</p>
       </div>
-      <p class="logo-note"><b>Logo:</b> top-right corner on the square and portrait crops; shifts to top-left on the 9:16 story crop (department war-room).</p>
-      <p class="text-note"><b>Text boxes:</b> real box &mdash; the bottom band (black, ~72% opacity) is an actual scrim across all three ratios; keep it behind the headline. The "Laptop screen"/"Tablet screen"/"Wall monitor" panels are real UI screenshot placements, not text.</p>
+      <p class="logo-note"><b>Logo:</b> top-right on square/portrait; shifts to top-left on the 9:16 crop (war-room).</p>
+      <p class="text-note"><b>Text boxes:</b> real box &mdash; black ~72% scrim behind headline. "Laptop screen"/"Tablet screen"/"Wall monitor" panels are real UI screenshots.</p>
       
       </div></details>
       </div>
@@ -2481,8 +2477,8 @@
         <details class="prompt" data-subject-item="2"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic photo of a Black female athletic director with natural hair, in business-casual attire, in an institutional office setting, standing near a desk, cool blue lighting, editorial premium-office photography style. Full-bleed vertical composition. Leave an empty panel mid-frame for an admin dashboard card overlay, and a dark band at the bottom for headline and CTA. No text, no logos, no UI elements, face not clearly identifiable.</p></details>
       </div>
       <p class="comp-note">Compositing note: the real coach or admin dashboard screenshot drops into the reserved card panel &mdash; never fabricate the UI. Reskin guide: see the concept cards above &mdash; swap sport, gender, and ethnicity for both figures each time this recurs.</p>
-      <p class="logo-note"><b>Logo:</b> top-left corner across all three ratios, scaling down slightly as the canvas gets taller.</p>
-      <p class="text-note"><b>Text boxes:</b> real box &mdash; the bottom band (black, ~72% opacity) is an actual scrim across all three ratios; keep it behind the headline. The "Coach dashboard card"/"Admin dashboard card" panels are real UI screenshot placements, not text.</p>
+      <p class="logo-note"><b>Logo:</b> top-left, scaling down on taller ratios.</p>
+      <p class="text-note"><b>Text boxes:</b> real box &mdash; black ~72% scrim behind headline. "Coach dashboard card"/"Admin dashboard card" panels are real UI screenshots.</p>
       
       </div></details>
       </div>
@@ -2523,8 +2519,8 @@
         <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same cascading-windows composition. Reframe for a tall 9:16 canvas: windows compressed toward the upper two-thirds, deep empty space at the bottom for headline, tagline, and CTA. No text, no logos, no UI elements.</p></details>
       </div>
       <p class="comp-note">Compositing note: the real dashboard, athlete-list, and match-score screenshots drop into the three window reservations &mdash; the AI render supplies only the cascading-window staging and glow, never the UI content.</p>
-      <p class="logo-note"><b>Logo:</b> top-left corner across all three ratios, sitting clear above the cascading window stack.</p>
-      <p class="text-note"><b>Text boxes:</b> mixed &mdash; the "Dashboard"/"Athlete list"/"Match score" cascading windows are real elements with actual fills, keep them. The headline at the bottom has no background &mdash; grid-only, sits directly on the dark canvas.</p>
+      <p class="logo-note"><b>Logo:</b> top-left, clear above the cascading window stack.</p>
+      <p class="text-note"><b>Text boxes:</b> mixed &mdash; "Dashboard"/"Athlete list"/"Match score" windows are real elements, keep them. Headline is grid-only, on the dark canvas.</p>
       
       </div></details>
       </div>
@@ -2621,7 +2617,7 @@
       </div>
 
       <p class="month-label">Choose a Layout</p>
-      <p class="section-sub" style="margin:0 0 16px;">Tap a tab to preview that direction &mdash; only one shows at a time. Its prompts stay tucked behind a toggle until you want them.</p>
+      <p class="section-sub" style="margin:0 0 16px;">Tap a tab to preview a direction.</p>
       <div class="design-options-group" id="t5-options">
       <div class="option-tabs"><button class="option-tab" data-option="A" onclick="showOptionTab('t5','A')">Option A <span class="tab-name">Network Grid (composite, real cards only)</span><span class="tab-check">&#10003;</span></button><button class="option-tab" data-option="B" onclick="showOptionTab('t5','B')">Option B <span class="tab-name">Statement, single hero card</span><span class="tab-check">&#10003;</span></button><button class="option-tab" data-option="C" onclick="showOptionTab('t5','C')">Option C <span class="tab-name">Diagonal Manifesto Sweep, dynamic</span><span class="tab-check">&#10003;</span></button></div>
       <div class="design-option" data-option="A">
@@ -2657,8 +2653,8 @@
       </div>
       <details class="option-detail"><summary>Prompts &amp; layout notes<span class="toggle">+</span></summary><div class="option-detail-body">
       <p class="comp-note">Compositing note: no AI photography needed here &mdash; this is a flat charcoal gradient built directly in the design tool, populated entirely with real Match Preview / Match Factors card screenshots alternating gold and blue.</p>
-      <p class="logo-note"><b>Logo:</b> top-left corner across all three ratios, scaling down slightly as the canvas gets taller.</p>
-      <p class="text-note"><b>Text boxes:</b> real box &mdash; the bottom band (black, ~60% opacity) is an actual scrim across all three ratios; keep it behind the headline. The small gold/blue tinted zones are placement guides for real card screenshots, not text elements.</p>
+      <p class="logo-note"><b>Logo:</b> top-left, scaling down on taller ratios.</p>
+      <p class="text-note"><b>Text boxes:</b> real box &mdash; black ~60% scrim behind headline. Small gold/blue zones are placement guides for real card screenshots, not text.</p>
       
       </div></details>
       </div>
@@ -2687,8 +2683,8 @@
       </div>
       <details class="option-detail"><summary>Prompts &amp; layout notes<span class="toggle">+</span></summary><div class="option-detail-body">
       <p class="comp-note">Compositing note: same flat charcoal gradient background, no AI photography &mdash; one real Verified profile card enlarged and centered, alternating gold/blue border per placement.</p>
-      <p class="logo-note"><b>Logo:</b> top-left corner across all three ratios, scaling down slightly as the canvas gets taller.</p>
-      <p class="text-note"><b>Text boxes:</b> real box &mdash; the bottom band (black, ~60% opacity) is an actual scrim across all three ratios; keep it behind the headline. The centered "Verified profile card" panel is a real UI screenshot placement, not text.</p>
+      <p class="logo-note"><b>Logo:</b> top-left, scaling down on taller ratios.</p>
+      <p class="text-note"><b>Text boxes:</b> real box &mdash; black ~60% scrim behind headline. Centered "Verified profile card" is a real UI screenshot, not text.</p>
       
       </div></details>
       </div>
@@ -2721,8 +2717,8 @@
       </div>
       <details class="option-detail"><summary>Prompts &amp; layout notes<span class="toggle">+</span></summary><div class="option-detail-body">
       <p class="comp-note">Compositing note: the diagonal gold-to-blue gradient is built directly in the design tool (no AI photography needed), oversized display type set live, and one real Verified profile card composited dead-center &mdash; keep the gradient seam soft enough that the headline stays legible where it crosses.</p>
-      <p class="logo-note"><b>Logo:</b> top-left corner across all three ratios, positioned on the gold side of the diagonal sweep, above the oversized cropped headline type.</p>
-      <p class="text-note"><b>Text boxes:</b> mixed &mdash; the oversized cropped headline has no background and sits directly on the diagonal gradient, that's grid-only. The centered "Verified card" panel is a real UI screenshot placement (dark fill, white border), keep it.</p>
+      <p class="logo-note"><b>Logo:</b> top-left, on the gold side of the sweep, above the cropped headline.</p>
+      <p class="text-note"><b>Text boxes:</b> mixed &mdash; the oversized headline is grid-only, on the gradient directly. Centered "Verified card" is a real UI screenshot (dark fill, white border), keep it.</p>
       
       </div></details>
       </div>
