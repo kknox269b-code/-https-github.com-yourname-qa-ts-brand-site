@@ -249,15 +249,20 @@
 
   footer{margin-top:64px; padding-top:20px; border-top:1px solid var(--stroke2); color:var(--fg3); font-size:12px;}
 
-  /* ===== brand tab switcher ===== */
-  .brand-tabs{position:sticky; top:0; z-index:50; display:flex; background:var(--bg-card); border-bottom:1px solid var(--stroke2); box-shadow:var(--shadow2);}
-  .brand-tab{flex:1; max-width:280px; margin:0 auto 0 0; border:none; background:none; cursor:pointer; font-family:var(--fluent-font); font-size:13.5px; font-weight:600; color:var(--fg3); padding:14px 22px; border-bottom:3px solid transparent; transition:color .12s ease, border-color .12s ease;}
-  .brand-tab.qa-tab{margin-right:0;}
-  .brand-tabs{justify-content:center; gap:4px;}
-  .brand-tab:hover{color:var(--fg1);}
-  .brand-tab.active.qa-tab{color:var(--navy); border-bottom-color:var(--navy);}
-  .brand-tab.active.ts-tab{color:var(--ts-blue); border-bottom-color:var(--ts-gold);}
-  .brand-tab.active.market-tab{color:#5B4B8A; border-bottom-color:#5B4B8A;}
+  /* ===== nav dropdown menu (top-left) ===== */
+  .nav-bar{position:sticky; top:0; z-index:50; background:var(--bg-card); border-bottom:1px solid var(--stroke2); box-shadow:var(--shadow2); padding:10px 16px;}
+  .nav-menu-btn{display:inline-flex; align-items:center; gap:10px; border:none; background:none; cursor:pointer; font-family:var(--fluent-font); font-size:13.5px; font-weight:600; color:var(--fg1); padding:8px 10px; border-radius:var(--r-s); transition:background .12s ease;}
+  .nav-menu-btn:hover{background:var(--bg-card2);}
+  .nav-menu-icon{font-size:18px; line-height:1;}
+  .nav-current-label{color:var(--fg3); font-weight:400;}
+  .nav-current-label b{color:var(--fg1); font-weight:600;}
+  .nav-dropdown{position:absolute; top:calc(100% + 4px); left:16px; min-width:240px; background:var(--bg-card); border:1px solid var(--stroke2); border-radius:var(--r-m); box-shadow:var(--shadow16); padding:6px; display:none; flex-direction:column; gap:2px;}
+  .nav-dropdown.open{display:flex;}
+  .nav-dropdown-item{display:block; width:100%; text-align:left; border:none; background:none; cursor:pointer; font-family:var(--fluent-font); font-size:13.5px; font-weight:600; color:var(--fg2); padding:10px 12px; border-radius:var(--r-s); border-left:3px solid transparent; transition:background .12s ease, color .12s ease;}
+  .nav-dropdown-item:hover{background:var(--bg-card2); color:var(--fg1);}
+  .nav-dropdown-item.active.qa-tab{color:var(--navy); border-left-color:var(--navy); background:var(--bg-card2);}
+  .nav-dropdown-item.active.ts-tab{color:var(--ts-blue); border-left-color:var(--ts-gold); background:var(--bg-card2);}
+  .nav-dropdown-item.active.market-tab{color:#5B4B8A; border-left-color:#5B4B8A; background:var(--bg-card2);}
 
   /* ===== template kit ===== */
   .tk-set{display:flex; gap:22px; flex-wrap:wrap; margin:0 0 28px; align-items:flex-start;}
@@ -342,10 +347,16 @@
   .option-detail-body .prompt-row:first-child{margin-top:0;}
 </style>
 
-<div class="brand-tabs">
-  <button class="brand-tab qa-tab active" onclick="switchBrand('qa')">Quarter Athletic</button>
-  <button class="brand-tab ts-tab" onclick="switchBrand('ts')">Twenty Five Select</button>
-  <button class="brand-tab market-tab" onclick="switchBrand('market')">Market Watch</button>
+<div class="nav-bar">
+  <button class="nav-menu-btn" onclick="toggleNavMenu(event)" aria-haspopup="true" aria-expanded="false">
+    <span class="nav-menu-icon">&#9776;</span>
+    <span class="nav-current-label">Viewing: <b id="nav-current-label">Quarter Athletic</b></span>
+  </button>
+  <div class="nav-dropdown" id="nav-dropdown">
+    <button class="nav-dropdown-item qa-tab active" onclick="switchBrand('qa'); closeNavMenu();">Quarter Athletic</button>
+    <button class="nav-dropdown-item ts-tab" onclick="switchBrand('ts'); closeNavMenu();">Twenty Five Select</button>
+    <button class="nav-dropdown-item market-tab" onclick="switchBrand('market'); closeNavMenu();">Market Watch</button>
+  </div>
 </div>
 
 <div id="qa-view">
@@ -2762,6 +2773,21 @@
 </div><!-- /market-view -->
 
 <script>
+  function toggleNavMenu(e){
+    if(e) e.stopPropagation();
+    var dd = document.getElementById('nav-dropdown');
+    var open = dd.classList.toggle('open');
+    document.querySelector('.nav-menu-btn').setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+  function closeNavMenu(){
+    document.getElementById('nav-dropdown').classList.remove('open');
+    document.querySelector('.nav-menu-btn').setAttribute('aria-expanded', 'false');
+  }
+  document.addEventListener('click', function(e){
+    var bar = document.querySelector('.nav-bar');
+    if(bar && !bar.contains(e.target)) closeNavMenu();
+  });
+
   function switchBrand(brand){
     var views = {qa:'qa-view', ts:'ts-view', market:'market-view'};
     var showing = document.getElementById(views[brand]);
@@ -2774,9 +2800,11 @@
     showing.style.display = 'block';
     showing.style.opacity = '0';
     requestAnimationFrame(function(){ showing.style.opacity = '1'; });
-    document.querySelector('.brand-tab.qa-tab').classList.toggle('active', brand === 'qa');
-    document.querySelector('.brand-tab.ts-tab').classList.toggle('active', brand === 'ts');
-    document.querySelector('.brand-tab.market-tab').classList.toggle('active', brand === 'market');
+    var names = {qa:'Quarter Athletic', ts:'Twenty Five Select', market:'Market Watch'};
+    document.querySelector('.nav-dropdown-item.qa-tab').classList.toggle('active', brand === 'qa');
+    document.querySelector('.nav-dropdown-item.ts-tab').classList.toggle('active', brand === 'ts');
+    document.querySelector('.nav-dropdown-item.market-tab').classList.toggle('active', brand === 'market');
+    document.getElementById('nav-current-label').textContent = names[brand];
     window.scrollTo({top:0, behavior:'smooth'});
   }
 
