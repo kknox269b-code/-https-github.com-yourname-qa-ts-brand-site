@@ -67,8 +67,18 @@
 
   *{box-sizing:border-box;}
   @media (prefers-reduced-motion:reduce){ *{transition:none !important; animation:none !important;} }
-  body{margin:0; background:var(--bg-canvas); color:var(--fg1); font-family:var(--fluent-font); font-size:14px; line-height:1.5; -webkit-font-smoothing:antialiased;}
-  .wrap{max-width:960px; margin:0 auto; padding:0 28px 120px;}
+  body{margin:0; background:var(--bg-canvas); color:var(--fg1); font-family:var(--fluent-font); font-size:14px; line-height:1.5; -webkit-font-smoothing:antialiased; position:relative;}
+  .wrap{max-width:960px; margin:0 auto; padding:0 28px 120px; position:relative;}
+
+  /* ===== modern grid-line texture (toolkit-page treatment) ===== */
+  body::before{content:""; position:fixed; inset:0; z-index:0; pointer-events:none;
+    background-image:repeating-linear-gradient(90deg, transparent 0 calc(12.5% - 1px), var(--stroke2) calc(12.5% - 1px) 12.5%);
+    opacity:.55;
+  }
+  :root[data-theme="dark"] body::before{opacity:.4;}
+  @media (prefers-color-scheme:dark){ body::before{opacity:.4;} }
+  .cover, .why-band, .nav-bar{position:relative; z-index:1;}
+  .wrap > *{position:relative; z-index:1;}
 
   .cover{
     background:
@@ -79,8 +89,8 @@
     color:#FFFFFF; padding:76px 28px 60px; position:relative; overflow:hidden;
   }
   .cover-inner{max-width:960px; margin:0 auto; position:relative;}
-  .eyebrow{font-family:var(--fluent-font); font-weight:600; font-size:12px; letter-spacing:.04em; text-transform:uppercase; color:rgba(255,255,255,.82); margin:0 0 16px;}
-  h1.title{font-family:var(--fluent-font-display); font-weight:700; font-size:clamp(34px,6vw,56px); line-height:1.05; margin:0 0 16px; text-wrap:balance; letter-spacing:-.02em;}
+  .eyebrow{font-family:var(--fluent-font); font-weight:800; font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:rgba(255,255,255,.82); margin:0 0 16px;}
+  h1.title{font-family:var(--fluent-font-display); font-weight:800; font-size:clamp(40px,7.5vw,76px); line-height:.98; margin:0 0 16px; text-wrap:balance; letter-spacing:-.03em;}
   .dek{font-size:16px; line-height:1.55; color:rgba(255,255,255,.88); max-width:68ch; margin:0 0 30px; font-weight:400;}
 
   /* ===== Why band — full-bleed, the one bold moment ===== */
@@ -92,8 +102,8 @@
     color:#F1F3F8; padding:64px 28px 60px;
   }
   .why-inner{max-width:960px; margin:0 auto;}
-  .why-eyebrow{font-weight:600; font-size:12px; letter-spacing:.06em; text-transform:uppercase; color:#8FB8EE; margin:0 0 18px;}
-  .why-quote{font-family:var(--fluent-font-display); font-weight:700; font-size:clamp(27px,4.4vw,42px); line-height:1.15; letter-spacing:-.015em; max-width:24ch; margin:0 0 40px; text-wrap:balance;}
+  .why-eyebrow{font-weight:800; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:#8FB8EE; margin:0 0 18px;}
+  .why-quote{font-family:var(--fluent-font-display); font-weight:800; font-size:clamp(30px,5.2vw,52px); line-height:1.05; letter-spacing:-.02em; max-width:22ch; margin:0 0 40px; text-wrap:balance;}
   .why-quote em{font-style:normal; color:#77B7F7;}
   .why-grid{display:grid; grid-template-columns:1fr 1fr; gap:28px; margin-bottom:36px;}
   .why-col h4{font-size:12px; font-weight:600; letter-spacing:.05em; text-transform:uppercase; color:#8FB8EE; margin:0 0 10px;}
@@ -116,7 +126,7 @@
   .roadmap .rm-dot{width:7px; height:7px; border-radius:50%; position:absolute; top:14px; right:12px;}
 
   .section{padding-top:56px;}
-  h2.section-title{font-family:var(--fluent-font-display); font-weight:600; font-size:22px; margin:0 0 8px; letter-spacing:-.005em;}
+  h2.section-title{font-family:var(--fluent-font-display); font-weight:800; font-size:clamp(24px,3vw,34px); margin:0 0 10px; letter-spacing:-.015em; line-height:1.05;}
   .section-sub{color:var(--fg3); font-size:14px; line-height:1.55; max-width:72ch; margin:0 0 20px;}
 
   .stage-table{width:100%; border-collapse:collapse; margin:0 0 12px; font-size:13px;}
@@ -356,6 +366,9 @@
     <button class="nav-dropdown-item qa-tab active" onclick="switchBrand('qa'); closeNavMenu();">Quarter Athletic</button>
     <button class="nav-dropdown-item ts-tab" onclick="switchBrand('ts'); closeNavMenu();">Twenty Five Select</button>
     <button class="nav-dropdown-item market-tab" onclick="switchBrand('market'); closeNavMenu();">Market Watch</button>
+    <div style="height:1px; background:var(--stroke2); margin:6px 4px;"></div>
+    <a class="nav-dropdown-item" style="display:block; text-decoration:none;" href="../QA-T5S branding/QA-T5S Branding/Quarter Athletic/brand-guidelines.html">QA Brand Toolkit &rarr;</a>
+    <a class="nav-dropdown-item" style="display:block; text-decoration:none;" href="../QA-T5S branding/QA-T5S Branding/Twenty Five Select/brand-guidelines.html">TS Brand Toolkit &rarr;</a>
   </div>
 </div>
 
