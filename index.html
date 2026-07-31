@@ -177,6 +177,18 @@
 
   .month-thesis{font-size:14px; color:var(--fg1); line-height:1.6; max-width:74ch; margin:20px 0 6px;}
   .nike-note{font-size:12.5px; color:var(--fg3); margin:0 0 18px; border-left:3px solid var(--stroke1); padding-left:10px;}
+
+  .month-tldr{font-family:var(--fluent-font-display); font-weight:700; font-size:16.5px; line-height:1.4; color:var(--fg1); max-width:70ch; margin:20px 0 14px;}
+  .campaign-compact{display:flex; flex-wrap:wrap; gap:8px; margin:0 0 16px;}
+  .cd-chip{display:inline-flex; align-items:baseline; gap:5px; background:var(--bg-card2); border:1px solid var(--stroke2); border-radius:var(--r-pill); padding:6px 12px; font-size:12px; color:var(--fg2);}
+  .cd-chip b{font-size:10.5px; font-weight:700; text-transform:uppercase; letter-spacing:.04em; color:var(--fg3);}
+  details.why-toggle{margin:0 0 20px; border-top:1px solid var(--stroke2); padding-top:2px;}
+  details.why-toggle summary{cursor:pointer; list-style:none; padding:8px 2px; font-weight:600; font-size:12px; color:var(--brand); display:flex; align-items:center; gap:8px; -webkit-user-select:none; user-select:none;}
+  details.why-toggle summary::-webkit-details-marker{display:none;}
+  details.why-toggle summary .toggle{font-size:14px; color:var(--fg3); flex:none; transition:transform .15s ease; display:inline-block;}
+  details.why-toggle[open] summary .toggle{transform:rotate(45deg);}
+  .why-toggle-body{padding-top:10px;}
+  .why-toggle-body .month-thesis{margin-top:0;}
   .design-strip{display:flex; gap:0; flex-wrap:wrap; margin:0 0 18px; border-radius:var(--r-l); background:var(--bg-card2); border:1px solid var(--stroke2); font-size:12.5px; overflow:hidden;}
   .design-strip div{padding:11px 16px; border-right:1px solid var(--stroke2);}
   .design-strip div:last-child{border-right:none;}
@@ -481,8 +493,7 @@
       <span class="chev">&#9662;</span>
     </summary>
     <div class="month-body">
-      <p class="month-thesis">Before Quarter Athletic can claim culture, it has to claim truth. This month proves the company is exactly who it says it is &mdash; the real founding story, real licensing &mdash; using rugby, the sport that's already proven, before anything expands. This is the second rugby concept, sitting alongside last week's Campaign 1 set (Trusted By, Champions Wall, Straight Talk, Built For), not replacing it.</p>
-      <p class="nike-note">Stage parallel: early Nike earning trust through the waffle sole and Olympic athletes before it sold a lifestyle.</p>
+      <p class="month-tldr">Prove the company is real before claiming culture &mdash; real founding story, real licensing, on rugby. Runs alongside Campaign 1, doesn't replace it.</p>
       <div class="design-strip">
         <div><b>Accent</b><span class="accent-dot"></span>Deep Navy + White</div>
         <div><b>Mood</b>Dawn/dusk stadium light, still, quiet</div>
@@ -494,11 +505,23 @@
         <span class="sport-pill">Baseball &mdash; not yet</span>
       </div>
 
-      <div class="campaign-detail">
-        <div><b>Cadence</b><span>2 ad variants live at once in the ad set &mdash; 1 hero/carousel, 1 proof card &mdash; refreshed weekly. Low frequency on purpose; this month sells the story, not the sale.</span></div>
-        <div><b>Primary KPI</b><span>CTR + branded search lift. Quote requests aren't the goal here &mdash; recognition is.</span></div>
-        <div><b>Audience</b><span>Warm/retarget &mdash; people who've already seen Campaign 1's rugby ads. The story needs context to land.</span></div>
+      <div class="campaign-compact">
+        <span class="cd-chip"><b>Cadence</b>2/wk, low frequency</span>
+        <span class="cd-chip"><b>KPI</b>CTR + branded search lift</span>
+        <span class="cd-chip"><b>Audience</b>Warm retarget</span>
       </div>
+      <details class="why-toggle">
+        <summary>Why this month<span class="toggle">+</span></summary>
+        <div class="why-toggle-body">
+          <p class="month-thesis">Before Quarter Athletic can claim culture, it has to claim truth. This month proves the company is exactly who it says it is &mdash; the real founding story, real licensing &mdash; using rugby, the sport that's already proven, before anything expands. This is the second rugby concept, sitting alongside last week's Campaign 1 set (Trusted By, Champions Wall, Straight Talk, Built For), not replacing it.</p>
+          <p class="nike-note">Stage parallel: early Nike earning trust through the waffle sole and Olympic athletes before it sold a lifestyle.</p>
+          <div class="campaign-detail">
+            <div><b>Cadence</b><span>2 ad variants live at once in the ad set &mdash; 1 hero/carousel, 1 proof card &mdash; refreshed weekly. Low frequency on purpose; this month sells the story, not the sale.</span></div>
+            <div><b>Primary KPI</b><span>CTR + branded search lift. Quote requests aren't the goal here &mdash; recognition is.</span></div>
+            <div><b>Audience</b><span>Warm/retarget &mdash; people who've already seen Campaign 1's rugby ads. The story needs context to land.</span></div>
+          </div>
+        </div>
+      </details>
 
       <p class="month-label">The Concept</p>
       <div class="hero-post">
@@ -666,8 +689,7 @@
       <span class="chev">&#9662;</span>
     </summary>
     <div class="month-body">
-      <p class="month-thesis">Once the company is proven real, the story shifts from Quarter Athletic to the program wearing it. Rugby's identity story runs first, men's and women's both getting their own voice — then the exact same idea, &ldquo;the athlete customizes their own gear,&rdquo; gets reskinned for lacrosse through the one piece of gear every lacrosse player personalizes: their stick stringing.</p>
-      <p class="nike-note">Stage parallel: Air Jordan and &ldquo;Just Do It&rdquo; turning the product into self-expression.</p>
+      <p class="month-tldr">Story shifts from the company to the program wearing it &mdash; rugby's identity idea (&ldquo;customize your own gear&rdquo;) reskinned for lacrosse through stick stringing.</p>
       <div class="design-strip">
         <div><b>Accent</b><span class="accent-dot"></span>Athletic Magenta + Navy</div>
         <div><b>Mood</b>Golden-hour, warmer, more dynamic</div>
@@ -679,11 +701,23 @@
         <span class="sport-pill">Baseball &mdash; not yet</span>
       </div>
 
-      <div class="campaign-detail">
-        <div><b>Cadence</b><span>3 ad variants rotating across rugby + lacrosse, alternating so neither sport reads as the &ldquo;main&rdquo; one in the ad set.</span></div>
-        <div><b>Primary KPI</b><span>Saves + shares on the ad itself (Meta reports both on paid placements). Identity creative succeeds when people want to be associated with it, not just see it.</span></div>
-        <div><b>Audience</b><span>Broad interest &mdash; rugby &amp; lacrosse program/coach categories, ages 25&ndash;55 &mdash; plus retarget from Month 1's viewers.</span></div>
+      <div class="campaign-compact">
+        <span class="cd-chip"><b>Cadence</b>3 variants, rugby + lacrosse</span>
+        <span class="cd-chip"><b>KPI</b>Saves + shares</span>
+        <span class="cd-chip"><b>Audience</b>Broad, ages 25&ndash;55 + retarget</span>
       </div>
+      <details class="why-toggle">
+        <summary>Why this month<span class="toggle">+</span></summary>
+        <div class="why-toggle-body">
+          <p class="month-thesis">Once the company is proven real, the story shifts from Quarter Athletic to the program wearing it. Rugby's identity story runs first, men's and women's both getting their own voice — then the exact same idea, &ldquo;the athlete customizes their own gear,&rdquo; gets reskinned for lacrosse through the one piece of gear every lacrosse player personalizes: their stick stringing.</p>
+          <p class="nike-note">Stage parallel: Air Jordan and &ldquo;Just Do It&rdquo; turning the product into self-expression.</p>
+          <div class="campaign-detail">
+            <div><b>Cadence</b><span>3 ad variants rotating across rugby + lacrosse, alternating so neither sport reads as the &ldquo;main&rdquo; one in the ad set.</span></div>
+            <div><b>Primary KPI</b><span>Saves + shares on the ad itself (Meta reports both on paid placements). Identity creative succeeds when people want to be associated with it, not just see it.</span></div>
+            <div><b>Audience</b><span>Broad interest &mdash; rugby &amp; lacrosse program/coach categories, ages 25&ndash;55 &mdash; plus retarget from Month 1's viewers.</span></div>
+          </div>
+        </div>
+      </details>
 
       <p class="month-label">The Concept</p>
       <div class="hero-post">
@@ -865,8 +899,7 @@
       <span class="chev">&#9662;</span>
     </summary>
     <div class="month-body">
-      <p class="month-thesis">Identity earns attention; reinvestment earns loyalty. This is the month baseball enters for the first time — deliberately through the give-back story rather than a cold product push, since &ldquo;we already invest in your program&rdquo; is a warmer front door than a pricing chart. Lacrosse deepens here too, its second month.</p>
-      <p class="nike-note">Stage parallel: grassroots courts and community leagues &mdash; brand loyalty built by showing up where the sport actually lives.</p>
+      <p class="month-tldr">Reinvestment earns loyalty. Baseball enters for the first time through the give-back story, not a cold product push; lacrosse deepens into its second month.</p>
       <div class="design-strip">
         <div><b>Accent</b><span class="accent-dot"></span>Natural Field Green</div>
         <div><b>Mood</b>Bright midday, real turf/dirt texture, optimistic</div>
@@ -878,11 +911,23 @@
         <span class="sport-pill live"><span class="dot"></span>Baseball &mdash; new this month</span>
       </div>
 
-      <div class="campaign-detail">
-        <div><b>Cadence</b><span>4 ad variants live at once, refreshed weekly &mdash; the highest-frequency month. This is the conversion engine, not just the awareness build.</span></div>
-        <div><b>Primary KPI</b><span>Cost per lead + quote requests. Unlike Months 1&ndash;2, this month is judged on pipeline, not just reach.</span></div>
-        <div><b>Audience</b><span>Broad cold reach in lacrosse + baseball program/coach interest categories, geo-targeted around active program regions.</span></div>
+      <div class="campaign-compact">
+        <span class="cd-chip"><b>Cadence</b>4 variants, highest frequency</span>
+        <span class="cd-chip"><b>KPI</b>Cost per lead + quotes</span>
+        <span class="cd-chip"><b>Audience</b>Broad cold, geo-targeted</span>
       </div>
+      <details class="why-toggle">
+        <summary>Why this month<span class="toggle">+</span></summary>
+        <div class="why-toggle-body">
+          <p class="month-thesis">Identity earns attention; reinvestment earns loyalty. This is the month baseball enters for the first time — deliberately through the give-back story rather than a cold product push, since &ldquo;we already invest in your program&rdquo; is a warmer front door than a pricing chart. Lacrosse deepens here too, its second month.</p>
+          <p class="nike-note">Stage parallel: grassroots courts and community leagues &mdash; brand loyalty built by showing up where the sport actually lives.</p>
+          <div class="campaign-detail">
+            <div><b>Cadence</b><span>4 ad variants live at once, refreshed weekly &mdash; the highest-frequency month. This is the conversion engine, not just the awareness build.</span></div>
+            <div><b>Primary KPI</b><span>Cost per lead + quote requests. Unlike Months 1&ndash;2, this month is judged on pipeline, not just reach.</span></div>
+            <div><b>Audience</b><span>Broad cold reach in lacrosse + baseball program/coach interest categories, geo-targeted around active program regions.</span></div>
+          </div>
+        </div>
+      </details>
 
       <p class="month-label">The Concept</p>
       <div class="hero-post">
@@ -1059,8 +1104,7 @@
       <span class="chev">&#9662;</span>
     </summary>
     <div class="month-body">
-      <p class="month-thesis">With identity and community established, the brand proves it plays the long game across all three priority sports at once. Rather than three separate ideas, this month runs one visual system three times — same composition and lighting instructions, one line of equipment swapped per sport. That's the efficient way to prove range without diluting the system.</p>
-      <p class="nike-note">Stage parallel: signature lines and decades-long athlete deals &mdash; loyalty over transactions.</p>
+      <p class="month-tldr">Proves the brand plays the long game across all three priority sports &mdash; one visual system, three sports, one line of equipment swapped per sport.</p>
       <div class="design-strip">
         <div><b>Accent</b><span class="accent-dot"></span>Gold</div>
         <div><b>Mood</b>Matched light across time &mdash; continuity as the visual idea</div>
@@ -1072,11 +1116,23 @@
         <span class="sport-pill live"><span class="dot"></span>Baseball &mdash; live</span>
       </div>
 
-      <div class="campaign-detail">
-        <div><b>Cadence</b><span>2 ad variants, weighted toward the retargeting ad set + CRM email &mdash; not a broad-reach spend month.</span></div>
-        <div><b>Primary KPI</b><span>Renewal rate among Months 1&ndash;3 leads. This month is retention-facing, not acquisition-facing.</span></div>
-        <div><b>Audience</b><span>Existing customers, quote-requesters, and email list &mdash; not primarily cold Meta spend.</span></div>
+      <div class="campaign-compact">
+        <span class="cd-chip"><b>Cadence</b>2 variants, retarget + CRM</span>
+        <span class="cd-chip"><b>KPI</b>Renewal rate</span>
+        <span class="cd-chip"><b>Audience</b>Existing customers/leads</span>
       </div>
+      <details class="why-toggle">
+        <summary>Why this month<span class="toggle">+</span></summary>
+        <div class="why-toggle-body">
+          <p class="month-thesis">With identity and community established, the brand proves it plays the long game across all three priority sports at once. Rather than three separate ideas, this month runs one visual system three times — same composition and lighting instructions, one line of equipment swapped per sport. That's the efficient way to prove range without diluting the system.</p>
+          <p class="nike-note">Stage parallel: signature lines and decades-long athlete deals &mdash; loyalty over transactions.</p>
+          <div class="campaign-detail">
+            <div><b>Cadence</b><span>2 ad variants, weighted toward the retargeting ad set + CRM email &mdash; not a broad-reach spend month.</span></div>
+            <div><b>Primary KPI</b><span>Renewal rate among Months 1&ndash;3 leads. This month is retention-facing, not acquisition-facing.</span></div>
+            <div><b>Audience</b><span>Existing customers, quote-requesters, and email list &mdash; not primarily cold Meta spend.</span></div>
+          </div>
+        </div>
+      </details>
 
       <p class="month-label">The Concept</p>
       <div class="hero-post">
@@ -1260,8 +1316,7 @@
       <span class="chev">&#9662;</span>
     </summary>
     <div class="month-body">
-      <p class="month-thesis">The closing chapter. QA stops explaining itself sport-by-sport and states its full scale out loud. Rugby, lacrosse, and baseball lead the wall as the three sports with dedicated campaigns behind them; the rest of the roster appears in the same shot to show the standard applies everywhere, not just where the last five months focused.</p>
-      <p class="nike-note">Stage parallel: Nike as an institution &mdash; a brand people follow, bigger than its product category.</p>
+      <p class="month-tldr">The closing chapter &mdash; QA states its full scale out loud. Rugby, lacrosse, and baseball lead the wall; the rest of the 10-sport roster shows the standard applies everywhere.</p>
       <div class="design-strip">
         <div><b>Accent</b><span class="accent-dot" style="background:linear-gradient(90deg,#1B2A4E,#9C2159,#2F5233,#B4863A);"></span>Full palette, one color per ad</div>
         <div><b>Mood</b>Wide, architectural, scaled</div>
@@ -1272,11 +1327,23 @@
         <span class="sport-pill">+ 7 more sports &mdash; in the network wall</span>
       </div>
 
-      <div class="campaign-detail">
-        <div><b>Cadence</b><span>1&ndash;2 ad concepts total, short flight &mdash; a single culminating statement, not a sustained push.</span></div>
-        <div><b>Primary KPI</b><span>Reach + brand favorability lift. This sets the table for the next 5-month arc more than it drives immediate leads.</span></div>
-        <div><b>Audience</b><span>Broad &mdash; full-account remarketing plus a lookalike audience built from everyone who engaged across Months 1&ndash;4.</span></div>
+      <div class="campaign-compact">
+        <span class="cd-chip"><b>Cadence</b>1&ndash;2 concepts, short flight</span>
+        <span class="cd-chip"><b>KPI</b>Reach + brand favorability</span>
+        <span class="cd-chip"><b>Audience</b>Broad remarketing + lookalike</span>
       </div>
+      <details class="why-toggle">
+        <summary>Why this month<span class="toggle">+</span></summary>
+        <div class="why-toggle-body">
+          <p class="month-thesis">The closing chapter. QA stops explaining itself sport-by-sport and states its full scale out loud. Rugby, lacrosse, and baseball lead the wall as the three sports with dedicated campaigns behind them; the rest of the roster appears in the same shot to show the standard applies everywhere, not just where the last five months focused.</p>
+          <p class="nike-note">Stage parallel: Nike as an institution &mdash; a brand people follow, bigger than its product category.</p>
+          <div class="campaign-detail">
+            <div><b>Cadence</b><span>1&ndash;2 ad concepts total, short flight &mdash; a single culminating statement, not a sustained push.</span></div>
+            <div><b>Primary KPI</b><span>Reach + brand favorability lift. This sets the table for the next 5-month arc more than it drives immediate leads.</span></div>
+            <div><b>Audience</b><span>Broad &mdash; full-account remarketing plus a lookalike audience built from everyone who engaged across Months 1&ndash;4.</span></div>
+          </div>
+        </div>
+      </details>
 
       <p class="month-label">The Concept</p>
       <div class="hero-post">
@@ -1583,8 +1650,7 @@
       <span class="chev">&#9662;</span>
     </summary>
     <div class="month-body">
-      <p class="month-thesis">Before Twenty Five Select can sell matching, merch, or scale, it has to prove the one thing every recruiting platform claims and almost none actually does: real verification. This month runs the same trust message to both sides at once &mdash; the umbrella statement everything else builds on.</p>
-      <p class="nike-note">Stage parallel: Airbnb making stranger-to-stranger trust feel safe through ID checks before anything else about the product mattered.</p>
+      <p class="month-tldr">Prove real verification before selling anything else &mdash; the same trust message to both sides at once, the umbrella statement everything else builds on.</p>
       <div class="design-strip">
         <div><b>Accent</b>Gold + Blue, both sides equally</div>
         <div><b>Mood</b>Clean, near-black, high contrast &mdash; confidence, not hype</div>
@@ -1594,11 +1660,23 @@
         <span class="sport-pill live"><span class="dot"></span>Athlete side &mdash; live</span>
         <span class="sport-pill live"><span class="dot"></span>Coach side &mdash; live</span>
       </div>
-      <div class="campaign-detail">
-        <div><b>Cadence</b><span>3 ad variants rotating, alternating athlete and coach versions &mdash; never both audiences in the same ad. Creative refreshes on a 2-week flight: a new pass of both versions goes live at the Weeks 3&ndash;4 mark rather than running the same two ads all month.</span></div>
-        <div><b>Primary KPI</b><span>Sign-up starts on both sides + verification-page click-through. This month sells the process, not a specific plan.</span></div>
-        <div><b>Audience</b><span>Broad cold reach &mdash; athlete interest categories (class year, sport) and coach/AD job-title targeting, run as two separate ad sets.</span></div>
+      <div class="campaign-compact">
+        <span class="cd-chip"><b>Cadence</b>3 variants, alternating sides</span>
+        <span class="cd-chip"><b>KPI</b>Sign-up starts + verification CTR</span>
+        <span class="cd-chip"><b>Audience</b>Broad cold, both sides</span>
       </div>
+      <details class="why-toggle">
+        <summary>Why this month<span class="toggle">+</span></summary>
+        <div class="why-toggle-body">
+          <p class="month-thesis">Before Twenty Five Select can sell matching, merch, or scale, it has to prove the one thing every recruiting platform claims and almost none actually does: real verification. This month runs the same trust message to both sides at once &mdash; the umbrella statement everything else builds on.</p>
+          <p class="nike-note">Stage parallel: Airbnb making stranger-to-stranger trust feel safe through ID checks before anything else about the product mattered.</p>
+          <div class="campaign-detail">
+            <div><b>Cadence</b><span>3 ad variants rotating, alternating athlete and coach versions &mdash; never both audiences in the same ad. Creative refreshes on a 2-week flight: a new pass of both versions goes live at the Weeks 3&ndash;4 mark rather than running the same two ads all month.</span></div>
+            <div><b>Primary KPI</b><span>Sign-up starts on both sides + verification-page click-through. This month sells the process, not a specific plan.</span></div>
+            <div><b>Audience</b><span>Broad cold reach &mdash; athlete interest categories (class year, sport) and coach/AD job-title targeting, run as two separate ad sets.</span></div>
+          </div>
+        </div>
+      </details>
 
       <p class="month-label">The Concept</p>
       <p class="active-layout-note" id="t1-active-layout"></p>
@@ -1827,8 +1905,7 @@
       <span class="chev">&#9662;</span>
     </summary>
     <div class="month-body">
-      <p class="month-thesis">Once both sides trust that profiles are real, the second objection surfaces: is the matching itself trustworthy, or just another algorithm? This month opens the Match Factors score up &mdash; coach-led, since coaches set the criteria, with an athlete-facing version showing them the same transparency from their side.</p>
-      <p class="nike-note">Stage parallel: Hinge replacing infinite swiping with matches designed to be deleted, and explaining why two profiles fit.</p>
+      <p class="month-tldr">Second objection: is the matching itself trustworthy? Opens the Match Factors score up &mdash; coach-led, with an athlete-facing version showing the same transparency.</p>
       <div class="design-strip">
         <div><b>Accent</b>Blue-led, gold companion piece</div>
         <div><b>Mood</b>Focused, analytical, data made calm instead of overwhelming</div>
@@ -1838,11 +1915,23 @@
         <span class="sport-pill live"><span class="dot"></span>Coach side &mdash; leading</span>
         <span class="sport-pill live"><span class="dot"></span>Athlete side &mdash; companion version</span>
       </div>
-      <div class="campaign-detail">
-        <div><b>Cadence</b><span>3 ad variants rotating, 2 coach-version for every 1 athlete-version this month. Refreshed on a 2-week flight &mdash; a new creative pass for both sides replaces the Weeks 1&ndash;2 set at the Weeks 3&ndash;4 mark.</span></div>
-        <div><b>Primary KPI</b><span>Match-tool trial starts (&ldquo;Try the Match Tool&rdquo; clicks) &mdash; this month is judged on engagement with the mechanic itself.</span></div>
-        <div><b>Audience</b><span>Broad coach/AD targeting for the lead concept; retarget Month 1 athlete engagers for the companion piece.</span></div>
+      <div class="campaign-compact">
+        <span class="cd-chip"><b>Cadence</b>3 variants, 2:1 coach:athlete</span>
+        <span class="cd-chip"><b>KPI</b>Match-tool trial starts</span>
+        <span class="cd-chip"><b>Audience</b>Broad coach/AD + retarget</span>
       </div>
+      <details class="why-toggle">
+        <summary>Why this month<span class="toggle">+</span></summary>
+        <div class="why-toggle-body">
+          <p class="month-thesis">Once both sides trust that profiles are real, the second objection surfaces: is the matching itself trustworthy, or just another algorithm? This month opens the Match Factors score up &mdash; coach-led, since coaches set the criteria, with an athlete-facing version showing them the same transparency from their side.</p>
+          <p class="nike-note">Stage parallel: Hinge replacing infinite swiping with matches designed to be deleted, and explaining why two profiles fit.</p>
+          <div class="campaign-detail">
+            <div><b>Cadence</b><span>3 ad variants rotating, 2 coach-version for every 1 athlete-version this month. Refreshed on a 2-week flight &mdash; a new creative pass for both sides replaces the Weeks 1&ndash;2 set at the Weeks 3&ndash;4 mark.</span></div>
+            <div><b>Primary KPI</b><span>Match-tool trial starts (&ldquo;Try the Match Tool&rdquo; clicks) &mdash; this month is judged on engagement with the mechanic itself.</span></div>
+            <div><b>Audience</b><span>Broad coach/AD targeting for the lead concept; retarget Month 1 athlete engagers for the companion piece.</span></div>
+          </div>
+        </div>
+      </details>
 
       <p class="month-label">The Concept</p>
       <p class="active-layout-note" id="t2-active-layout"></p>
@@ -2070,8 +2159,7 @@
       <span class="chev">&#9662;</span>
     </summary>
     <div class="month-body">
-      <p class="month-thesis">Trust and transparency are proven; now the platform earns the third objection back &mdash; &ldquo;what am I actually getting.&rdquo; This is the month that leads with the real cross-brand tie: 6 &amp; 12-month athlete plans ship a genuine Quarter Athletic swag bag, and every coach gets a free polo. Tangible goods, not a discount code &mdash; and the moment both brand strategies literally intersect.</p>
-      <p class="nike-note">Stage parallel: early Costco/Venmo-style membership that visibly pays you back in something real.</p>
+      <p class="month-tldr">Third objection: &ldquo;what am I actually getting.&rdquo; 6 &amp; 12-month athlete plans ship a real Quarter Athletic swag bag; every coach gets a free polo &mdash; tangible goods, not a discount code.</p>
       <div class="design-strip">
         <div><b>Accent</b>Gold-led, blue companion for the coach polo</div>
         <div><b>Mood</b>Warm, tactile, product-forward &mdash; the merch is the hero prop</div>
@@ -2081,11 +2169,23 @@
         <span class="sport-pill live"><span class="dot"></span>Athlete side &mdash; leading</span>
         <span class="sport-pill live"><span class="dot"></span>Coach side &mdash; companion</span>
       </div>
-      <div class="campaign-detail">
-        <div><b>Cadence</b><span>3 ad variants rotating, weighted toward the 6/12-month athlete plans since those are the tiers that include merch. Refreshed on a 2-week flight, so the merch story doesn't go stale mid-month.</span></div>
-        <div><b>Primary KPI</b><span>6 &amp; 12-month plan mix as a share of new athlete sign-ups &mdash; this month should shift the tier distribution, not just add volume.</span></div>
-        <div><b>Audience</b><span>Broad athlete/parent reach for the merch hook; retarget existing free-tier coaches with the polo reminder.</span></div>
+      <div class="campaign-compact">
+        <span class="cd-chip"><b>Cadence</b>3 variants, weighted to 6/12mo</span>
+        <span class="cd-chip"><b>KPI</b>6/12mo plan mix share</span>
+        <span class="cd-chip"><b>Audience</b>Broad athlete/parent + retarget</span>
       </div>
+      <details class="why-toggle">
+        <summary>Why this month<span class="toggle">+</span></summary>
+        <div class="why-toggle-body">
+          <p class="month-thesis">Trust and transparency are proven; now the platform earns the third objection back &mdash; &ldquo;what am I actually getting.&rdquo; This is the month that leads with the real cross-brand tie: 6 &amp; 12-month athlete plans ship a genuine Quarter Athletic swag bag, and every coach gets a free polo. Tangible goods, not a discount code &mdash; and the moment both brand strategies literally intersect.</p>
+          <p class="nike-note">Stage parallel: early Costco/Venmo-style membership that visibly pays you back in something real.</p>
+          <div class="campaign-detail">
+            <div><b>Cadence</b><span>3 ad variants rotating, weighted toward the 6/12-month athlete plans since those are the tiers that include merch. Refreshed on a 2-week flight, so the merch story doesn't go stale mid-month.</span></div>
+            <div><b>Primary KPI</b><span>6 &amp; 12-month plan mix as a share of new athlete sign-ups &mdash; this month should shift the tier distribution, not just add volume.</span></div>
+            <div><b>Audience</b><span>Broad athlete/parent reach for the merch hook; retarget existing free-tier coaches with the polo reminder.</span></div>
+          </div>
+        </div>
+      </details>
 
       <p class="month-label">The Concept</p>
       <p class="active-layout-note" id="t3-active-layout"></p>
@@ -2315,8 +2415,7 @@
       <span class="chev">&#9662;</span>
     </summary>
     <div class="month-body">
-      <p class="month-thesis">With trust, transparency, and value all proven, this month answers the institutional question: does this work for more than one coach at a time? The corporate package &mdash; bulk licenses, dedicated founder support &mdash; is real today; this is the month it gets said out loud to athletic departments and recruiting organizations, not just individual coaches.</p>
-      <p class="nike-note">Stage parallel: LinkedIn keeping the supply side free and frictionless so the paying side always had somewhere to be seen.</p>
+      <p class="month-tldr">The institutional question: does this work for more than one coach at a time? The real corporate package &mdash; bulk licenses, dedicated founder support &mdash; gets said out loud to athletic departments.</p>
       <div class="design-strip">
         <div><b>Accent</b>Blue, institutional register</div>
         <div><b>Mood</b>Office/workspace, cool light, premium SaaS feel</div>
@@ -2326,11 +2425,23 @@
         <span class="sport-pill live"><span class="dot"></span>Individual coaches &mdash; retained</span>
         <span class="sport-pill live"><span class="dot"></span>Athletic departments / corporate &mdash; new this month</span>
       </div>
-      <div class="campaign-detail">
-        <div><b>Cadence</b><span>2 ad variants live at once &mdash; lower frequency, higher-intent audience. Refreshed on a 2-week flight, same low-frequency logic carried through both halves of the month.</span></div>
-        <div><b>Primary KPI</b><span>Corporate package inquiries (&ldquo;Contact Us&rdquo; submissions) &mdash; this month is judged on qualified institutional leads, not volume.</span></div>
-        <div><b>Audience</b><span>Retarget existing coach sign-ups for the reused concept; broad cold LinkedIn-style job-title targeting (athletic director, recruiting coordinator) for the department concept.</span></div>
+      <div class="campaign-compact">
+        <span class="cd-chip"><b>Cadence</b>2 variants, low frequency</span>
+        <span class="cd-chip"><b>KPI</b>Corporate "Contact Us" inquiries</span>
+        <span class="cd-chip"><b>Audience</b>Retarget + AD/coordinator titles</span>
       </div>
+      <details class="why-toggle">
+        <summary>Why this month<span class="toggle">+</span></summary>
+        <div class="why-toggle-body">
+          <p class="month-thesis">With trust, transparency, and value all proven, this month answers the institutional question: does this work for more than one coach at a time? The corporate package &mdash; bulk licenses, dedicated founder support &mdash; is real today; this is the month it gets said out loud to athletic departments and recruiting organizations, not just individual coaches.</p>
+          <p class="nike-note">Stage parallel: LinkedIn keeping the supply side free and frictionless so the paying side always had somewhere to be seen.</p>
+          <div class="campaign-detail">
+            <div><b>Cadence</b><span>2 ad variants live at once &mdash; lower frequency, higher-intent audience. Refreshed on a 2-week flight, same low-frequency logic carried through both halves of the month.</span></div>
+            <div><b>Primary KPI</b><span>Corporate package inquiries (&ldquo;Contact Us&rdquo; submissions) &mdash; this month is judged on qualified institutional leads, not volume.</span></div>
+            <div><b>Audience</b><span>Retarget existing coach sign-ups for the reused concept; broad cold LinkedIn-style job-title targeting (athletic director, recruiting coordinator) for the department concept.</span></div>
+          </div>
+        </div>
+      </details>
 
       <p class="month-label">The Concept</p>
       <p class="active-layout-note" id="t4-active-layout"></p>
@@ -2562,8 +2673,7 @@
       <span class="chev">&#9662;</span>
     </summary>
     <div class="month-body">
-      <p class="month-thesis">The closing chapter. Twenty Five Select stops proving each piece separately and states the whole thing at once, in the platform's own words from the About page. This is the graduation ad that sets up the next five-month arc.</p>
-      <p class="nike-note">Stage parallel: LinkedIn and Airbnb at maturity &mdash; the default identity layer for the category, not just another listing site.</p>
+      <p class="month-tldr">The closing chapter &mdash; TS stops proving each piece separately and states the whole thing at once. The graduation ad that sets up the next five-month arc.</p>
       <div class="design-strip">
         <div><b>Accent</b>Gold + Blue, unified &mdash; one ad, both colors</div>
         <div><b>Mood</b>Dense, confident, network-scale</div>
@@ -2573,11 +2683,23 @@
         <span class="sport-pill live"><span class="dot"></span>Athlete side &mdash; unified</span>
         <span class="sport-pill live"><span class="dot"></span>Coach side &mdash; unified</span>
       </div>
-      <div class="campaign-detail">
-        <div><b>Cadence</b><span>1&ndash;2 ad concepts total, short flight &mdash; a single closing statement, not a sustained push. If the flight does run the full month, the Weeks 3&ndash;4 variant below is the second half; it isn't meant to run at Months 1&ndash;4's frequency.</span></div>
-        <div><b>Primary KPI</b><span>Reach + brand favorability across both sides; sets up the next arc more than it drives immediate sign-ups.</span></div>
-        <div><b>Audience</b><span>Broad remarketing to everyone who engaged across Months 1&ndash;4, both athlete and coach segments combined.</span></div>
+      <div class="campaign-compact">
+        <span class="cd-chip"><b>Cadence</b>1&ndash;2 concepts, short flight</span>
+        <span class="cd-chip"><b>KPI</b>Reach + brand favorability</span>
+        <span class="cd-chip"><b>Audience</b>Broad remarketing, both sides</span>
       </div>
+      <details class="why-toggle">
+        <summary>Why this month<span class="toggle">+</span></summary>
+        <div class="why-toggle-body">
+          <p class="month-thesis">The closing chapter. Twenty Five Select stops proving each piece separately and states the whole thing at once, in the platform's own words from the About page. This is the graduation ad that sets up the next five-month arc.</p>
+          <p class="nike-note">Stage parallel: LinkedIn and Airbnb at maturity &mdash; the default identity layer for the category, not just another listing site.</p>
+          <div class="campaign-detail">
+            <div><b>Cadence</b><span>1&ndash;2 ad concepts total, short flight &mdash; a single closing statement, not a sustained push. If the flight does run the full month, the Weeks 3&ndash;4 variant below is the second half; it isn't meant to run at Months 1&ndash;4's frequency.</span></div>
+            <div><b>Primary KPI</b><span>Reach + brand favorability across both sides; sets up the next arc more than it drives immediate sign-ups.</span></div>
+            <div><b>Audience</b><span>Broad remarketing to everyone who engaged across Months 1&ndash;4, both athlete and coach segments combined.</span></div>
+          </div>
+        </div>
+      </details>
 
       <p class="month-label">The Concept</p>
       <p class="active-layout-note" id="t5-active-layout"></p>
