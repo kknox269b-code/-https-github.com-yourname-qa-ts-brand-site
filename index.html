@@ -1812,13 +1812,13 @@
           <button class="choose-btn" onclick="chooseDesign('t1','A')">Choose This Design</button>
         </div>
       <div class="tk-set">
-        <div class="tk-unit" data-subject-item="1" style="--accent:var(--ts-gold);"><div class="tk-canvas r-square">
+        <div class="tk-unit" style="--accent:var(--ts-gold);"><div class="tk-canvas r-square">
           <div class="tk-zone tk-logo" style="top:4%; left:4%; right:auto; width:26%; height:6%;"><span class="tk-label">Logo</span></div>
           <div class="tk-zone tk-image" style="top:0; left:0; right:0; bottom:0; border-radius:0; z-index:0;"></div>
           <div class="tk-zone" style="top:14%; right:5%; width:38%; height:32%; background:rgba(20,20,24,.9);"><span class="tk-label" style="color:#fff;">Verification card</span></div>
           <div class="tk-zone" style="bottom:5%; height:22%; background:rgba(0,0,0,.72); flex-direction:column; z-index:1;"><span class="tk-label" style="color:var(--ts-gold); font-size:9.5px;">Real Recruiting. No Noise.</span><span class="tk-label" style="font-weight:400; text-transform:none; font-size:8px; margin-top:3px; color:#D6D6DC;">Every account, manually approved.</span></div>
         </div><p class="tk-caption"><b>1080&times;1080</b> &middot; gold (athlete)</p></div>
-        <div class="tk-unit" data-subject-item="2" style="--accent:var(--ts-blue);"><div class="tk-canvas r-portrait">
+        <div class="tk-unit" style="--accent:var(--ts-blue);"><div class="tk-canvas r-portrait">
           <div class="tk-zone tk-logo" style="top:3%; left:4%; right:auto; width:30%; height:4.5%;"><span class="tk-label">Logo</span></div>
           <div class="tk-zone tk-image" style="top:0; left:0; right:0; bottom:0; border-radius:0; z-index:0;"></div>
           <div class="tk-zone" style="top:10%; left:5%; right:5%; height:20%; background:rgba(20,20,24,.9);"><span class="tk-label" style="color:#fff;">Verification card</span></div>
@@ -1863,12 +1863,12 @@
           <button class="choose-btn" onclick="chooseDesign('t1','B')">Choose This Design</button>
         </div>
       <div class="tk-set">
-        <div class="tk-unit" data-subject-item="1" style="--accent:var(--ts-gold);"><div class="tk-canvas r-square">
+        <div class="tk-unit" style="--accent:var(--ts-gold);"><div class="tk-canvas r-square">
           <div class="tk-zone tk-logo" style="top:4%; left:4%; right:auto; width:26%; height:6%;"><span class="tk-label">Logo</span></div>
           <div class="tk-zone tk-image" style="top:0; left:0; right:0; bottom:0; border-radius:0; z-index:0;"></div>
           <div class="tk-zone" style="bottom:5%; height:24%; background:rgba(0,0,0,.72); flex-direction:column; z-index:1;"><span class="tk-label" style="color:var(--ts-gold); font-size:9.5px;">Real Recruiting. No Noise.</span><span class="tk-label" style="font-weight:400; text-transform:none; font-size:7px; margin-top:3px; color:#D6D6DC;">100% ID Verified &middot; &lt;48h Approval</span></div>
         </div><p class="tk-caption"><b>1080&times;1080</b> &middot; gold (athlete)</p></div>
-        <div class="tk-unit" data-subject-item="2" style="--accent:var(--ts-blue);"><div class="tk-canvas r-portrait">
+        <div class="tk-unit" style="--accent:var(--ts-blue);"><div class="tk-canvas r-portrait">
           <div class="tk-zone tk-logo" style="top:3%; left:4%; right:auto; width:30%; height:4.5%;"><span class="tk-label">Logo</span></div>
           <div class="tk-zone tk-image" style="top:0; left:0; right:0; bottom:0; border-radius:0; z-index:0;"></div>
           <div class="tk-zone" style="bottom:4%; height:20%; background:rgba(0,0,0,.72); flex-direction:column; z-index:1;"><span class="tk-label" style="color:var(--ts-blue); font-size:9px;">Real Recruiting. No Noise.</span><span class="tk-label" style="font-weight:400; text-transform:none; font-size:6.5px; margin-top:3px; color:#D6D6DC;">$0 for Coaches &middot; &lt;48h Approval</span></div>
@@ -1880,16 +1880,28 @@
         </div><p class="tk-caption"><b>1080&times;1920</b> &middot; either accent</p></div>
       </div>
       <details class="option-detail"><summary>Prompts &amp; layout notes<span class="toggle">+</span></summary><div class="option-detail-body">
-      <p class="option-c-note">Athlete prompt shown below; the coach version reuses this same photo family with a color/copy swap (see compositing note) rather than a separate render.</p>
+      <p class="option-c-note">Showing the version matching "Designing for" above &mdash; toggle it to see the other.</p>
+      <div data-subject-item="1">
+      <p style="font-weight:700; font-size:11px; text-transform:uppercase; letter-spacing:.03em; margin:14px 0 6px; color:var(--ts-gold);">Athlete version (gold)</p>
       <div class="prompt-row">
         <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic photo of a young Black female track &amp; field athlete on a running track, calm confident expression, natural late-afternoon light with a warm gold rim light, editorial sports-lifestyle style, filling the entire frame edge to edge. Leave a wide empty band across the bottom third of the frame, dark and semi-transparent, for a headline, tagline, and a small proof-stat row &mdash; no floating card this time. Square 1:1 format. No text, no logos, no UI elements.</p></details>
         <details class="prompt"><summary>1080&times;1350<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic photo of a young white female track &amp; field athlete on the same running track, same warm-gold rim lighting, full-bleed. Reframe for a taller 4:5 canvas: athlete fills the upper two-thirds of the frame. Leave a deeper dark semi-transparent band across the bottom for headline, tagline, and proof-stat row. No text, no logos, no UI elements.</p></details>
         <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic photo of a young Asian-American female track &amp; field athlete on the same running track, full-bleed. Reframe for a tall 9:16 canvas: athlete fills the middle two-thirds of the frame. Leave a dark semi-transparent band across the very bottom for headline, tagline, proof-stat row, and CTA stacked. No text, no logos, no UI elements.</p></details>
       </div>
-      <p class="comp-note">Compositing note: for the coach version, swap warm-gold for cool blue rim light and reuse the established coach photo &mdash; no floating card, the stat row carries the proof. Reskin guide: each ratio is a different athlete/ethnicity, matching the concept card above.</p>
+      <p class="comp-note">Compositing note: no floating card this time &mdash; the stat row carries the proof. Reskin guide: each ratio is a different athlete/ethnicity, matching the concept card above.</p>
+      </div>
+      <div data-subject-item="2">
+      <p style="font-weight:700; font-size:11px; text-transform:uppercase; letter-spacing:.03em; margin:16px 0 6px; color:var(--ts-blue);">Coach version (blue)</p>
+      <div class="prompt-row">
+        <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic photo of a middle-aged Latino coach in a team polo on a soccer sideline, arms crossed, calm evaluating expression, natural outdoor light with a cool blue rim light, editorial sports-recruiting style, filling the entire frame edge to edge. Leave a wide empty band across the bottom third of the frame, dark and semi-transparent, for a headline, tagline, and a small proof-stat row &mdash; no floating card this time. Square 1:1 format. No text, no logos, no UI elements.</p></details>
+        <details class="prompt"><summary>1080&times;1350<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic Latino coach on the soccer sideline, same cool-blue rim lighting, full-bleed. Reframe for a taller 4:5 canvas: coach fills the upper two-thirds of the frame. Leave a deeper dark semi-transparent band across the bottom for headline, tagline, and proof-stat row. No text, no logos, no UI elements.</p></details>
+        <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic Latino coach on the soccer sideline, full-bleed. Reframe for a tall 9:16 canvas: coach fills the middle two-thirds of the frame. Leave a dark semi-transparent band across the very bottom for headline, tagline, proof-stat row, and CTA stacked. No text, no logos, no UI elements.</p></details>
+      </div>
+      <p class="comp-note">Compositing note: same sideline setting as the athlete version, cool blue instead of warm gold &mdash; no floating card, the stat row carries the proof.</p>
+      </div>
       <p class="logo-note"><b>Logo:</b> top-left, scaling down on taller ratios.</p>
       <p class="text-note"><b>Text boxes:</b> real box &mdash; black ~72% scrim behind headline, subtext, and proof-stat row.</p>
-      
+
       </div></details>
       </div>
 
@@ -1900,14 +1912,14 @@
         </div>
       <p class="option-c-note">A tilted seal-style verification stamp overlaps a diagonal color block cutting the frame corner to corner &mdash; the stamp reads as official, not decorative.</p>
       <div class="tk-set">
-        <div class="tk-unit" data-subject-item="1" style="--accent:var(--ts-gold);"><div class="tk-canvas r-square tk-dyn">
+        <div class="tk-unit" style="--accent:var(--ts-gold);"><div class="tk-canvas r-square tk-dyn">
           <div style="position:absolute; inset:0; clip-path:polygon(0 0,62% 0,38% 100%,0 100%); background:#0B0B0E;"></div>
           <div style="position:absolute; inset:0; clip-path:polygon(64% 0,100% 0,100% 100%,40% 100%); background:linear-gradient(160deg, var(--ts-gold), #7a5c1e);"></div>
           <div class="tk-zone tk-logo" style="top:4%; left:4%; right:auto; width:26%; height:6%; border-color:rgba(255,255,255,.4);"><span class="tk-label" style="color:#fff;">Logo</span></div>
           <div class="tk-badge-round" style="width:34%; aspect-ratio:1/1; top:34%; left:33%; transform:rotate(-16deg); background:#0B0B0E; border:2px dashed var(--ts-gold); flex-direction:column;"><span style="font-size:6.5px; font-weight:800; color:var(--ts-gold); letter-spacing:.05em;">VERIFIED</span></div>
           <div style="position:absolute; bottom:6%; left:8%; right:8%; text-align:center; z-index:2;"><span class="tk-label" style="font-size:9px; color:#fff;">Real Recruiting. No Noise.</span></div>
         </div><p class="tk-caption"><b>1080&times;1080</b></p></div>
-        <div class="tk-unit" data-subject-item="2" style="--accent:var(--ts-blue);"><div class="tk-canvas r-portrait tk-dyn">
+        <div class="tk-unit" style="--accent:var(--ts-blue);"><div class="tk-canvas r-portrait tk-dyn">
           <div style="position:absolute; inset:0; clip-path:polygon(0 0,62% 0,38% 100%,0 100%); background:#0B0B0E;"></div>
           <div style="position:absolute; inset:0; clip-path:polygon(64% 0,100% 0,100% 100%,40% 100%); background:linear-gradient(160deg, var(--ts-blue), #1c3f8a);"></div>
           <div class="tk-zone tk-logo" style="top:3%; left:4%; right:auto; width:30%; height:4.5%; border-color:rgba(255,255,255,.4);"><span class="tk-label" style="color:#fff;">Logo</span></div>
@@ -1923,16 +1935,27 @@
         </div><p class="tk-caption"><b>1080&times;1920</b></p></div>
       </div>
       <details class="option-detail"><summary>Prompts &amp; layout notes<span class="toggle">+</span></summary><div class="option-detail-body">
-      <p class="option-c-note">One shared graphic prompt, colored gold for the athlete version and blue for the coach version (see the reframe note below) &mdash; not two separate renders.</p>
+      <p class="option-c-note">Showing the version matching "Designing for" above &mdash; toggle it to see the other.</p>
+      <div data-subject-item="1">
+      <p style="font-weight:700; font-size:11px; text-transform:uppercase; letter-spacing:.03em; margin:14px 0 6px; color:var(--ts-gold);">Athlete version (gold)</p>
       <div class="prompt-row">
         <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A stylized near-black background split by a sharp diagonal color-block seam running corner to corner, warm gold on one side of the seam fading to deep charcoal. Centered on the seam, reserve a circular dashed-border badge shape tilted at a slight angle, like an official verification stamp. Bold graphic sports-tech aesthetic, no photography, no gradients beyond the described diagonal blocks. Square 1:1 format. No text, no logos, no UI elements.</p></details>
         <details class="prompt"><summary>1080&times;1350<span class="toggle">+</span></summary><p class="prompt-body">Same diagonal color-block seam and tilted circular badge reservation, same warm gold-to-charcoal palette. Reframe for a taller 4:5 canvas: seam angle steepened slightly, badge shape shifted upper-center. No text, no logos, no UI elements.</p></details>
-        <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same diagonal color-block seam composition. Reframe for a tall 9:16 canvas: seam runs nearly vertical corner to corner, badge shape centered in the upper half, deep empty space at the bottom for headline, tagline, and CTA. Use blue-to-charcoal for the coach variant instead of gold. No text, no logos, no UI elements.</p></details>
+        <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same diagonal color-block seam composition, warm gold-to-charcoal palette. Reframe for a tall 9:16 canvas: seam runs nearly vertical corner to corner, badge shape centered in the upper half, deep empty space at the bottom for headline, tagline, and CTA. No text, no logos, no UI elements.</p></details>
+      </div>
+      </div>
+      <div data-subject-item="2">
+      <p style="font-weight:700; font-size:11px; text-transform:uppercase; letter-spacing:.03em; margin:16px 0 6px; color:var(--ts-blue);">Coach version (blue)</p>
+      <div class="prompt-row">
+        <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">Same stylized near-black background split by a sharp diagonal color-block seam running corner to corner, cool blue on one side of the seam fading to deep charcoal instead of gold. Centered on the seam, reserve the same tilted circular dashed-border verification badge shape. Bold graphic sports-tech aesthetic, no photography. Square 1:1 format. No text, no logos, no UI elements.</p></details>
+        <details class="prompt"><summary>1080&times;1350<span class="toggle">+</span></summary><p class="prompt-body">Same diagonal color-block seam and tilted circular badge reservation, cool blue-to-charcoal palette. Reframe for a taller 4:5 canvas: seam angle steepened slightly, badge shape shifted upper-center. No text, no logos, no UI elements.</p></details>
+        <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same diagonal color-block seam composition, cool blue-to-charcoal palette. Reframe for a tall 9:16 canvas: seam runs nearly vertical corner to corner, badge shape centered in the upper half, deep empty space at the bottom for headline, tagline, and CTA. No text, no logos, no UI elements.</p></details>
+      </div>
       </div>
       <p class="comp-note">Compositing note: the "VERIFIED" wordmark inside the badge is set in the compositing pass, not the AI render &mdash; keep the badge interior empty in the prompt output so real type can be dropped in cleanly.</p>
       <p class="logo-note"><b>Logo:</b> top-left, on the dark seam side, clear of the seam and verification badge.</p>
       <p class="text-note"><b>Text boxes:</b> mixed &mdash; the "VERIFIED" badge is a real filled disc, keep it. "Real Recruiting. No Noise." is grid-only, on the diagonal blocks directly.</p>
-      
+
       </div></details>
       </div>
       <p class="chosen-note">You're going with <b></b> for this month.</p>
