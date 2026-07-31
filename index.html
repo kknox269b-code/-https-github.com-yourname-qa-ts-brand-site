@@ -282,8 +282,8 @@
   .nav-menu-icon{font-size:18px; line-height:1;}
   .nav-current-label{color:var(--fg3); font-weight:400;}
   .nav-current-label b{color:var(--fg1); font-weight:600;}
-  .nav-dropdown{position:absolute; top:calc(100% + 4px); left:16px; min-width:240px; background:var(--bg-card); border:1px solid var(--stroke2); border-radius:var(--r-m); box-shadow:var(--shadow16); padding:6px; display:none; flex-direction:column; gap:2px;}
-  .nav-dropdown.open{display:flex;}
+  .nav-dropdown{position:absolute; top:calc(100% + 4px); left:16px; min-width:240px; background:var(--bg-card); border:1px solid var(--stroke2); border-radius:var(--r-m); box-shadow:var(--shadow16); padding:6px; display:flex; flex-direction:column; gap:2px; opacity:0; transform:translateY(-6px) scale(.98); pointer-events:none; transition:opacity .16s ease, transform .16s cubic-bezier(.2,.8,.2,1); transform-origin:top left;}
+  .nav-dropdown.open{opacity:1; transform:translateY(0) scale(1); pointer-events:auto;}
   .nav-dropdown-item{display:block; width:100%; text-align:left; border:none; background:none; cursor:pointer; font-family:var(--fluent-font); font-size:13.5px; font-weight:600; color:var(--fg2); padding:10px 12px; border-radius:var(--r-s); border-left:3px solid transparent; transition:background .12s ease, color .12s ease;}
   .nav-dropdown-item:hover{background:var(--bg-card2); color:var(--fg1);}
   .nav-dropdown-item.active.qa-tab{color:var(--navy); border-left-color:var(--navy); background:var(--bg-card2);}
@@ -312,6 +312,19 @@
   .tk-badge-round{position:absolute; border-radius:50%; background:#fff; display:flex; align-items:center; justify-content:center; box-shadow:0 3px 9px rgba(0,0,0,.3); z-index:3; text-align:center; line-height:1.1;}
   .tk-card-float{position:absolute; background:#fff; border-radius:4px; box-shadow:0 4px 12px rgba(0,0,0,.28); z-index:2; display:flex; align-items:center; justify-content:center; padding:2px;}
   .option-c-note{font-size:11px; color:var(--fg3); margin:0 0 10px; max-width:70ch;}
+
+  /* ===== scroll-reveal + ambient motion ===== */
+  .reveal{opacity:0; transform:translateY(18px); transition:opacity .6s cubic-bezier(.16,1,.3,1), transform .6s cubic-bezier(.16,1,.3,1);}
+  .reveal.in-view{opacity:1; transform:translateY(0);}
+  @keyframes heroIn{to{opacity:1; transform:translateY(0);}}
+  .stagger-in > *{opacity:0; transform:translateY(14px); animation:heroIn .7s cubic-bezier(.16,1,.3,1) forwards;}
+  .stagger-in > *:nth-child(1){animation-delay:.02s;}
+  .stagger-in > *:nth-child(2){animation-delay:.10s;}
+  .stagger-in > *:nth-child(3){animation-delay:.18s;}
+  .stagger-in > *:nth-child(4){animation-delay:.26s;}
+  .stagger-in > *:nth-child(5){animation-delay:.34s;}
+  @keyframes bgDrift{from{background-position:0% 0%;} to{background-position:100% 100%;}}
+  .cover, .why-band{background-size:160% 160%; animation:bgDrift 24s ease-in-out infinite alternate;}
 
   /* ===== design chooser + progressive disclosure ===== */
   @keyframes fadeSlideIn{from{opacity:0; transform:translateY(-6px);} to{opacity:1; transform:translateY(0);}}
@@ -390,7 +403,7 @@
 
 <div id="qa-view">
 <div class="cover">
-  <div class="cover-inner">
+  <div class="cover-inner stagger-in">
     <p class="eyebrow">5-Month Brand Direction &middot; Design Toolkit</p>
     <h1 class="title">From a Quarter to a Standard.</h1>
     <p class="dek">One fixed system underneath, one evolving monthly theme on top &mdash; and a real production toolkit riding along with it: a headline/tagline per concept, a ChatGPT prompt for every export ratio, and a staged rollout that keeps rugby as the lead while lacrosse and baseball earn their way in, sport by sport, month by month.</p>
@@ -405,7 +418,7 @@
 </div>
 
 <div class="why-band">
-  <div class="why-inner">
+  <div class="why-inner stagger-in">
     <p class="why-eyebrow">Why This Exists</p>
     <p class="why-quote">Anyone can run an ad for a jersey. <em>Only Quarter Athletic can back it up with the truth</em> &mdash; and that truth is the actual strategy.</p>
 
@@ -1570,7 +1583,7 @@
 </style>
 
 <div class="cover">
-  <div class="cover-inner">
+  <div class="cover-inner stagger-in">
     <p class="eyebrow">5-Month Brand Direction &middot; Twenty Five Select</p>
     <h1 class="title">Where Verified Meets Trusted.</h1>
     <p class="dek">Twenty Five Select connects admin-verified athletes with admin-verified coaches &mdash; real recruiting, no noise. Five months that prove the verification before anyone has to take our word for it, staged the same way as Quarter Athletic's arc: credibility first, everything else after &mdash; adapted for a two-sided marketplace instead of a product line.</p>
@@ -1585,7 +1598,7 @@
 </div>
 
 <div class="why-band">
-  <div class="why-inner">
+  <div class="why-inner stagger-in">
     <p class="why-eyebrow">Why This Exists</p>
     <p class="why-quote">Recruiting is broken by noise. <em>Twenty Five Select is what recruiting should have been all along</em> &mdash; but only if the marketing proves the verification instead of just claiming it.</p>
     <details class="why-toggle why-toggle-light">
@@ -3097,5 +3110,25 @@
     });
   }
 
+  function initScrollReveal(){
+    if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var targets = document.querySelectorAll('details.month, .toolkit-card, .cv-card, .hier-sample');
+    if(!('IntersectionObserver' in window)){ return; }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('in-view');
+          io.unobserve(entry.target);
+        }
+      });
+    }, {threshold:.12, rootMargin:'0px 0px -40px 0px'});
+    targets.forEach(function(el, i){
+      el.classList.add('reveal');
+      el.style.transitionDelay = (Math.min(i % 4, 3) * 0.06) + 's';
+      io.observe(el);
+    });
+  }
+
   document.addEventListener('DOMContentLoaded', initAllSelections);
+  document.addEventListener('DOMContentLoaded', initScrollReveal);
 </script>
