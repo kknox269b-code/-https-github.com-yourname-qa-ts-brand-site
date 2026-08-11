@@ -742,21 +742,48 @@
       </div>
 
       <div class="concept-card">
-        <div class="concept-top"><span class="concept-sport-tag">Football &middot; master version</span><span class="concept-status">Reskin for soccer, cross country &amp; volleyball below</span><span class="funnel-tag broad">Broad</span></div>
+        <div class="concept-top"><span class="concept-sport-tag">Football &middot; master version</span><span class="concept-status">Tap a sport below to preview all four</span><span class="funnel-tag broad">Broad</span></div>
         <p class="concept-h">Order Before Kickoff</p>
         <p class="concept-t">Football, soccer, cross country, volleyball &mdash; same official standard as rugby. Order now, ready for fall.</p>
         <p class="concept-visual"><b>Visual direction</b>A single ghost-mannequin torso in the finished kit, centered and filling the frame &mdash; the simplest, fastest-reading shot in the whole toolkit, on purpose. No second subject, no scene to parse, just the kit and a three-word promise.</p>
+        <div class="sport-tabs"><button class="sport-tab active" data-sport="football" onclick="showSportTab('m1b','football')">Football</button><button class="sport-tab" data-sport="soccer" onclick="showSportTab('m1b','soccer')">Soccer</button><button class="sport-tab" data-sport="cross-country" onclick="showSportTab('m1b','cross-country')">Cross Country</button><button class="sport-tab" data-sport="volleyball" onclick="showSportTab('m1b','volleyball')">Volleyball</button></div>
+        <div class="sport-panel sport-active" data-sport="football">
         <div class="prompt-row">
-          <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic 3D ghost-mannequin torso in a finished solid-color football jersey and shoulder pads, centered and filling the entire frame, lit with soft even studio light, plain neutral studio backdrop. Leave a wide empty band across the bottom third of the frame for a headline and tagline. Square 1:1 format. No text, no logos, no crests.</p></details>
+          <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic 3D ghost-mannequin torso in a finished solid-color football jersey and shoulder pads, helmet resting at the base of the frame, centered and filling the entire frame, lit with soft even studio light, plain neutral studio backdrop. Leave a wide empty band across the bottom third of the frame for a headline and tagline. Square 1:1 format. No text, no logos, no crests.</p></details>
           <details class="prompt"><summary>1080&times;1350<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic ghost-mannequin torso, same soft studio lighting. Reframe for a taller 4:5 canvas: mannequin centered filling the upper two-thirds of the frame. Leave a deeper empty band across the bottom for headline and tagline stacked. No text, no logos, no crests.</p></details>
           <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic ghost-mannequin torso. Reframe for a tall 9:16 canvas: mannequin centered in the middle third of the frame. Leave a deep empty band across the very bottom for headline, tagline, and CTA stacked. No text, no logos, no crests.</p></details>
         </div>
-        <p class="comp-note">Compositing note: leave chest space blank on the mannequin for the QA logo, same rule as every other concept &mdash; plain backdrop and single subject are the point this month, don't add scene elements.</p>
+        <p class="comp-note">Compositing note: this is the master version &mdash; leave chest space blank on the mannequin for the QA logo, same rule as every other concept &mdash; plain backdrop and single subject are the point this month, don't add scene elements.</p>
+        </div>
+        <div class="sport-panel" data-sport="soccer">
+        <div class="prompt-row">
+          <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic 3D ghost-mannequin torso in a finished solid-color soccer jersey and shorts, centered and filling the entire frame, lit with soft even studio light, plain neutral studio backdrop. Leave a wide empty band across the bottom third of the frame for a headline and tagline. Square 1:1 format. No text, no logos, no crests.</p></details>
+          <details class="prompt"><summary>1080&times;1350<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic ghost-mannequin torso, same soft studio lighting. Reframe for a taller 4:5 canvas: mannequin centered filling the upper two-thirds of the frame. Leave a deeper empty band across the bottom for headline and tagline stacked. No text, no logos, no crests.</p></details>
+          <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic ghost-mannequin torso. Reframe for a tall 9:16 canvas: mannequin centered in the middle third of the frame. Leave a deep empty band across the very bottom for headline, tagline, and CTA stacked. No text, no logos, no crests.</p></details>
+        </div>
+        <p class="comp-note">Compositing note: reskinned from the Football master version above &mdash; same composition and lighting, soccer kit swapped in. Leave chest space blank on the mannequin for the QA logo.</p>
+        </div>
+        <div class="sport-panel" data-sport="cross-country">
+        <div class="prompt-row">
+          <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic 3D ghost-mannequin torso in a finished solid-color cross country singlet and shorts, centered and filling the entire frame, lit with soft even studio light, plain neutral studio backdrop. Leave a wide empty band across the bottom third of the frame for a headline and tagline. Square 1:1 format. No text, no logos, no crests.</p></details>
+          <details class="prompt"><summary>1080&times;1350<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic ghost-mannequin torso, same soft studio lighting. Reframe for a taller 4:5 canvas: mannequin centered filling the upper two-thirds of the frame. Leave a deeper empty band across the bottom for headline and tagline stacked. No text, no logos, no crests.</p></details>
+          <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic ghost-mannequin torso. Reframe for a tall 9:16 canvas: mannequin centered in the middle third of the frame. Leave a deep empty band across the very bottom for headline, tagline, and CTA stacked. No text, no logos, no crests.</p></details>
+        </div>
+        <p class="comp-note">Compositing note: reskinned from the Football master version above &mdash; same composition and lighting, cross country kit swapped in. Leave chest space blank on the mannequin for the QA logo.</p>
+        </div>
+        <div class="sport-panel" data-sport="volleyball">
+        <div class="prompt-row">
+          <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic 3D ghost-mannequin torso in a finished solid-color volleyball jersey, shorts, and kneepads, centered and filling the entire frame, lit with soft even studio light, plain neutral studio backdrop. Leave a wide empty band across the bottom third of the frame for a headline and tagline. Square 1:1 format. No text, no logos, no crests.</p></details>
+          <details class="prompt"><summary>1080&times;1350<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic ghost-mannequin torso, same soft studio lighting. Reframe for a taller 4:5 canvas: mannequin centered filling the upper two-thirds of the frame. Leave a deeper empty band across the bottom for headline and tagline stacked. No text, no logos, no crests.</p></details>
+          <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic ghost-mannequin torso. Reframe for a tall 9:16 canvas: mannequin centered in the middle third of the frame. Leave a deep empty band across the very bottom for headline, tagline, and CTA stacked. No text, no logos, no crests.</p></details>
+        </div>
+        <p class="comp-note">Compositing note: reskinned from the Football master version above &mdash; same composition and lighting, volleyball kit swapped in. Leave chest space blank on the mannequin for the QA logo.</p>
+        </div>
 
-        <p style="font-family:ui-monospace,monospace; font-size:11px; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); margin:18px 0 6px;">Reskin guide &mdash; same three prompts, swap this line only</p>
+        <p style="font-family:ui-monospace,monospace; font-size:11px; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); margin:18px 0 6px;">Reskin guide &mdash; quick reference for the swap above</p>
         <table class="reskin-table">
-          <tr><th>Sport</th><th>Swap the kit description to</th></tr>
-          <tr><td>Football (above)</td><td>&ldquo;a finished solid-color football jersey and shoulder pads, helmet resting at the base of the frame&rdquo;</td></tr>
+          <tr><th>Sport</th><th>Kit description used</th></tr>
+          <tr><td>Football (master)</td><td>&ldquo;a finished solid-color football jersey and shoulder pads, helmet resting at the base of the frame&rdquo;</td></tr>
           <tr><td>Soccer</td><td>&ldquo;a finished solid-color soccer jersey and shorts&rdquo;</td></tr>
           <tr><td>Cross Country</td><td>&ldquo;a finished solid-color cross country singlet and shorts&rdquo;</td></tr>
           <tr><td>Volleyball</td><td>&ldquo;a finished solid-color volleyball jersey, shorts, and kneepads&rdquo;</td></tr>
@@ -783,7 +810,7 @@
       </div>
 
       <p class="month-label">Choose a Layout</p>
-      <p class="section-sub" style="margin:0 0 6px;">First pick the sport, then the layout &mdash; the prompts below adjust to match both. Its prompts stay tucked behind a toggle until you want them.</p>
+      <p class="section-sub" style="margin:0 0 6px;">Pick a layout &mdash; the sport you selected above carries through automatically. Its prompts stay tucked behind a toggle until you want them.</p>
       <div class="design-options-group" id="m1b-options">
       <div class="sport-tabs"><button class="sport-tab active" data-sport="football" onclick="showSportTab('m1b','football')">Football</button><button class="sport-tab" data-sport="soccer" onclick="showSportTab('m1b','soccer')">Soccer</button><button class="sport-tab" data-sport="cross-country" onclick="showSportTab('m1b','cross-country')">Cross Country</button><button class="sport-tab" data-sport="volleyball" onclick="showSportTab('m1b','volleyball')">Volleyball</button></div>
       <div class="option-tabs"><button class="option-tab" data-option="A" onclick="showOptionTab('m1b','A')">Option A <span class="tab-name">Statement</span><span class="tab-check">&#10003;</span></button><button class="option-tab" data-option="B" onclick="showOptionTab('m1b','B')">Option B <span class="tab-name">Split</span><span class="tab-check">&#10003;</span></button><button class="option-tab" data-option="C" onclick="showOptionTab('m1b','C')">Option C <span class="tab-name">Diagonal Slice, dynamic</span><span class="tab-check">&#10003;</span></button><button class="option-tab" data-option="D" onclick="showOptionTab('m1b','D')">Option D <span class="tab-name">Spotlight Burst, dynamic</span><span class="tab-check">&#10003;</span></button></div>
@@ -3486,12 +3513,12 @@
   }
 
   function showSportTab(monthId, sport){
-    var group = document.getElementById(monthId + '-options');
-    if(!group) return;
-    group.querySelectorAll('.sport-tab').forEach(function(btn){
+    var month = document.getElementById(monthId);
+    if(!month) return;
+    month.querySelectorAll('.sport-tab').forEach(function(btn){
       btn.classList.toggle('active', btn.getAttribute('data-sport') === sport);
     });
-    group.querySelectorAll('.sport-panel').forEach(function(el){
+    month.querySelectorAll('.sport-panel').forEach(function(el){
       el.classList.toggle('sport-active', el.getAttribute('data-sport') === sport);
     });
   }
