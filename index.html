@@ -373,6 +373,14 @@
   .flight-panel.flight-active{display:block;}
   .subject-tabs{margin:0 0 14px;}
   .subject-tabs-label{font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:var(--fg3); margin:0 0 8px;}
+
+  /* ===== sport tabs (QA Order Window: reskin selector nested above the layout-option tabs) ===== */
+  .sport-tabs{display:flex; gap:6px; margin:16px 0 10px; flex-wrap:wrap;}
+  .sport-tab{font-family:var(--fluent-font); font-weight:600; font-size:12.5px; color:var(--fg2); background:var(--bg-card2); border:1px solid var(--stroke2); border-radius:var(--r-pill); padding:7px 16px; cursor:pointer; transition:background .15s ease, color .15s ease, border-color .15s ease; -webkit-user-select:none; user-select:none;}
+  .sport-tab:hover{border-color:var(--accent);}
+  .sport-tab.active{background:var(--accent); color:#fff; border-color:var(--accent);}
+  .sport-panel{display:none;}
+  .sport-panel.sport-active{display:block;}
   .design-options-group[data-active-subject="1"] [data-subject-item="2"]{display:none;}
   .design-options-group[data-active-subject="2"] [data-subject-item="1"]{display:none;}
 
@@ -403,44 +411,41 @@
 
 <div id="qa-view">
 <div class="cover">
-  <div class="cover-inner stagger-in">
-    <p class="eyebrow">5-Month Brand Direction &middot; Design Toolkit</p>
+  <div class="cover-inner">
+    <p class="eyebrow">5-Month Brand Direction + Fall Order Window &middot; Design Toolkit</p>
     <h1 class="title">From a Quarter to a Standard.</h1>
-    <p class="dek">One fixed system underneath, one evolving monthly theme on top &mdash; and a real production toolkit riding along with it: a headline/tagline per concept, a ChatGPT prompt for every export ratio, and a staged rollout that keeps rugby as the lead while lacrosse and baseball earn their way in, sport by sport, month by month.</p>
+    <p class="dek">One fixed system underneath, one evolving monthly theme on top &mdash; and a real production toolkit riding along with it: a headline/tagline per concept, a ChatGPT prompt for every export ratio, and a staged rollout that keeps rugby as the lead while lacrosse and baseball earn their way in, sport by sport, month by month. A supplemental Order Window card sits between Months 1 and 2 &mdash; outside the five-stage arc, a reminder push for football, soccer, cross country, and volleyball (already part of QA's roster) timed to when programs actually place their fall orders.</p>
     <div class="roadmap">
-      <a href="#m1"><span class="rm-num">Month 1</span><span class="rm-name">The Quarter</span><span class="rm-sport">Rugby</span><span class="rm-dot" style="background:#1B2A4E;"></span></a>
-      <a href="#m2"><span class="rm-num">Month 2</span><span class="rm-name">Built With</span><span class="rm-sport">Rugby + Lacrosse</span><span class="rm-dot" style="background:#9C2159;"></span></a>
-      <a href="#m3"><span class="rm-num">Month 3</span><span class="rm-name">Give Back</span><span class="rm-sport">Lacrosse + Baseball</span><span class="rm-dot" style="background:#2F5233;"></span></a>
-      <a href="#m4"><span class="rm-num">Month 4</span><span class="rm-name">Generational Partnership</span><span class="rm-sport">Rugby + Lacrosse + Baseball</span><span class="rm-dot" style="background:#B4863A;"></span></a>
-      <a href="#m5"><span class="rm-num">Month 5</span><span class="rm-name">One Standard</span><span class="rm-sport">All 10, as a network</span><span class="rm-dot" style="background:linear-gradient(90deg,#1B2A4E,#9C2159,#2F5233,#B4863A);"></span></a>
+      <a href="#m1"><span class="rm-num">Month 1</span><span class="rm-name">The Quarter</span><span class="rm-sport">Rugby</span><span class="rm-sport">Run: June</span><span class="rm-dot" style="background:#1B2A4E;"></span></a>
+      <a href="#m1b"><span class="rm-num">Order Window</span><span class="rm-name">Order Before Kickoff</span><span class="rm-sport">Football + Soccer + XC + Volleyball</span><span class="rm-sport">Run: Aug&ndash;Sept</span><span class="rm-dot" style="background:#C2571B;"></span></a>
+      <a href="#m2"><span class="rm-num">Month 2</span><span class="rm-name">Built With</span><span class="rm-sport">Rugby + Lacrosse</span><span class="rm-sport">Run: October</span><span class="rm-dot" style="background:#9C2159;"></span></a>
+      <a href="#m3"><span class="rm-num">Month 3</span><span class="rm-name">Give Back</span><span class="rm-sport">Lacrosse + Baseball</span><span class="rm-sport">Run: November</span><span class="rm-dot" style="background:#2F5233;"></span></a>
+      <a href="#m4"><span class="rm-num">Month 4</span><span class="rm-name">Generational Partnership</span><span class="rm-sport">Rugby + Lacrosse + Baseball</span><span class="rm-sport">Run: December</span><span class="rm-dot" style="background:#B4863A;"></span></a>
+      <a href="#m5"><span class="rm-num">Month 5</span><span class="rm-name">One Standard</span><span class="rm-sport">All 10, as a network</span><span class="rm-sport">Run: Jan&ndash;Feb</span><span class="rm-dot" style="background:linear-gradient(90deg,#1B2A4E,#9C2159,#2F5233,#B4863A);"></span></a>
     </div>
   </div>
 </div>
 
 <div class="why-band">
-  <div class="why-inner stagger-in">
+  <div class="why-inner">
     <p class="why-eyebrow">Why This Exists</p>
     <p class="why-quote">Anyone can run an ad for a jersey. <em>Only Quarter Athletic can back it up with the truth</em> &mdash; and that truth is the actual strategy.</p>
 
-    <details class="why-toggle why-toggle-light">
-      <summary>Read the full problem + approach<span class="toggle">+</span></summary>
-      <div class="why-toggle-body">
-        <div class="why-grid">
-          <div class="why-col">
-            <h4>The problem</h4>
-            <p>Every piece of QA marketing to date has been filtered through one true but incomplete lens: a company that makes apparel. That's real. It's also the smallest true thing about the business. Real collegiate licensing, team-curated identity work, 10% of every sale reinvested back into the program, a growing multi-sport roster &mdash; none of that has ever shown up in what a coach sees on Meta.</p>
-            <p>Left as-is, that gap has a cost: if the only thing a coach can evaluate is price and turnaround time, QA is competing on the one axis a print shop can always match. Nothing can match the founder's story, the licensing, or the 10% back &mdash; but only if someone actually says it out loud.</p>
-          </div>
-          <div class="why-col">
-            <h4>The approach</h4>
-            <p>This isn't inventing a new brand. It's sequencing the truth QA already has, in the order every brand that's earned real loyalty has always used: prove it's real, prove it's yours, prove it gives back, prove it stays, prove it's bigger than one sport. Skip a step and the next one doesn't land &mdash; nobody believes &ldquo;partner for life&rdquo; from a company they don't yet trust is legitimate.</p>
-            <p>The sport rollout follows the same logic. Lacrosse and baseball don't launch cold in month one competing with rugby's proof &mdash; each enters inside the month that makes it most believable: lacrosse through identity, baseball through give-back.</p>
-          </div>
-        </div>
-
-        <p class="why-close">The purpose isn't better-looking ads for their own sake. It's more coaches requesting quotes, at a lower cost per lead over time, because the brand has already done part of the convincing before the price sheet ever comes up &mdash; for rugby, and for the two sports QA is still earning the right to be trusted in.</p>
+    <div class="why-grid">
+      <div class="why-col">
+        <h4>The problem</h4>
+        <p>Every piece of QA marketing to date has been filtered through one true but incomplete lens: a company that makes apparel. That's real. It's also the smallest true thing about the business. Real collegiate licensing, team-curated identity work, 10% of every sale reinvested back into the program, a growing multi-sport roster &mdash; none of that has ever shown up in what a coach sees on Meta.</p>
+        <p>Left as-is, that gap has a cost: if the only thing a coach can evaluate is price and turnaround time, QA is competing on the one axis a print shop can always match. Nothing can match the founder's story, the licensing, or the 10% back &mdash; but only if someone actually says it out loud.</p>
       </div>
-    </details>
+      <div class="why-col">
+        <h4>The approach</h4>
+        <p>This isn't inventing a new brand. It's sequencing the truth QA already has, in the order every brand that's earned real loyalty has always used: prove it's real, prove it's yours, prove it gives back, prove it stays, prove it's bigger than one sport. Skip a step and the next one doesn't land &mdash; nobody believes &ldquo;partner for life&rdquo; from a company they don't yet trust is legitimate.</p>
+        <p>The sport rollout follows the same logic. Lacrosse and baseball don't launch cold in month one competing with rugby's proof &mdash; each enters inside the month that makes it most believable: lacrosse through identity, baseball through give-back.</p>
+        <p>&ldquo;Month 1&rdquo; through &ldquo;Month 5&rdquo; are the narrative order, not the calendar &mdash; they don't run back-to-back. Rugby's own preseason (mid-to-late August) and lacrosse/baseball's real purchasing window (coaches place spring-season orders November&ndash;January, well after fall ball) sit six months apart, so the arc runs in two waves: Month 1 alone in June, 1&ndash;2 months ahead of rugby's season and inside the summer budget-cycle window; then Months 2&ndash;5 run back-to-back October through February, landing squarely in the window when lacrosse and baseball programs are actually deciding, and closing right as both those seasons and rugby's spring 7s peak open.</p>
+      </div>
+    </div>
+
+    <p class="why-close">The purpose isn't better-looking ads for their own sake. It's more coaches requesting quotes, at a lower cost per lead over time, because the brand has already done part of the convincing before the price sheet ever comes up &mdash; for rugby, and for the two sports QA is still earning the right to be trusted in.</p>
   </div>
 </div>
 
@@ -448,10 +453,7 @@
 
   <section class="section" style="padding-top:56px;">
     <h2 class="section-title">How brands actually grow</h2>
-    <p class="section-sub">Nike moved through five stages &mdash; credibility, identity, community, loyalty, culture &mdash; keeping its logo and voice fixed while the story evolved. This roadmap runs QA through the same five stages, using its own facts instead of borrowed ones.</p>
-    <details class="why-toggle">
-      <summary>See the full stage-by-stage breakdown<span class="toggle">+</span></summary>
-      <div class="why-toggle-body">
+    <p class="section-sub">Nike didn't become Nike by running one campaign forever, and it didn't get there by changing its logo every season either. It moved through stages &mdash; credibility, identity, community, loyalty, culture &mdash; keeping the swoosh and the voice fixed while the story evolved. This roadmap runs Quarter Athletic through the same five stages, using QA's own facts and its real sport priorities instead of borrowed ones.</p>
     <div class="wrap-table">
       <table class="stage-table">
         <tr><th>Stage</th><th>What the major brands did</th><th>What QA does with it</th></tr>
@@ -462,32 +464,22 @@
         <tr><td>5&nbsp;&middot; Culture<div class="stage-brand">Nike as an institution</div></td><td>Became bigger than its product category &mdash; a brand people follow, not a company people buy from.</td><td>States the full network out loud &mdash; all ten sports, rugby/lacrosse/baseball leading the wall.</td></tr>
       </table>
     </div>
-      </div>
-    </details>
   </section>
 
   <section class="section">
     <h2 class="section-title">How this toolkit works</h2>
     <p class="section-sub">Three things stay constant everywhere in this document, so nothing below needs to repeat them:</p>
-    <details class="why-toggle">
-      <summary>See the three rules<span class="toggle">+</span></summary>
-      <div class="why-toggle-body">
     <div class="toolkit-grid">
       <div class="toolkit-card"><b>One concept, three ratios</b><p>Every concept keeps the same subject, lighting, and mood across 1080&times;1080, 1080&times;1350, and 1080&times;1920 &mdash; only the framing and the reserved text space change. Same rule the rugby shoot already used.</p></div>
       <div class="toolkit-card"><b>Reskin before reinventing</b><p>When a concept works, it moves to the next sport as a reskin &mdash; same composition and lighting instructions, different kit/equipment. Month 4 is written this way on purpose: one prompt set, three sports.</p></div>
       <div class="toolkit-card"><b>Sports earn their way in</b><p>Rugby is live every month. Lacrosse and baseball are staged in deliberately &mdash; identity month for lacrosse, community month for baseball &mdash; instead of both launching cold in month one.</p></div>
       <div class="toolkit-card"><b>Zones are fixed, copy isn't</b><p>Each month below ends with a scaled layout showing exactly where headline, tagline, image, and logo go at all three ratios. Drop that month's copy in and the composition holds &mdash; logo width stays fixed (22% square / 26% portrait / 30% story) regardless of concept.</p></div>
     </div>
-      </div>
-    </details>
   </section>
 
   <section class="section">
     <h2 class="section-title">The hierarchy strategy: what's fixed, what moves</h2>
-    <p class="section-sub">One three-layer typography system &mdash; Hero Statement, Power Statement, Supporting Copy &mdash; keeps five monthly moods and three sports reading as one brand.</p>
-    <details class="why-toggle">
-      <summary>See the layer sample + what's fixed vs. what moves<span class="toggle">+</span></summary>
-      <div class="why-toggle-body">
+    <p class="section-sub">Every ad, every month, every sport runs through the same three-layer typography &mdash; Hero Statement, Power Statement, Supporting Copy &mdash; and the same visual system. That consistency is what makes five monthly moods and three sports still read as one brand.</p>
 
     <div class="hier-sample">
       <div class="hier-row"><div class="hier-label">Layer 1 &middot; Hero Statement &middot; largest, 3&ndash;5 words, fixed position</div><div class="hier-hero">Built With, Not For.</div></div>
@@ -517,8 +509,6 @@
         </ul>
       </div>
     </div>
-      </div>
-    </details>
   </section>
 
   <!-- ============ MONTH 1 ============ -->
@@ -530,7 +520,8 @@
       <span class="chev">&#9662;</span>
     </summary>
     <div class="month-body">
-      <p class="month-tldr">Prove the company is real before claiming culture &mdash; real founding story, real licensing, on rugby. Runs alongside Campaign 1, doesn't replace it.</p>
+      <p class="month-thesis">Before Quarter Athletic can claim culture, it has to claim truth. This month proves the company is exactly who it says it is &mdash; the real founding story, real licensing &mdash; using rugby, the sport that's already proven, before anything expands. This is the second rugby concept, sitting alongside last week's Campaign 1 set (Trusted By, Champions Wall, Straight Talk, Built For), not replacing it.</p>
+      <p class="nike-note">Stage parallel: early Nike earning trust through the waffle sole and Olympic athletes before it sold a lifestyle.</p>
       <div class="design-strip">
         <div><b>Accent</b><span class="accent-dot"></span>Deep Navy + White</div>
         <div><b>Mood</b>Dawn/dusk stadium light, still, quiet</div>
@@ -542,23 +533,12 @@
         <span class="sport-pill">Baseball &mdash; not yet</span>
       </div>
 
-      <div class="campaign-compact">
-        <span class="cd-chip"><b>Cadence</b>2/wk, low frequency</span>
-        <span class="cd-chip"><b>KPI</b>CTR + branded search lift</span>
-        <span class="cd-chip"><b>Audience</b>Warm retarget</span>
+      <div class="campaign-detail">
+        <div><b>Run window</b><span>June &mdash; 1&ndash;2 months ahead of rugby's mid-to-late August preseason, and inside the spring/summer window when athletic-department budgets typically get locked in before the new fiscal year.</span></div>
+        <div><b>Cadence</b><span>2 ad variants live at once in the ad set &mdash; 1 hero/carousel, 1 proof card &mdash; refreshed weekly. Low frequency on purpose; this month sells the story, not the sale.</span></div>
+        <div><b>Primary KPI</b><span>CTR + branded search lift. Quote requests aren't the goal here &mdash; recognition is.</span></div>
+        <div><b>Audience</b><span>Warm/retarget &mdash; people who've already seen Campaign 1's rugby ads. The story needs context to land.</span></div>
       </div>
-      <details class="why-toggle">
-        <summary>Why this month<span class="toggle">+</span></summary>
-        <div class="why-toggle-body">
-          <p class="month-thesis">Before Quarter Athletic can claim culture, it has to claim truth. This month proves the company is exactly who it says it is &mdash; the real founding story, real licensing &mdash; using rugby, the sport that's already proven, before anything expands. This is the second rugby concept, sitting alongside last week's Campaign 1 set (Trusted By, Champions Wall, Straight Talk, Built For), not replacing it.</p>
-          <p class="nike-note">Stage parallel: early Nike earning trust through the waffle sole and Olympic athletes before it sold a lifestyle.</p>
-          <div class="campaign-detail">
-            <div><b>Cadence</b><span>2 ad variants live at once in the ad set &mdash; 1 hero/carousel, 1 proof card &mdash; refreshed weekly. Low frequency on purpose; this month sells the story, not the sale.</span></div>
-            <div><b>Primary KPI</b><span>CTR + branded search lift. Quote requests aren't the goal here &mdash; recognition is.</span></div>
-            <div><b>Audience</b><span>Warm/retarget &mdash; people who've already seen Campaign 1's rugby ads. The story needs context to land.</span></div>
-          </div>
-        </div>
-      </details>
 
       <p class="month-label">The Concept</p>
       <div class="hero-post">
@@ -572,7 +552,12 @@
         <p class="concept-h">The Quarter</p>
         <p class="concept-t">It started with a quarter. Every program we outfit continues it.</p>
         <p class="concept-visual"><b>Visual direction</b>Worn, analog-grain texture bleeding into the crisp ghost-mannequin render &mdash; the origin story and the product sharing one frame. A coin motif catches light in the stadium tunnel floor, subtle, never literal.</p>
-        
+        <div class="prompt-row">
+          <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic 3D render of a translucent grey ghost-mannequin athlete in a rugby kit, walking toward camera through a stadium tunnel, low and centered in frame. The tunnel lighting transitions across the frame — grainy, warm, slightly desaturated sodium-vapor light on the left side fading into clean, cool, modern stadium light on the right, as if the tunnel itself changes era halfway through. A single quarter coin rests on the tunnel floor in the immediate foreground, slightly out of focus, catching a glint of the modern light. Leave a wide empty band across the bottom third of the frame, and a narrow empty strip at the very top for a logo. Square 1:1 format. No text, no logos, no crests.</p></details>
+          <details class="prompt"><summary>1080&times;1350<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic ghost-mannequin athlete walking through the same grain-to-clean lit tunnel, same coin on the ground in the foreground. Reframe for a taller 4:5 canvas: more headroom above the mannequin so the tunnel's ceiling and lighting rig are visible, mannequin positioned in the lower half of the frame. Deepen the empty band across the bottom for a headline and tagline stacked. Narrow empty strip at the top for a logo. No text, no logos, no crests.</p></details>
+          <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic ghost-mannequin athlete and tunnel concept, grain-to-clean lighting transition. Reframe for a tall 9:16 canvas: the tunnel recedes further into the background, mannequin smaller and centered in the middle third of the frame to emphasize the tunnel's length and the passage from old light to new. The coin is larger and more prominent in the extreme foreground, bottom of frame, slightly blurred. Leave a deep empty band across the very bottom for a headline, tagline, and CTA stacked, plus a narrow strip at the top for a logo. No text, no logos, no crests.</p></details>
+        </div>
+        <p class="comp-note">Compositing note: QA wordmark goes in the reserved top strip on all three ratios — never let the AI attempt the logo itself.</p>
         <p class="cta-line">CTA: <b>START YOUR PROGRAM'S STORY</b></p>
       </div>
 
@@ -595,7 +580,7 @@
       </div>
 
       <p class="month-label">Choose a Layout</p>
-      <p class="section-sub" style="margin:0 0 16px;">Tap a tab to preview a direction.</p>
+      <p class="section-sub" style="margin:0 0 16px;">Tap a tab to preview that direction &mdash; only one shows at a time. Its prompts stay tucked behind a toggle until you want them.</p>
       <div class="design-options-group" id="m1-options">
       <div class="option-tabs"><button class="option-tab" data-option="A" onclick="showOptionTab('m1','A')">Option A <span class="tab-name">Statement</span><span class="tab-check">&#10003;</span></button><button class="option-tab" data-option="B" onclick="showOptionTab('m1','B')">Option B <span class="tab-name">Split</span><span class="tab-check">&#10003;</span></button><button class="option-tab" data-option="C" onclick="showOptionTab('m1','C')">Option C <span class="tab-name">Diagonal Slice, dynamic</span><span class="tab-check">&#10003;</span></button></div>
       <div class="design-option" data-option="A">
@@ -621,14 +606,15 @@
         </div><p class="tk-caption"><b>1080&times;1920</b></p></div>
       </div>
       <details class="option-detail"><summary>Prompts &amp; layout notes<span class="toggle">+</span></summary><div class="option-detail-body">
+      <p class="option-c-note">This is the concept's original composition &mdash; same prompt set as the concept card above, reproduced here so everything about this layout lives in one place.</p>
       <div class="prompt-row">
         <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic 3D render of a translucent grey ghost-mannequin athlete in a rugby kit, walking toward camera through a stadium tunnel, low and centered in frame. The tunnel lighting transitions across the frame — grainy, warm, slightly desaturated sodium-vapor light on the left side fading into clean, cool, modern stadium light on the right, as if the tunnel itself changes era halfway through. A single quarter coin rests on the tunnel floor in the immediate foreground, slightly out of focus, catching a glint of the modern light. Leave a wide empty band across the bottom third of the frame, and a narrow empty strip at the very top for a logo. Square 1:1 format. No text, no logos, no crests.</p></details>
         <details class="prompt"><summary>1080&times;1350<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic ghost-mannequin athlete walking through the same grain-to-clean lit tunnel, same coin on the ground in the foreground. Reframe for a taller 4:5 canvas: more headroom above the mannequin so the tunnel's ceiling and lighting rig are visible, mannequin positioned in the lower half of the frame. Deepen the empty band across the bottom for a headline and tagline stacked. Narrow empty strip at the top for a logo. No text, no logos, no crests.</p></details>
         <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic ghost-mannequin athlete and tunnel concept, grain-to-clean lighting transition. Reframe for a tall 9:16 canvas: the tunnel recedes further into the background, mannequin smaller and centered in the middle third of the frame to emphasize the tunnel's length and the passage from old light to new. The coin is larger and more prominent in the extreme foreground, bottom of frame, slightly blurred. Leave a deep empty band across the very bottom for a headline, tagline, and CTA stacked, plus a narrow strip at the top for a logo. No text, no logos, no crests.</p></details>
       </div>
       <p class="comp-note">Compositing note: QA wordmark goes in the reserved top strip on all three ratios &mdash; never let the AI attempt the logo itself.</p>
-      <p class="logo-note"><b>Logo:</b> top-left, scaling down on taller ratios.</p>
-      <p class="text-note"><b>Text boxes:</b> real box &mdash; bottom band (white, ~94% opacity), keep it behind the headline/subtext.</p>
+      <p class="logo-note"><b>Logo:</b> top-left corner across all three ratios, scaling down slightly as the canvas gets taller.</p>
+      <p class="text-note"><b>Text boxes:</b> real box &mdash; the bottom band (white, ~94% opacity) is an actual panel across all three ratios; keep it behind both the headline and subtext in the final composite.</p>
 
       </div></details>
       </div>
@@ -665,8 +651,8 @@
         <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic ghost-mannequin and coin in the tunnel. Reframe for a tall 9:16 canvas: mannequin fills the top 42% of the frame, full width. Leave a deep lower portion of the frame as the soft tunnel wall for headline, tagline, and CTA stacked. No text, no logos, no crests.</p></details>
       </div>
       <p class="comp-note">Compositing note: same reserved-logo and coin rules as Option A &mdash; QA wordmark composited in afterward, never AI-generated.</p>
-      <p class="logo-note"><b>Logo:</b> top-right on square/portrait; shifts to top-left on the 9:16 crop (image band goes full-width).</p>
-      <p class="text-note"><b>Text boxes:</b> mixed &mdash; headline is grid-only (sits on the tunnel wall); subtext below has a real white ~50% panel. Same split across ratios.</p>
+      <p class="logo-note"><b>Logo:</b> top-right corner on the square and portrait image half; shifts to top-left on the 9:16 story crop, where the image band sits full-width at the top instead of on the left.</p>
+      <p class="text-note"><b>Text boxes:</b> mixed &mdash; the headline ("It Started With a Quarter.") has no background and sits directly on the out-of-focus tunnel wall, that's grid-only. The subtext line below it does have a real panel (white, ~50% opacity) &mdash; keep that one. Same split across all three ratios.</p>
       
       </div></details>
       </div>
@@ -707,9 +693,359 @@
         <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic ghost-mannequin and tunnel. Reframe for a tall 9:16 canvas: steepen the diagonal further so the wedge's lower point sits about 48% down the left edge, giving the solid navy triangle roughly half the frame for headline, tagline, and CTA. No text, no logos, no crests.</p></details>
       </div>
       <p class="comp-note">Compositing note: the rotated coin badge and QA logo are composited in post at the reserved positions &mdash; never let the AI attempt either.</p>
-      <p class="logo-note"><b>Logo:</b> top-left on the upper wedge, clear of the seam and coin badge.</p>
-      <p class="text-note"><b>Text boxes:</b> grid only &mdash; headline sits directly on the accent-color wedge, no separate panel.</p>
+      <p class="logo-note"><b>Logo:</b> top-left corner on the upper wedge (the render side), across all three ratios &mdash; keep it clear of the diagonal seam and the rotated coin badge below it.</p>
+      <p class="text-note"><b>Text boxes:</b> grid only &mdash; the headline has no separate panel; it sits directly on the solid accent-color wedge (that wedge color itself is real and part of the design, just no extra box behind the type).</p>
       
+      </div></details>
+      </div>
+      <p class="chosen-note">You're going with <b></b> for this month.</p>
+      </div>
+    </div>
+  </details>
+
+  <!-- ============ MONTH 1B (SUPPLEMENTAL) ============ -->
+  <details class="month" id="m1b" style="--accent:#C2571B;">
+    <summary>
+      <span class="month-chip">Order Window</span>
+      <span class="month-summary-title">Order Before Kickoff &mdash; Fall Season Reminder</span>
+      <span class="month-summary-sport">Football + Soccer + Cross Country + Volleyball</span>
+      <span class="chev">&#9662;</span>
+    </summary>
+    <div class="month-body">
+      <p class="month-thesis">This is a supplemental add-on, not a sixth stage of the five-stage arc above &mdash; and it isn't a launch. Football, soccer, cross country, and volleyball are already part of QA's roster; this month exists because their season starts in the same August&ndash;September window, which is exactly when programs that haven't ordered yet start running out of runway. One reskinned concept, four sports, built deliberately plain: a single clear subject per ad, one short line of copy, nothing for Meta's delivery algorithm or a scrolling coach to have to parse.</p>
+      <p class="nike-note">Stage parallel: the pre-deadline reminder push retailers run before a known cutoff &mdash; not an announcement, a nudge.</p>
+      <div class="design-strip">
+        <div><b>Accent</b><span class="accent-dot"></span>Burnt Orange</div>
+        <div><b>Mood</b>Flat, bright, unmistakable &mdash; no mood lighting to parse, just the kit</div>
+        <div><b>Register</b>Direct, fast, zero clutter</div>
+      </div>
+      <div class="sport-rollout">
+        <span class="sport-pill live"><span class="dot"></span>Football &mdash; order window open</span>
+        <span class="sport-pill live"><span class="dot"></span>Soccer &mdash; order window open</span>
+        <span class="sport-pill live"><span class="dot"></span>Cross Country &mdash; order window open</span>
+        <span class="sport-pill live"><span class="dot"></span>Volleyball &mdash; order window open</span>
+        <span class="sport-pill">Rugby / Lacrosse / Baseball &mdash; resting this month</span>
+      </div>
+
+      <div class="campaign-detail">
+        <div><b>Run window</b><span>August&ndash;September &mdash; dead center of these four sports' preseason and season kickoff (football camp, NCAA soccer and volleyball openers, first cross country meets), the last real stretch before ordering behind the season becomes a scramble.</span></div>
+        <div><b>Cadence</b><span>4 ad variants live at once &mdash; one per sport, same exact template, same headline &mdash; refreshed only when a sport's photo swaps in. Deliberately one signal, not four competing concepts, so Meta's delivery algorithm has a single clear pattern to learn and spend against.</span></div>
+        <div><b>Primary KPI</b><span>Cost per lead + quote requests. These are established categories for QA, so this month is judged on converting known-but-not-yet-ordered programs before the window closes, not on awareness.</span></div>
+        <div><b>Audience</b><span>Football/soccer/cross country/volleyball program &amp; coach interest categories, geo-targeted around active program regions, plus retarget of anyone who's engaged with QA content for these sports but hasn't requested a quote.</span></div>
+      </div>
+
+      <p class="month-label">The Concept</p>
+      <div class="hero-post">
+        <p class="hp-label">Flagship ad &middot; Hero Statement</p>
+        <h4 class="hp-headline">Order Before Kickoff.</h4>
+        <p class="hp-subtext">Football, soccer, cross country, and volleyball &mdash; order now for fall.</p>
+      </div>
+
+      <div class="concept-card">
+        <div class="concept-top"><span class="concept-sport-tag">Football &middot; master version</span><span class="concept-status">Reskin for soccer, cross country &amp; volleyball below</span><span class="funnel-tag broad">Broad</span></div>
+        <p class="concept-h">Order Before Kickoff</p>
+        <p class="concept-t">Football, soccer, cross country, volleyball &mdash; same official standard as rugby. Order now, ready for fall.</p>
+        <p class="concept-visual"><b>Visual direction</b>A single ghost-mannequin torso in the finished kit, centered and filling the frame &mdash; the simplest, fastest-reading shot in the whole toolkit, on purpose. No second subject, no scene to parse, just the kit and a three-word promise.</p>
+        <div class="prompt-row">
+          <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic 3D ghost-mannequin torso in a finished solid-color football jersey and shoulder pads, centered and filling the entire frame, lit with soft even studio light, plain neutral studio backdrop. Leave a wide empty band across the bottom third of the frame for a headline and tagline. Square 1:1 format. No text, no logos, no crests.</p></details>
+          <details class="prompt"><summary>1080&times;1350<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic ghost-mannequin torso, same soft studio lighting. Reframe for a taller 4:5 canvas: mannequin centered filling the upper two-thirds of the frame. Leave a deeper empty band across the bottom for headline and tagline stacked. No text, no logos, no crests.</p></details>
+          <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic ghost-mannequin torso. Reframe for a tall 9:16 canvas: mannequin centered in the middle third of the frame. Leave a deep empty band across the very bottom for headline, tagline, and CTA stacked. No text, no logos, no crests.</p></details>
+        </div>
+        <p class="comp-note">Compositing note: leave chest space blank on the mannequin for the QA logo, same rule as every other concept &mdash; plain backdrop and single subject are the point this month, don't add scene elements.</p>
+
+        <p style="font-family:ui-monospace,monospace; font-size:11px; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); margin:18px 0 6px;">Reskin guide &mdash; same three prompts, swap this line only</p>
+        <table class="reskin-table">
+          <tr><th>Sport</th><th>Swap the kit description to</th></tr>
+          <tr><td>Football (above)</td><td>&ldquo;a finished solid-color football jersey and shoulder pads, helmet resting at the base of the frame&rdquo;</td></tr>
+          <tr><td>Soccer</td><td>&ldquo;a finished solid-color soccer jersey and shorts&rdquo;</td></tr>
+          <tr><td>Cross Country</td><td>&ldquo;a finished solid-color cross country singlet and shorts&rdquo;</td></tr>
+          <tr><td>Volleyball</td><td>&ldquo;a finished solid-color volleyball jersey, shorts, and kneepads&rdquo;</td></tr>
+        </table>
+        <p class="cta-line">CTA: <b>GET A QUOTE</b></p>
+      </div>
+
+      <p class="month-label">Supporting Assets</p>
+      <div class="struct-grid">
+        <div class="struct-card">
+          <p class="struct-tag">Proof / stat card</p>
+          <p class="struct-h">Fall Fills Up Fast.</p>
+          <p class="struct-s">Order now and your kit ships well ahead of week one &mdash; wait, and you're competing with every other program's fall order.</p>
+        </div>
+        <div class="struct-card">
+          <p class="struct-tag">Carousel ad &middot; 4 slides, one per sport</p>
+          <div class="struct-slides">
+            <div><b>1.</b> &ldquo;Season's Close.&rdquo;</div>
+            <div><b>2.</b> &ldquo;We Already Outfit Your Sport.&rdquo; &mdash; Football, soccer, cross country, volleyball.</div>
+            <div><b>3.</b> &ldquo;Order Now, Ready by Kickoff.&rdquo;</div>
+            <div><b>4.</b> &ldquo;Get a Quote in Minutes.&rdquo;</div>
+          </div>
+        </div>
+      </div>
+
+      <p class="month-label">Choose a Layout</p>
+      <p class="section-sub" style="margin:0 0 6px;">First pick the sport, then the layout &mdash; the prompts below adjust to match both. Its prompts stay tucked behind a toggle until you want them.</p>
+      <div class="design-options-group" id="m1b-options">
+      <div class="sport-tabs"><button class="sport-tab active" data-sport="football" onclick="showSportTab('m1b','football')">Football</button><button class="sport-tab" data-sport="soccer" onclick="showSportTab('m1b','soccer')">Soccer</button><button class="sport-tab" data-sport="cross-country" onclick="showSportTab('m1b','cross-country')">Cross Country</button><button class="sport-tab" data-sport="volleyball" onclick="showSportTab('m1b','volleyball')">Volleyball</button></div>
+      <div class="option-tabs"><button class="option-tab" data-option="A" onclick="showOptionTab('m1b','A')">Option A <span class="tab-name">Statement</span><span class="tab-check">&#10003;</span></button><button class="option-tab" data-option="B" onclick="showOptionTab('m1b','B')">Option B <span class="tab-name">Split</span><span class="tab-check">&#10003;</span></button><button class="option-tab" data-option="C" onclick="showOptionTab('m1b','C')">Option C <span class="tab-name">Diagonal Slice, dynamic</span><span class="tab-check">&#10003;</span></button><button class="option-tab" data-option="D" onclick="showOptionTab('m1b','D')">Option D <span class="tab-name">Spotlight Burst, dynamic</span><span class="tab-check">&#10003;</span></button></div>
+      <div class="design-option" data-option="A">
+        <div class="design-option-head">
+          <span class="design-option-title">Option A <span>&mdash; Statement</span></span>
+          <button class="choose-btn" onclick="chooseDesign('m1b','A')">Choose This Design</button>
+        </div>
+      <div class="tk-set">
+        <div class="tk-unit"><div class="tk-canvas r-square">
+          <div class="tk-zone tk-logo" style="top:4%; left:4%; right:auto; width:22%; height:7%;"><span class="tk-label">Logo</span></div>
+          <div class="tk-zone tk-image" style="top:0; left:0; right:0; bottom:0; border-radius:0; z-index:0;"></div>
+          <div class="tk-zone" style="bottom:6%; height:26%; background:rgba(255,255,255,.94); flex-direction:column; z-index:1;"><span class="tk-label" style="color:var(--accent); font-size:9.5px;">Order Before Kickoff.</span><span class="tk-label" style="font-weight:400; text-transform:none; font-size:7.5px; margin-top:3px; color:#5A5A5A;">Football, soccer, cross country &amp; volleyball &mdash; order now for fall.</span></div>
+        </div><p class="tk-caption"><b>1080&times;1080</b></p></div>
+        <div class="tk-unit"><div class="tk-canvas r-portrait">
+          <div class="tk-zone tk-logo" style="top:3%; left:4%; right:auto; width:26%; height:5.5%;"><span class="tk-label">Logo</span></div>
+          <div class="tk-zone tk-image" style="top:0; left:0; right:0; bottom:0; border-radius:0; z-index:0;"></div>
+          <div class="tk-zone" style="bottom:5%; height:22%; background:rgba(255,255,255,.94); flex-direction:column; z-index:1;"><span class="tk-label" style="color:var(--accent); font-size:9px;">Order Before Kickoff.</span></div>
+        </div><p class="tk-caption"><b>1080&times;1350</b></p></div>
+        <div class="tk-unit"><div class="tk-canvas r-story">
+          <div class="tk-zone tk-logo" style="top:3%; left:5%; right:auto; width:30%; height:4%;"><span class="tk-label">Logo</span></div>
+          <div class="tk-zone tk-image" style="top:0; left:0; right:0; bottom:0; border-radius:0; z-index:0;"></div>
+          <div class="tk-zone" style="bottom:4%; height:18%; background:rgba(255,255,255,.94); flex-direction:column; z-index:1;"><span class="tk-label" style="color:var(--accent); font-size:8px;">Order Before Kickoff.</span></div>
+        </div><p class="tk-caption"><b>1080&times;1920</b></p></div>
+      </div>
+      <details class="option-detail"><summary>Prompts &amp; layout notes<span class="toggle">+</span></summary><div class="option-detail-body">
+      <p class="option-c-note">Same layout across every sport &mdash; only the kit changes. Use the Football/Soccer/Cross Country/Volleyball tabs above to switch which prompt set shows below.</p>
+      <div class="sport-panel sport-active" data-sport="football">
+      <div class="prompt-row">
+        <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic 3D ghost-mannequin torso in a finished solid-color football jersey and shoulder pads, helmet resting at the base of the frame, centered and filling the entire frame, lit with soft even studio light, plain neutral studio backdrop. Leave a wide empty band across the bottom third of the frame for a headline and tagline. Square 1:1 format. No text, no logos, no crests.</p></details>
+        <details class="prompt"><summary>1080&times;1350<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic ghost-mannequin torso, same soft studio lighting. Reframe for a taller 4:5 canvas: mannequin centered filling the upper two-thirds of the frame. Leave a deeper empty band across the bottom for headline and tagline stacked. No text, no logos, no crests.</p></details>
+        <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic ghost-mannequin torso. Reframe for a tall 9:16 canvas: mannequin centered in the middle third of the frame. Leave a deep empty band across the very bottom for headline, tagline, and CTA stacked. No text, no logos, no crests.</p></details>
+      </div>
+      <p class="comp-note">Compositing note: this is the master version &mdash; leave chest space blank on the mannequin for the QA logo. See the reskin guide in the concept card above for the other three sports.</p>
+      </div>
+      <div class="sport-panel" data-sport="soccer">
+      <div class="prompt-row">
+        <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic 3D ghost-mannequin torso in a finished solid-color soccer jersey and shorts, centered and filling the entire frame, lit with soft even studio light, plain neutral studio backdrop. Leave a wide empty band across the bottom third of the frame for a headline and tagline. Square 1:1 format. No text, no logos, no crests.</p></details>
+        <details class="prompt"><summary>1080&times;1350<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic ghost-mannequin torso, same soft studio lighting. Reframe for a taller 4:5 canvas: mannequin centered filling the upper two-thirds of the frame. Leave a deeper empty band across the bottom for headline and tagline stacked. No text, no logos, no crests.</p></details>
+        <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic ghost-mannequin torso. Reframe for a tall 9:16 canvas: mannequin centered in the middle third of the frame. Leave a deep empty band across the very bottom for headline, tagline, and CTA stacked. No text, no logos, no crests.</p></details>
+      </div>
+      <p class="comp-note">Compositing note: reskinned from the Football master version above &mdash; same composition and lighting, soccer kit swapped in. Leave chest space blank on the mannequin for the QA logo.</p>
+      </div>
+      <div class="sport-panel" data-sport="cross-country">
+      <div class="prompt-row">
+        <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic 3D ghost-mannequin torso in a finished solid-color cross country singlet and shorts, centered and filling the entire frame, lit with soft even studio light, plain neutral studio backdrop. Leave a wide empty band across the bottom third of the frame for a headline and tagline. Square 1:1 format. No text, no logos, no crests.</p></details>
+        <details class="prompt"><summary>1080&times;1350<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic ghost-mannequin torso, same soft studio lighting. Reframe for a taller 4:5 canvas: mannequin centered filling the upper two-thirds of the frame. Leave a deeper empty band across the bottom for headline and tagline stacked. No text, no logos, no crests.</p></details>
+        <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic ghost-mannequin torso. Reframe for a tall 9:16 canvas: mannequin centered in the middle third of the frame. Leave a deep empty band across the very bottom for headline, tagline, and CTA stacked. No text, no logos, no crests.</p></details>
+      </div>
+      <p class="comp-note">Compositing note: reskinned from the Football master version above &mdash; same composition and lighting, cross country kit swapped in. Leave chest space blank on the mannequin for the QA logo.</p>
+      </div>
+      <div class="sport-panel" data-sport="volleyball">
+      <div class="prompt-row">
+        <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic 3D ghost-mannequin torso in a finished solid-color volleyball jersey, shorts, and kneepads, centered and filling the entire frame, lit with soft even studio light, plain neutral studio backdrop. Leave a wide empty band across the bottom third of the frame for a headline and tagline. Square 1:1 format. No text, no logos, no crests.</p></details>
+        <details class="prompt"><summary>1080&times;1350<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic ghost-mannequin torso, same soft studio lighting. Reframe for a taller 4:5 canvas: mannequin centered filling the upper two-thirds of the frame. Leave a deeper empty band across the bottom for headline and tagline stacked. No text, no logos, no crests.</p></details>
+        <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic ghost-mannequin torso. Reframe for a tall 9:16 canvas: mannequin centered in the middle third of the frame. Leave a deep empty band across the very bottom for headline, tagline, and CTA stacked. No text, no logos, no crests.</p></details>
+      </div>
+      <p class="comp-note">Compositing note: reskinned from the Football master version above &mdash; same composition and lighting, volleyball kit swapped in. Leave chest space blank on the mannequin for the QA logo.</p>
+      </div>
+      <p class="logo-note"><b>Logo:</b> top-left corner across all three ratios, scaling down slightly as the canvas gets taller &mdash; same position for every sport.</p>
+      <p class="text-note"><b>Text boxes:</b> real box &mdash; the bottom band (white, ~94% opacity) is an actual panel across all three ratios; keep it behind both the headline and subtext in the final composite.</p>
+
+      </div></details>
+      </div>
+
+      <div class="design-option" data-option="B">
+        <div class="design-option-head">
+          <span class="design-option-title">Option B <span>&mdash; Split</span></span>
+          <button class="choose-btn" onclick="chooseDesign('m1b','B')">Choose This Design</button>
+        </div>
+      <div class="tk-set">
+        <div class="tk-unit"><div class="tk-canvas r-square">
+          <div class="tk-zone tk-logo" style="top:4%; right:4%; left:auto; width:22%; height:7%;"><span class="tk-label">Logo</span></div>
+          <div class="tk-zone tk-image" style="top:0; left:0; width:48%; bottom:0; right:auto; border-radius:0; z-index:0;"></div>
+          <div class="tk-zone" style="top:18%; left:54%; right:6%; height:16%; flex-direction:column;"><span class="tk-label" style="font-size:8.5px;">Order Before<br>Kickoff.</span></div>
+          <div class="tk-zone" style="bottom:8%; left:54%; right:6%; height:26%; background:rgba(255,255,255,.5); flex-direction:column;"><span class="tk-label" style="font-weight:400; text-transform:none; font-size:7.5px; color:#5A5A5A;">Football, soccer, cross country, volleyball &mdash; order now.</span></div>
+        </div><p class="tk-caption"><b>1080&times;1080</b></p></div>
+        <div class="tk-unit"><div class="tk-canvas r-portrait">
+          <div class="tk-zone tk-logo" style="top:3%; right:4%; left:auto; width:26%; height:5.5%;"><span class="tk-label">Logo</span></div>
+          <div class="tk-zone tk-image" style="top:0; left:0; right:0; height:48%; bottom:auto; border-radius:0; z-index:0;"></div>
+          <div class="tk-zone" style="top:52%; left:6%; right:6%; height:14%; flex-direction:column;"><span class="tk-label" style="font-size:8.5px;">Order Before Kickoff.</span></div>
+          <div class="tk-zone" style="bottom:5%; left:6%; right:6%; height:20%; background:rgba(255,255,255,.5); flex-direction:column;"><span class="tk-label" style="font-weight:400; text-transform:none; font-size:7.5px; color:#5A5A5A;">Football, soccer, cross country, volleyball &mdash; order now.</span></div>
+        </div><p class="tk-caption"><b>1080&times;1350</b></p></div>
+        <div class="tk-unit"><div class="tk-canvas r-story">
+          <div class="tk-zone tk-logo" style="top:3%; left:5%; right:auto; width:30%; height:4%;"><span class="tk-label">Logo</span></div>
+          <div class="tk-zone tk-image" style="top:0; left:0; right:0; height:42%; bottom:auto; border-radius:0; z-index:0;"></div>
+          <div class="tk-zone" style="top:45%; left:6%; right:6%; height:12%; flex-direction:column;"><span class="tk-label" style="font-size:8px;">Order Before Kickoff.</span></div>
+          <div class="tk-zone" style="bottom:4%; left:6%; right:6%; height:24%; background:rgba(255,255,255,.5); flex-direction:column;"><span class="tk-label" style="font-weight:400; text-transform:none; font-size:6.5px; color:#5A5A5A;">Football, soccer, cross country, volleyball &mdash; order now. CTA below.</span></div>
+        </div><p class="tk-caption"><b>1080&times;1920</b></p></div>
+      </div>
+      <details class="option-detail"><summary>Prompts &amp; layout notes<span class="toggle">+</span></summary><div class="option-detail-body">
+      <p class="option-c-note">Same layout across every sport &mdash; only the kit changes. Use the Football/Soccer/Cross Country/Volleyball tabs above to switch which prompt set shows below.</p>
+      <div class="sport-panel sport-active" data-sport="football">
+      <div class="prompt-row">
+        <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic 3D ghost-mannequin torso in a finished solid-color football jersey and shoulder pads, helmet resting at the base of the frame, composed tightly within the left 48% of the frame only, soft even studio light, plain neutral backdrop. Leave the right half of the frame as a clean, plain backdrop with no mannequin, for a headline and tagline overlay. Square 1:1 format. No text, no logos, no crests.</p></details>
+        <details class="prompt"><summary>1080&times;1350<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic ghost-mannequin torso, same soft studio lighting. Reframe for a taller 4:5 canvas: mannequin fills the top 48% of the frame, full width. Leave the bottom half as the same plain backdrop for the text overlay. No text, no logos, no crests.</p></details>
+        <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic ghost-mannequin torso. Reframe for a tall 9:16 canvas: mannequin fills the top 42% of the frame, full width. Leave a deep lower portion for headline, tagline, and CTA stacked. No text, no logos, no crests.</p></details>
+      </div>
+      <p class="comp-note">Compositing note: this is the master version &mdash; leave chest space blank on the mannequin for the QA logo. See the reskin guide in the concept card above for the other three sports.</p>
+      </div>
+      <div class="sport-panel" data-sport="soccer">
+      <div class="prompt-row">
+        <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic 3D ghost-mannequin torso in a finished solid-color soccer jersey and shorts, composed tightly within the left 48% of the frame only, soft even studio light, plain neutral backdrop. Leave the right half of the frame as a clean, plain backdrop with no mannequin, for a headline and tagline overlay. Square 1:1 format. No text, no logos, no crests.</p></details>
+        <details class="prompt"><summary>1080&times;1350<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic ghost-mannequin torso, same soft studio lighting. Reframe for a taller 4:5 canvas: mannequin fills the top 48% of the frame, full width. Leave the bottom half as the same plain backdrop for the text overlay. No text, no logos, no crests.</p></details>
+        <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic ghost-mannequin torso. Reframe for a tall 9:16 canvas: mannequin fills the top 42% of the frame, full width. Leave a deep lower portion for headline, tagline, and CTA stacked. No text, no logos, no crests.</p></details>
+      </div>
+      <p class="comp-note">Compositing note: reskinned from the Football master version above &mdash; same composition and lighting, soccer kit swapped in. Leave chest space blank on the mannequin for the QA logo.</p>
+      </div>
+      <div class="sport-panel" data-sport="cross-country">
+      <div class="prompt-row">
+        <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic 3D ghost-mannequin torso in a finished solid-color cross country singlet and shorts, composed tightly within the left 48% of the frame only, soft even studio light, plain neutral backdrop. Leave the right half of the frame as a clean, plain backdrop with no mannequin, for a headline and tagline overlay. Square 1:1 format. No text, no logos, no crests.</p></details>
+        <details class="prompt"><summary>1080&times;1350<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic ghost-mannequin torso, same soft studio lighting. Reframe for a taller 4:5 canvas: mannequin fills the top 48% of the frame, full width. Leave the bottom half as the same plain backdrop for the text overlay. No text, no logos, no crests.</p></details>
+        <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic ghost-mannequin torso. Reframe for a tall 9:16 canvas: mannequin fills the top 42% of the frame, full width. Leave a deep lower portion for headline, tagline, and CTA stacked. No text, no logos, no crests.</p></details>
+      </div>
+      <p class="comp-note">Compositing note: reskinned from the Football master version above &mdash; same composition and lighting, cross country kit swapped in. Leave chest space blank on the mannequin for the QA logo.</p>
+      </div>
+      <div class="sport-panel" data-sport="volleyball">
+      <div class="prompt-row">
+        <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic 3D ghost-mannequin torso in a finished solid-color volleyball jersey, shorts, and kneepads, composed tightly within the left 48% of the frame only, soft even studio light, plain neutral backdrop. Leave the right half of the frame as a clean, plain backdrop with no mannequin, for a headline and tagline overlay. Square 1:1 format. No text, no logos, no crests.</p></details>
+        <details class="prompt"><summary>1080&times;1350<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic ghost-mannequin torso, same soft studio lighting. Reframe for a taller 4:5 canvas: mannequin fills the top 48% of the frame, full width. Leave the bottom half as the same plain backdrop for the text overlay. No text, no logos, no crests.</p></details>
+        <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic ghost-mannequin torso. Reframe for a tall 9:16 canvas: mannequin fills the top 42% of the frame, full width. Leave a deep lower portion for headline, tagline, and CTA stacked. No text, no logos, no crests.</p></details>
+      </div>
+      <p class="comp-note">Compositing note: reskinned from the Football master version above &mdash; same composition and lighting, volleyball kit swapped in. Leave chest space blank on the mannequin for the QA logo.</p>
+      </div>
+      <p class="logo-note"><b>Logo:</b> top-right corner on the square and portrait image half; shifts to top-left on the 9:16 story crop, where the image band sits full-width at the top instead of on the left &mdash; same position for every sport.</p>
+      <p class="text-note"><b>Text boxes:</b> mixed &mdash; the headline ("Order Before Kickoff.") has no background and sits directly on the plain backdrop, that's grid-only. The subtext line below it does have a real panel (white, ~50% opacity) &mdash; keep that one. Same split across all three ratios.</p>
+
+      </div></details>
+      </div>
+
+      <div class="design-option" data-option="C">
+        <div class="design-option-head">
+          <span class="design-option-title">Option C <span>&mdash; Diagonal Slice, dynamic</span></span>
+          <button class="choose-btn" onclick="chooseDesign('m1b','C')">Choose This Design</button>
+        </div>
+      <p class="option-c-note">One diagonal line &mdash; the render fills the upper wedge, the accent-color lower wedge carries the headline. Same energy as Month 1's rugby layout, reskinned for the fall sports.</p>
+      <div class="tk-set">
+        <div class="tk-unit"><div class="tk-canvas r-square tk-dyn">
+          <div style="position:absolute; inset:0; clip-path:polygon(0 0,100% 0,0 78%); background:repeating-linear-gradient(45deg, color-mix(in srgb, var(--accent) 10%, transparent), color-mix(in srgb, var(--accent) 10%, transparent) 6px, transparent 6px, transparent 12px), var(--bg-card2);"></div>
+          <div style="position:absolute; inset:0; clip-path:polygon(100% 0,100% 100%,0 100%,0 78%); background:var(--accent);"></div>
+          <div class="tk-zone tk-logo" style="top:4%; left:4%; right:auto; width:22%; height:7%; border-color:rgba(255,255,255,.5);"><span class="tk-label" style="color:#fff;">Logo</span></div>
+          <div style="position:absolute; bottom:7%; left:6%; right:6%; z-index:1;"><span class="tk-label" style="font-size:9.5px; color:#fff;">Order Before Kickoff.</span></div>
+        </div><p class="tk-caption"><b>1080&times;1080</b></p></div>
+        <div class="tk-unit"><div class="tk-canvas r-portrait tk-dyn">
+          <div style="position:absolute; inset:0; clip-path:polygon(0 0,100% 0,0 62%); background:repeating-linear-gradient(45deg, color-mix(in srgb, var(--accent) 10%, transparent), color-mix(in srgb, var(--accent) 10%, transparent) 6px, transparent 6px, transparent 12px), var(--bg-card2);"></div>
+          <div style="position:absolute; inset:0; clip-path:polygon(100% 0,100% 100%,0 100%,0 62%); background:var(--accent);"></div>
+          <div class="tk-zone tk-logo" style="top:3%; left:4%; right:auto; width:26%; height:5.5%; border-color:rgba(255,255,255,.5);"><span class="tk-label" style="color:#fff;">Logo</span></div>
+          <div style="position:absolute; bottom:6%; left:6%; right:6%; z-index:1;"><span class="tk-label" style="font-size:9px; color:#fff;">Order Before Kickoff.</span></div>
+        </div><p class="tk-caption"><b>1080&times;1350</b></p></div>
+        <div class="tk-unit"><div class="tk-canvas r-story tk-dyn">
+          <div style="position:absolute; inset:0; clip-path:polygon(0 0,100% 0,0 48%); background:repeating-linear-gradient(45deg, color-mix(in srgb, var(--accent) 10%, transparent), color-mix(in srgb, var(--accent) 10%, transparent) 6px, transparent 6px, transparent 12px), var(--bg-card2);"></div>
+          <div style="position:absolute; inset:0; clip-path:polygon(100% 0,100% 100%,0 100%,0 48%); background:var(--accent);"></div>
+          <div class="tk-zone tk-logo" style="top:3%; left:5%; right:auto; width:30%; height:4%; border-color:rgba(255,255,255,.5);"><span class="tk-label" style="color:#fff;">Logo</span></div>
+          <div style="position:absolute; bottom:4%; left:6%; right:6%; z-index:1;"><span class="tk-label" style="font-size:8px; color:#fff;">Order Before Kickoff.</span></div>
+        </div><p class="tk-caption"><b>1080&times;1920</b></p></div>
+      </div>
+      <details class="option-detail"><summary>Prompts &amp; layout notes<span class="toggle">+</span></summary><div class="option-detail-body">
+      <p class="option-c-note">Same layout across every sport &mdash; only the kit changes. Use the Football/Soccer/Cross Country/Volleyball tabs above to switch which prompt set shows below.</p>
+      <div class="sport-panel sport-active" data-sport="football">
+      <div class="prompt-row">
+        <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic 3D ghost-mannequin torso in a finished solid-color football jersey and shoulder pads, helmet resting at the base of the frame, composed to fill a diagonal wedge occupying the upper-left of the frame &mdash; the wedge's edge runs from the top-right corner down to a point about 78% down the left edge, soft even studio light. The lower-right triangular portion of the frame is a clean solid color field with no mannequin, ready for a headline. Square 1:1 format. No text, no logos, no crests.</p></details>
+        <details class="prompt"><summary>1080&times;1350<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic ghost-mannequin torso, same diagonal-wedge composition. Reframe for a taller 4:5 canvas: steepen the diagonal so the wedge's lower point sits about 62% down the left edge, giving the solid-color triangle more room at the bottom for a deeper headline zone. No text, no logos, no crests.</p></details>
+        <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic ghost-mannequin torso. Reframe for a tall 9:16 canvas: steepen the diagonal further so the wedge's lower point sits about 48% down the left edge, giving the solid-color triangle roughly half the frame for headline, tagline, and CTA. No text, no logos, no crests.</p></details>
+      </div>
+      <p class="comp-note">Compositing note: this is the master version &mdash; leave chest space blank on the mannequin for the QA logo. The solid-color wedge is built directly in the design tool, not AI-rendered.</p>
+      </div>
+      <div class="sport-panel" data-sport="soccer">
+      <div class="prompt-row">
+        <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic 3D ghost-mannequin torso in a finished solid-color soccer jersey and shorts, composed to fill a diagonal wedge occupying the upper-left of the frame &mdash; the wedge's edge runs from the top-right corner down to a point about 78% down the left edge, soft even studio light. The lower-right triangular portion of the frame is a clean solid color field with no mannequin, ready for a headline. Square 1:1 format. No text, no logos, no crests.</p></details>
+        <details class="prompt"><summary>1080&times;1350<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic ghost-mannequin torso, same diagonal-wedge composition. Reframe for a taller 4:5 canvas: steepen the diagonal so the wedge's lower point sits about 62% down the left edge, giving the solid-color triangle more room at the bottom for a deeper headline zone. No text, no logos, no crests.</p></details>
+        <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic ghost-mannequin torso. Reframe for a tall 9:16 canvas: steepen the diagonal further so the wedge's lower point sits about 48% down the left edge, giving the solid-color triangle roughly half the frame for headline, tagline, and CTA. No text, no logos, no crests.</p></details>
+      </div>
+      <p class="comp-note">Compositing note: reskinned from the Football master version above &mdash; same composition and lighting, soccer kit swapped in. Leave chest space blank on the mannequin for the QA logo.</p>
+      </div>
+      <div class="sport-panel" data-sport="cross-country">
+      <div class="prompt-row">
+        <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic 3D ghost-mannequin torso in a finished solid-color cross country singlet and shorts, composed to fill a diagonal wedge occupying the upper-left of the frame &mdash; the wedge's edge runs from the top-right corner down to a point about 78% down the left edge, soft even studio light. The lower-right triangular portion of the frame is a clean solid color field with no mannequin, ready for a headline. Square 1:1 format. No text, no logos, no crests.</p></details>
+        <details class="prompt"><summary>1080&times;1350<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic ghost-mannequin torso, same diagonal-wedge composition. Reframe for a taller 4:5 canvas: steepen the diagonal so the wedge's lower point sits about 62% down the left edge, giving the solid-color triangle more room at the bottom for a deeper headline zone. No text, no logos, no crests.</p></details>
+        <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic ghost-mannequin torso. Reframe for a tall 9:16 canvas: steepen the diagonal further so the wedge's lower point sits about 48% down the left edge, giving the solid-color triangle roughly half the frame for headline, tagline, and CTA. No text, no logos, no crests.</p></details>
+      </div>
+      <p class="comp-note">Compositing note: reskinned from the Football master version above &mdash; same composition and lighting, cross country kit swapped in. Leave chest space blank on the mannequin for the QA logo.</p>
+      </div>
+      <div class="sport-panel" data-sport="volleyball">
+      <div class="prompt-row">
+        <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic 3D ghost-mannequin torso in a finished solid-color volleyball jersey, shorts, and kneepads, composed to fill a diagonal wedge occupying the upper-left of the frame &mdash; the wedge's edge runs from the top-right corner down to a point about 78% down the left edge, soft even studio light. The lower-right triangular portion of the frame is a clean solid color field with no mannequin, ready for a headline. Square 1:1 format. No text, no logos, no crests.</p></details>
+        <details class="prompt"><summary>1080&times;1350<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic ghost-mannequin torso, same diagonal-wedge composition. Reframe for a taller 4:5 canvas: steepen the diagonal so the wedge's lower point sits about 62% down the left edge, giving the solid-color triangle more room at the bottom for a deeper headline zone. No text, no logos, no crests.</p></details>
+        <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic ghost-mannequin torso. Reframe for a tall 9:16 canvas: steepen the diagonal further so the wedge's lower point sits about 48% down the left edge, giving the solid-color triangle roughly half the frame for headline, tagline, and CTA. No text, no logos, no crests.</p></details>
+      </div>
+      <p class="comp-note">Compositing note: reskinned from the Football master version above &mdash; same composition and lighting, volleyball kit swapped in. Leave chest space blank on the mannequin for the QA logo.</p>
+      </div>
+      <p class="logo-note"><b>Logo:</b> top-left corner on the upper wedge (the render side), across all three ratios &mdash; keep it clear of the diagonal seam. Same position for every sport.</p>
+      <p class="text-note"><b>Text boxes:</b> grid only &mdash; the headline has no separate panel; it sits directly on the solid accent-color wedge (that wedge color itself is real and part of the design, just no extra box behind the type).</p>
+
+      </div></details>
+      </div>
+
+      <div class="design-option" data-option="D">
+        <div class="design-option-head">
+          <span class="design-option-title">Option D <span>&mdash; Spotlight Burst, dynamic</span></span>
+          <button class="choose-btn" onclick="chooseDesign('m1b','D')">Choose This Design</button>
+        </div>
+      <p class="option-c-note">A radiating spotlight burst instead of a flat backdrop &mdash; the kit reads like it's under stadium lights the moment the season starts, with a rotated &ldquo;ORDER NOW&rdquo; badge carrying the urgency the headline already sets up.</p>
+      <div class="tk-set">
+        <div class="tk-unit"><div class="tk-canvas r-square tk-dyn" style="background:#0B0B0E;">
+          <div style="position:absolute; inset:0; background:repeating-conic-gradient(color-mix(in srgb, var(--accent) 22%, transparent) 0deg 2deg, transparent 2deg 14deg);"></div>
+          <div class="tk-zone tk-logo" style="top:4%; left:4%; right:auto; width:22%; height:7%; border-color:rgba(255,255,255,.35);"><span class="tk-label" style="color:#fff;">Logo</span></div>
+          <div class="tk-badge-round" style="width:20%; aspect-ratio:1/1; top:8%; right:8%; transform:rotate(12deg); background:var(--accent); border:2px solid #fff; flex-direction:column;"><span style="font-size:4.5px; font-weight:800; color:#fff; letter-spacing:.03em;">ORDER NOW</span></div>
+          <div class="tk-zone tk-image" style="top:20%; left:22%; right:22%; bottom:26%; border-radius:8px; z-index:1;"></div>
+          <div style="position:absolute; bottom:6%; left:8%; right:8%; text-align:center; z-index:2;"><span class="tk-label" style="font-size:9px; color:#fff;">Order Before Kickoff.</span></div>
+        </div><p class="tk-caption"><b>1080&times;1080</b></p></div>
+        <div class="tk-unit"><div class="tk-canvas r-portrait tk-dyn" style="background:#0B0B0E;">
+          <div style="position:absolute; inset:0; background:repeating-conic-gradient(color-mix(in srgb, var(--accent) 22%, transparent) 0deg 2deg, transparent 2deg 14deg);"></div>
+          <div class="tk-zone tk-logo" style="top:3%; left:4%; right:auto; width:26%; height:5.5%; border-color:rgba(255,255,255,.35);"><span class="tk-label" style="color:#fff;">Logo</span></div>
+          <div class="tk-badge-round" style="width:24%; aspect-ratio:1/1; top:6%; right:6%; transform:rotate(12deg); background:var(--accent); border:2px solid #fff; flex-direction:column;"><span style="font-size:5px; font-weight:800; color:#fff; letter-spacing:.03em;">ORDER NOW</span></div>
+          <div class="tk-zone tk-image" style="top:16%; left:16%; right:16%; bottom:22%; border-radius:8px; z-index:1;"></div>
+          <div style="position:absolute; bottom:5%; left:8%; right:8%; text-align:center; z-index:2;"><span class="tk-label" style="font-size:8.5px; color:#fff;">Order Before Kickoff.</span></div>
+        </div><p class="tk-caption"><b>1080&times;1350</b></p></div>
+        <div class="tk-unit"><div class="tk-canvas r-story tk-dyn" style="background:#0B0B0E;">
+          <div style="position:absolute; inset:0; background:repeating-conic-gradient(color-mix(in srgb, var(--accent) 22%, transparent) 0deg 2deg, transparent 2deg 14deg);"></div>
+          <div class="tk-zone tk-logo" style="top:3%; left:5%; right:auto; width:30%; height:4%; border-color:rgba(255,255,255,.35);"><span class="tk-label" style="color:#fff;">Logo</span></div>
+          <div class="tk-badge-round" style="width:26%; aspect-ratio:1/1; top:5%; right:6%; transform:rotate(12deg); background:var(--accent); border:2px solid #fff; flex-direction:column;"><span style="font-size:5px; font-weight:800; color:#fff; letter-spacing:.03em;">ORDER NOW</span></div>
+          <div class="tk-zone tk-image" style="top:14%; left:14%; right:14%; bottom:32%; border-radius:8px; z-index:1;"></div>
+          <div style="position:absolute; bottom:4%; left:8%; right:8%; text-align:center; z-index:2;"><span class="tk-label" style="font-size:7.5px; color:#fff;">Order Before Kickoff.</span></div>
+        </div><p class="tk-caption"><b>1080&times;1920</b></p></div>
+      </div>
+      <details class="option-detail"><summary>Prompts &amp; layout notes<span class="toggle">+</span></summary><div class="option-detail-body">
+      <p class="option-c-note">Same layout across every sport &mdash; only the kit changes. Use the Football/Soccer/Cross Country/Volleyball tabs above to switch which prompt set shows below.</p>
+      <div class="sport-panel sport-active" data-sport="football">
+      <div class="prompt-row">
+        <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic 3D ghost-mannequin torso in a finished solid-color football jersey and shoulder pads, helmet resting at the base of the frame, centered in the frame under a dramatic radiating spotlight burst, rays fanning outward from directly behind the mannequin, near-black backdrop beyond the light. Leave a narrow empty band across the bottom of the frame for a headline. Square 1:1 format. No text, no logos, no crests.</p></details>
+        <details class="prompt"><summary>1080&times;1350<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic ghost-mannequin torso under the same radiating spotlight burst. Reframe for a taller 4:5 canvas: mannequin and light burst centered in the upper two-thirds of the frame. Leave a deeper empty band across the bottom for headline and tagline stacked. No text, no logos, no crests.</p></details>
+        <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic ghost-mannequin torso under the same radiating spotlight burst. Reframe for a tall 9:16 canvas: mannequin and light burst centered in the middle third of the frame. Leave a deep empty band across the very bottom for headline, tagline, and CTA stacked. No text, no logos, no crests.</p></details>
+      </div>
+      <p class="comp-note">Compositing note: this is the master version &mdash; leave chest space blank on the mannequin for the QA logo. The rotated &ldquo;ORDER NOW&rdquo; badge is set in the compositing pass, not the AI render &mdash; keep it out of the prompt output.</p>
+      </div>
+      <div class="sport-panel" data-sport="soccer">
+      <div class="prompt-row">
+        <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic 3D ghost-mannequin torso in a finished solid-color soccer jersey and shorts, centered in the frame under a dramatic radiating spotlight burst, rays fanning outward from directly behind the mannequin, near-black backdrop beyond the light. Leave a narrow empty band across the bottom of the frame for a headline. Square 1:1 format. No text, no logos, no crests.</p></details>
+        <details class="prompt"><summary>1080&times;1350<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic ghost-mannequin torso under the same radiating spotlight burst. Reframe for a taller 4:5 canvas: mannequin and light burst centered in the upper two-thirds of the frame. Leave a deeper empty band across the bottom for headline and tagline stacked. No text, no logos, no crests.</p></details>
+        <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic ghost-mannequin torso under the same radiating spotlight burst. Reframe for a tall 9:16 canvas: mannequin and light burst centered in the middle third of the frame. Leave a deep empty band across the very bottom for headline, tagline, and CTA stacked. No text, no logos, no crests.</p></details>
+      </div>
+      <p class="comp-note">Compositing note: reskinned from the Football master version above &mdash; same composition and lighting, soccer kit swapped in. Leave chest space blank on the mannequin for the QA logo.</p>
+      </div>
+      <div class="sport-panel" data-sport="cross-country">
+      <div class="prompt-row">
+        <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic 3D ghost-mannequin torso in a finished solid-color cross country singlet and shorts, centered in the frame under a dramatic radiating spotlight burst, rays fanning outward from directly behind the mannequin, near-black backdrop beyond the light. Leave a narrow empty band across the bottom of the frame for a headline. Square 1:1 format. No text, no logos, no crests.</p></details>
+        <details class="prompt"><summary>1080&times;1350<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic ghost-mannequin torso under the same radiating spotlight burst. Reframe for a taller 4:5 canvas: mannequin and light burst centered in the upper two-thirds of the frame. Leave a deeper empty band across the bottom for headline and tagline stacked. No text, no logos, no crests.</p></details>
+        <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic ghost-mannequin torso under the same radiating spotlight burst. Reframe for a tall 9:16 canvas: mannequin and light burst centered in the middle third of the frame. Leave a deep empty band across the very bottom for headline, tagline, and CTA stacked. No text, no logos, no crests.</p></details>
+      </div>
+      <p class="comp-note">Compositing note: reskinned from the Football master version above &mdash; same composition and lighting, cross country kit swapped in. Leave chest space blank on the mannequin for the QA logo.</p>
+      </div>
+      <div class="sport-panel" data-sport="volleyball">
+      <div class="prompt-row">
+        <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic 3D ghost-mannequin torso in a finished solid-color volleyball jersey, shorts, and kneepads, centered in the frame under a dramatic radiating spotlight burst, rays fanning outward from directly behind the mannequin, near-black backdrop beyond the light. Leave a narrow empty band across the bottom of the frame for a headline. Square 1:1 format. No text, no logos, no crests.</p></details>
+        <details class="prompt"><summary>1080&times;1350<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic ghost-mannequin torso under the same radiating spotlight burst. Reframe for a taller 4:5 canvas: mannequin and light burst centered in the upper two-thirds of the frame. Leave a deeper empty band across the bottom for headline and tagline stacked. No text, no logos, no crests.</p></details>
+        <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic ghost-mannequin torso under the same radiating spotlight burst. Reframe for a tall 9:16 canvas: mannequin and light burst centered in the middle third of the frame. Leave a deep empty band across the very bottom for headline, tagline, and CTA stacked. No text, no logos, no crests.</p></details>
+      </div>
+      <p class="comp-note">Compositing note: reskinned from the Football master version above &mdash; same composition and lighting, volleyball kit swapped in. Leave chest space blank on the mannequin for the QA logo.</p>
+      </div>
+      <p class="logo-note"><b>Logo:</b> top-left corner across all three ratios, clear of the radiating burst and the rotated &ldquo;ORDER NOW&rdquo; badge &mdash; same position for every sport.</p>
+      <p class="text-note"><b>Text boxes:</b> mixed &mdash; the &ldquo;ORDER NOW&rdquo; badge is a real filled disc (accent color, white border), keep it. The headline at the bottom has no background &mdash; grid-only, sits directly on the dark radiating burst.</p>
+
       </div></details>
       </div>
       <p class="chosen-note">You're going with <b></b> for this month.</p>
@@ -726,7 +1062,8 @@
       <span class="chev">&#9662;</span>
     </summary>
     <div class="month-body">
-      <p class="month-tldr">Story shifts from the company to the program wearing it &mdash; rugby's identity idea (&ldquo;customize your own gear&rdquo;) reskinned for lacrosse through stick stringing.</p>
+      <p class="month-thesis">Once the company is proven real, the story shifts from Quarter Athletic to the program wearing it. Rugby's identity story runs first, men's and women's both getting their own voice — then the exact same idea, &ldquo;the athlete customizes their own gear,&rdquo; gets reskinned for lacrosse through the one piece of gear every lacrosse player personalizes: their stick stringing.</p>
+      <p class="nike-note">Stage parallel: Air Jordan and &ldquo;Just Do It&rdquo; turning the product into self-expression.</p>
       <div class="design-strip">
         <div><b>Accent</b><span class="accent-dot"></span>Athletic Magenta + Navy</div>
         <div><b>Mood</b>Golden-hour, warmer, more dynamic</div>
@@ -738,23 +1075,12 @@
         <span class="sport-pill">Baseball &mdash; not yet</span>
       </div>
 
-      <div class="campaign-compact">
-        <span class="cd-chip"><b>Cadence</b>3 variants, rugby + lacrosse</span>
-        <span class="cd-chip"><b>KPI</b>Saves + shares</span>
-        <span class="cd-chip"><b>Audience</b>Broad, ages 25&ndash;55 + retarget</span>
+      <div class="campaign-detail">
+        <div><b>Run window</b><span>October &mdash; rugby's fall season is still live or just wrapping, keeping the rugby half current, and it's the on-ramp before lacrosse's real purchase-decision window opens in November.</span></div>
+        <div><b>Cadence</b><span>3 ad variants rotating across rugby + lacrosse, alternating so neither sport reads as the &ldquo;main&rdquo; one in the ad set.</span></div>
+        <div><b>Primary KPI</b><span>Saves + shares on the ad itself (Meta reports both on paid placements). Identity creative succeeds when people want to be associated with it, not just see it.</span></div>
+        <div><b>Audience</b><span>Broad interest &mdash; rugby &amp; lacrosse program/coach categories, ages 25&ndash;55 &mdash; plus retarget from Month 1's viewers.</span></div>
       </div>
-      <details class="why-toggle">
-        <summary>Why this month<span class="toggle">+</span></summary>
-        <div class="why-toggle-body">
-          <p class="month-thesis">Once the company is proven real, the story shifts from Quarter Athletic to the program wearing it. Rugby's identity story runs first, men's and women's both getting their own voice — then the exact same idea, &ldquo;the athlete customizes their own gear,&rdquo; gets reskinned for lacrosse through the one piece of gear every lacrosse player personalizes: their stick stringing.</p>
-          <p class="nike-note">Stage parallel: Air Jordan and &ldquo;Just Do It&rdquo; turning the product into self-expression.</p>
-          <div class="campaign-detail">
-            <div><b>Cadence</b><span>3 ad variants rotating across rugby + lacrosse, alternating so neither sport reads as the &ldquo;main&rdquo; one in the ad set.</span></div>
-            <div><b>Primary KPI</b><span>Saves + shares on the ad itself (Meta reports both on paid placements). Identity creative succeeds when people want to be associated with it, not just see it.</span></div>
-            <div><b>Audience</b><span>Broad interest &mdash; rugby &amp; lacrosse program/coach categories, ages 25&ndash;55 &mdash; plus retarget from Month 1's viewers.</span></div>
-          </div>
-        </div>
-      </details>
 
       <p class="month-label">The Concept</p>
       <div class="hero-post">
@@ -768,7 +1094,12 @@
         <p class="concept-h">Built With</p>
         <p class="concept-t">Your program. Your kit. Designed with the team wearing it.</p>
         <p class="concept-visual"><b>Visual direction</b>Behind-the-scenes framing &mdash; swatches, sketches, a captain reviewing a mockup &mdash; cut against the final ghost-mannequin hero shot. Rotate men's/women's kit colorway between posts (navy vs. magenta) using the same composition.</p>
-        
+        <div class="prompt-row">
+          <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic overhead flat-lay of fabric swatches, a colored pencil, and a rough kit sketch on butcher paper, arranged on the left half of the frame on a wood studio table, soft natural window light. On the right half of the same frame, a photorealistic 3D ghost-mannequin torso in the finished solid-color rugby kit, lit to match the same soft natural light, as if the sketch and the finished product share the same table. Leave a narrow empty band across the bottom of the frame for a headline. Square 1:1 format. No text, no logos, no crests, no legible sketch labeling.</p></details>
+          <details class="prompt"><summary>1080&times;1350<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic split concept — swatches and sketch above, finished ghost-mannequin kit below. Reframe for a taller 4:5 canvas: sketch and swatch flat-lay fills the upper half of the frame, ghost-mannequin torso fills the lower half, matched soft natural lighting across both. Leave a narrow empty band between the two halves for a headline. No text, no logos, no crests, no legible sketch labeling.</p></details>
+          <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic concept, reframed as a tall 9:16 vertical stack: fabric swatches and pencil at the very top third, a rough kit sketch in the middle third, the finished ghost-mannequin kit in the lower third, all under matched soft natural light as one continuous surface. Leave a narrow empty band between each section for a small headline element, and a deeper empty band at the very bottom for a tagline and CTA. No text, no logos, no crests, no legible sketch labeling.</p></details>
+        </div>
+        <p class="comp-note">Compositing note: reserve blank space on the mannequin's chest for the QA logo — never render it directly.</p>
         <p class="cta-line">CTA: <b>START YOUR DESIGN</b></p>
       </div>
 
@@ -777,7 +1108,12 @@
         <p class="concept-h">Strung Your Way</p>
         <p class="concept-t">Your pocket. Your play. Strung by the player who owns it.</p>
         <p class="concept-visual"><b>Visual direction</b>Same identity-through-customization idea as rugby's Built With, translated into lacrosse's own ritual: a player stringing their own stick pocket, paired with the finished ghost-mannequin athlete in cradle-ready stance. Same split-frame structure and matched lighting as the rugby concept — deliberately, so the two read as one campaign idea across two sports.</p>
-        
+        <div class="prompt-row">
+          <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic close-up of a pair of hands mid-motion stringing the mesh pocket of a lacrosse stick head, focused and precise, resting on a wood studio table with soft natural window light, positioned on the left half of the frame. On the right half of the same frame, a photorealistic 3D translucent grey ghost-mannequin lacrosse athlete in a solid-color jersey and pads, in a cradle-ready stance, lit to match the same soft natural light, as if stringing the stick and wearing the kit happen in the same moment. Leave a narrow empty band across the bottom of the frame for a headline. Square 1:1 format. No text, no logos, no crests, no visible brand marks on the stick.</p></details>
+          <details class="prompt"><summary>1080&times;1350<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic split concept — stick-stringing hands above, finished ghost-mannequin lacrosse athlete below. Reframe for a taller 4:5 canvas: stringing close-up fills the upper half of the frame, ghost-mannequin cradle-ready stance fills the lower half, matched soft natural lighting across both. Leave a narrow empty band between the two halves for a headline. No text, no logos, no crests, no visible brand marks on the stick.</p></details>
+          <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic concept, reframed as a tall 9:16 vertical stack: stick-stringing hands at the very top third, a close detail of the finished strung pocket in the middle third, the full-body ghost-mannequin lacrosse athlete in the lower third, all under matched soft natural light as one continuous surface. Leave a narrow empty band between each section for a small headline element, and a deeper empty band at the very bottom for a tagline and CTA. No text, no logos, no crests, no visible brand marks on the stick.</p></details>
+        </div>
+        <p class="comp-note">Compositing note: reserve blank space on the mannequin's chest for the QA logo — same rule, no exceptions for a new sport.</p>
         <p class="cta-line">CTA: <b>START YOUR DESIGN</b></p>
       </div>
 
@@ -797,7 +1133,7 @@
       </div>
 
       <p class="month-label">Choose a Layout</p>
-      <p class="section-sub" style="margin:0 0 16px;">Tap a tab to preview a direction.</p>
+      <p class="section-sub" style="margin:0 0 16px;">Tap a tab to preview that direction &mdash; only one shows at a time. Its prompts stay tucked behind a toggle until you want them.</p>
       <div class="design-options-group" id="m2-options">
       <div class="option-tabs"><button class="option-tab" data-option="A" onclick="showOptionTab('m2','A')">Option A <span class="tab-name">Split</span><span class="tab-check">&#10003;</span></button><button class="option-tab" data-option="B" onclick="showOptionTab('m2','B')">Option B <span class="tab-name">Statement</span><span class="tab-check">&#10003;</span></button><button class="option-tab" data-option="C" onclick="showOptionTab('m2','C')">Option C <span class="tab-name">Card Stack, dynamic</span><span class="tab-check">&#10003;</span></button></div>
       <div class="design-option" data-option="A">
@@ -826,6 +1162,7 @@
         </div><p class="tk-caption"><b>1080&times;1920</b></p></div>
       </div>
       <details class="option-detail"><summary>Prompts &amp; layout notes<span class="toggle">+</span></summary><div class="option-detail-body">
+      <p class="option-c-note">This is the concept's original composition &mdash; same prompt sets as the concept cards above, reproduced here so everything about this layout lives in one place.</p>
       <p style="font-weight:700; font-size:11px; text-transform:uppercase; letter-spacing:.03em; margin:14px 0 6px; color:var(--fg3);">Rugby</p>
       <div class="prompt-row">
         <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic overhead flat-lay of fabric swatches, a colored pencil, and a rough kit sketch on butcher paper, arranged on the left half of the frame on a wood studio table, soft natural window light. On the right half of the same frame, a photorealistic 3D ghost-mannequin torso in the finished solid-color rugby kit, lit to match the same soft natural light, as if the sketch and the finished product share the same table. Leave a narrow empty band across the bottom of the frame for a headline. Square 1:1 format. No text, no logos, no crests, no legible sketch labeling.</p></details>
@@ -840,8 +1177,8 @@
         <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic concept, reframed as a tall 9:16 vertical stack: stick-stringing hands at the very top third, a close detail of the finished strung pocket in the middle third, the full-body ghost-mannequin lacrosse athlete in the lower third, all under matched soft natural light as one continuous surface. Leave a narrow empty band between each section for a small headline element, and a deeper empty band at the very bottom for a tagline and CTA. No text, no logos, no crests, no visible brand marks on the stick.</p></details>
       </div>
       <p class="comp-note">Compositing note: reserve blank space on the mannequin's chest for the QA logo &mdash; same rule, no exceptions for a new sport.</p>
-      <p class="logo-note"><b>Logo:</b> top-right on square/portrait; shifts to top-left on the 9:16 crop (image band goes full-width).</p>
-      <p class="text-note"><b>Text boxes:</b> mixed &mdash; headline is grid-only (sits on the text-panel side); the line beneath has a real white ~50% panel. Consistent across ratios.</p>
+      <p class="logo-note"><b>Logo:</b> top-right corner on the square and portrait image half; shifts to top-left on the 9:16 story crop, where the image band runs full-width at the top instead of on the left.</p>
+      <p class="text-note"><b>Text boxes:</b> mixed &mdash; the headline ("Your Program. Your Kit.") has no background and sits directly on the text-panel side of the split, that's grid-only. The line beneath it does have a real panel (white, ~50% opacity) &mdash; keep that one. Consistent across all three ratios.</p>
       
       </div></details>
       </div>
@@ -875,8 +1212,8 @@
         <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic ghost-mannequin torso. Reframe for a tall 9:16 canvas: mannequin centered in the middle third of the frame. Leave a deep empty band across the very bottom for headline, tagline, and CTA stacked. No text, no logos, no crests.</p></details>
       </div>
       <p class="comp-note">Compositing note: reserve blank space on the mannequin's chest for the QA logo, same rule as every other concept.</p>
-      <p class="logo-note"><b>Logo:</b> top-left, scaling down on taller ratios.</p>
-      <p class="text-note"><b>Text boxes:</b> real box &mdash; bottom band (white, ~94% opacity), keep it behind the headline/subtext.</p>
+      <p class="logo-note"><b>Logo:</b> top-left corner across all three ratios, scaling down slightly as the canvas gets taller.</p>
+      <p class="text-note"><b>Text boxes:</b> real box &mdash; the bottom band (white, ~94% opacity) is an actual panel across all three ratios; keep it behind both the headline and subtext in the final composite.</p>
       
       </div></details>
       </div>
@@ -917,8 +1254,8 @@
         <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic fanned card arrangement. Reframe for a tall 9:16 canvas: the fan sits in the lower half of the frame. Leave a deep empty band across the top for a headline, tagline, and CTA stacked. No text, no logos, no crests, no legible labeling.</p></details>
       </div>
       <p class="comp-note">Compositing note: the finished jersey card should show blank chest space for the QA logo &mdash; composited afterward, never AI-generated.</p>
-      <p class="logo-note"><b>Logo:</b> top-left, above the card fan, clear of rotation.</p>
-      <p class="text-note"><b>Text boxes:</b> grid only &mdash; headline floats above the fan, no panel. Card labels ("Swatch"/"Sketch"/"Final Kit") are planning labels only, not ad copy.</p>
+      <p class="logo-note"><b>Logo:</b> top-left corner across all three ratios, sitting above the fanned card stack, clear of every card's rotation.</p>
+      <p class="text-note"><b>Text boxes:</b> grid only &mdash; the headline floats directly above the card fan with no panel behind it. The "Swatch"/"Sketch"/"Final Kit" labels inside the fanned cards are just planning labels identifying which physical item goes in each card, not copy that appears in the ad.</p>
       
       </div></details>
       </div>
@@ -936,7 +1273,8 @@
       <span class="chev">&#9662;</span>
     </summary>
     <div class="month-body">
-      <p class="month-tldr">Reinvestment earns loyalty. Baseball enters for the first time through the give-back story, not a cold product push; lacrosse deepens into its second month.</p>
+      <p class="month-thesis">Identity earns attention; reinvestment earns loyalty. This is the month baseball enters for the first time — deliberately through the give-back story rather than a cold product push, since &ldquo;we already invest in your program&rdquo; is a warmer front door than a pricing chart. Lacrosse deepens here too, its second month.</p>
+      <p class="nike-note">Stage parallel: grassroots courts and community leagues &mdash; brand loyalty built by showing up where the sport actually lives.</p>
       <div class="design-strip">
         <div><b>Accent</b><span class="accent-dot"></span>Natural Field Green</div>
         <div><b>Mood</b>Bright midday, real turf/dirt texture, optimistic</div>
@@ -948,29 +1286,24 @@
         <span class="sport-pill live"><span class="dot"></span>Baseball &mdash; new this month</span>
       </div>
 
-      <div class="campaign-compact">
-        <span class="cd-chip"><b>Cadence</b>4 variants, highest frequency</span>
-        <span class="cd-chip"><b>KPI</b>Cost per lead + quotes</span>
-        <span class="cd-chip"><b>Audience</b>Broad cold, geo-targeted</span>
+      <div class="campaign-detail">
+        <div><b>Run window</b><span>November &mdash; dead center of the Nov&ndash;Jan window when lacrosse and baseball programs actually place spring-season kit orders, which is also why this is the highest-frequency month.</span></div>
+        <div><b>Cadence</b><span>4 ad variants live at once, refreshed weekly &mdash; the highest-frequency month. This is the conversion engine, not just the awareness build.</span></div>
+        <div><b>Primary KPI</b><span>Cost per lead + quote requests. Unlike Months 1&ndash;2, this month is judged on pipeline, not just reach.</span></div>
+        <div><b>Audience</b><span>Broad cold reach in lacrosse + baseball program/coach interest categories, geo-targeted around active program regions.</span></div>
       </div>
-      <details class="why-toggle">
-        <summary>Why this month<span class="toggle">+</span></summary>
-        <div class="why-toggle-body">
-          <p class="month-thesis">Identity earns attention; reinvestment earns loyalty. This is the month baseball enters for the first time — deliberately through the give-back story rather than a cold product push, since &ldquo;we already invest in your program&rdquo; is a warmer front door than a pricing chart. Lacrosse deepens here too, its second month.</p>
-          <p class="nike-note">Stage parallel: grassroots courts and community leagues &mdash; brand loyalty built by showing up where the sport actually lives.</p>
-          <div class="campaign-detail">
-            <div><b>Cadence</b><span>4 ad variants live at once, refreshed weekly &mdash; the highest-frequency month. This is the conversion engine, not just the awareness build.</span></div>
-            <div><b>Primary KPI</b><span>Cost per lead + quote requests. Unlike Months 1&ndash;2, this month is judged on pipeline, not just reach.</span></div>
-            <div><b>Audience</b><span>Broad cold reach in lacrosse + baseball program/coach interest categories, geo-targeted around active program regions.</span></div>
-          </div>
-        </div>
-      </details>
 
       <p class="month-label">The Concept</p>
       <div class="hero-post">
         <p class="hp-label">Flagship ad &middot; Hero Statement &middot; sport-agnostic, runs across all programs</p>
         <h4 class="hp-headline">10% Back. Every Sale.</h4>
         <p class="hp-subtext">Every order funds the next season.</p>
+        <div class="prompt-row" style="margin-top:16px;">
+          <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic close-up of sunlit turf field texture, shot from a low angle so the blades of grass are slightly soft in the foreground and sharper toward the center, warm late-afternoon light with a soft golden spotlight naturally falling in the middle of the frame, rest of the frame gently vignetted into shadow. Minimal, quiet, almost abstract — no players, no equipment, no lines painted on the turf. Square 1:1 format. No text, no logos, no numbers, no graphics.</p></details>
+          <details class="prompt"><summary>1080&times;1350<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic sunlit turf texture and soft golden spotlight concept. Reframe for a taller 4:5 canvas: spotlight positioned in the upper third of the frame, the rest of the frame fading into soft shadow below it, leaving a deep quiet empty space in the lower half for a headline, tagline, and CTA stacked. No text, no logos, no numbers, no graphics.</p></details>
+          <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic sunlit turf texture and soft golden spotlight concept. Reframe for a tall 9:16 canvas: spotlight positioned in the upper-middle of the frame, a long, quiet, softly shadowed empty expanse of turf filling the lower half of the frame for a large stacked headline, tagline, and CTA. No text, no logos, no numbers, no graphics.</p></details>
+        </div>
+        <p class="comp-note" style="color:#8D93A6;">Compositing note: this is the one concept built around type, not imagery — the &ldquo;10%&rdquo; figure is set directly in the reserved spotlight area in post, large, in Inter.</p>
       </div>
 
       <div class="concept-card">
@@ -1001,26 +1334,18 @@
         <p class="cta-line">CTA: <b>SEE WHERE IT GOES</b></p>
       </div>
 
-      <p class="month-label">Supporting Assets</p>
-      <div class="struct-grid">
-        <div class="struct-card">
-          <p class="struct-tag">Proof / stat card</p>
-          <p class="struct-h">Every Program. Every Season.</p>
-          <p class="struct-s">10% of every order goes back to the team that bought it &mdash; not a foundation, not a general fund, their program.</p>
-        </div>
-        <div class="struct-card">
-          <p class="struct-tag">Carousel ad &middot; 4 slides &middot; sport-agnostic, rotate the closing sport</p>
-          <div class="struct-slides">
-            <div><b>1.</b> &ldquo;When You Buy the Kit&mdash;&rdquo;</div>
-            <div><b>2.</b> &ldquo;&mdash;You Fund the Club.&rdquo;</div>
-            <div><b>3.</b> &ldquo;Not Just the Player.&rdquo;</div>
-            <div><b>4.</b> &ldquo;That's the Standard.&rdquo; &mdash; 10% back, every program, every season.</div>
-          </div>
+      <div class="struct-card">
+        <p class="struct-tag">Carousel ad &middot; 4 slides &middot; sport-agnostic, rotate the closing sport</p>
+        <div class="struct-slides">
+          <div><b>1.</b> &ldquo;When You Buy the Kit&mdash;&rdquo;</div>
+          <div><b>2.</b> &ldquo;&mdash;You Fund the Club.&rdquo;</div>
+          <div><b>3.</b> &ldquo;Not Just the Player.&rdquo;</div>
+          <div><b>4.</b> &ldquo;That's the Standard.&rdquo; &mdash; 10% back, every program, every season.</div>
         </div>
       </div>
 
       <p class="month-label">Choose a Layout</p>
-      <p class="section-sub" style="margin:0 0 16px;">Tap a tab to preview a direction.</p>
+      <p class="section-sub" style="margin:0 0 16px;">Tap a tab to preview that direction &mdash; only one shows at a time. Its prompts stay tucked behind a toggle until you want them.</p>
       <div class="design-options-group" id="m3-options">
       <div class="option-tabs"><button class="option-tab" data-option="A" onclick="showOptionTab('m3','A')">Option A <span class="tab-name">Type-Led, giant centered stat</span><span class="tab-check">&#10003;</span></button><button class="option-tab" data-option="B" onclick="showOptionTab('m3','B')">Option B <span class="tab-name">Statement, stat folded into the band</span><span class="tab-check">&#10003;</span></button><button class="option-tab" data-option="C" onclick="showOptionTab('m3','C')">Option C <span class="tab-name">Radial Medallion, dynamic</span><span class="tab-check">&#10003;</span></button></div>
       <p class="option-c-note" style="margin-bottom:16px;">Give Back is a type-led concept with no photographic subject &mdash; all three options below can reuse the exact same turf-texture base render from the flagship ad above. What changes between them is purely how the type is composited on top, not a new AI generation.</p>
@@ -1058,8 +1383,8 @@
         <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic sunlit turf texture and soft golden spotlight concept. Reframe for a tall 9:16 canvas: spotlight positioned in the upper-middle of the frame, a long, quiet, softly shadowed empty expanse of turf filling the lower half of the frame for a large stacked headline, tagline, and CTA. No text, no logos, no numbers, no graphics.</p></details>
       </div>
       <p class="comp-note">Compositing note: this is the one concept built around type, not imagery &mdash; the &ldquo;10%&rdquo; figure is set directly in the reserved spotlight area in post, large, in Inter.</p>
-      <p class="logo-note"><b>Logo:</b> top-left, scaling down on taller ratios, clear of the centered "10%" panel.</p>
-      <p class="text-note"><b>Text boxes:</b> mixed &mdash; the "10%" sits on a real white ~85% panel; the "Back. Every Sale." line below is grid-only, direct on the photo.</p>
+      <p class="logo-note"><b>Logo:</b> top-left corner across all three ratios, scaling down slightly as the canvas gets taller &mdash; keep it clear of the centered &ldquo;10%&rdquo; stat panel below it.</p>
+      <p class="text-note"><b>Text boxes:</b> mixed &mdash; the big centered &ldquo;10%&rdquo; sits on a real panel (white, ~85% opacity), keep that one behind it. The &ldquo;Back. Every Sale.&rdquo; line beneath has no background &mdash; that's grid-only, direct on the photo.</p>
       
       </div></details>
       </div>
@@ -1088,8 +1413,8 @@
       </div>
       <details class="option-detail"><summary>Prompts &amp; layout notes<span class="toggle">+</span></summary><div class="option-detail-body">
       <p class="option-c-note">Same flagship turf-texture render as Option A &mdash; only the type treatment changes, headline and tagline stacked in a bottom band instead of one giant centered number.</p>
-      <p class="logo-note"><b>Logo:</b> top-left, scaling down on taller ratios.</p>
-      <p class="text-note"><b>Text boxes:</b> real box &mdash; bottom band (white, ~94% opacity), keep it behind the headline/subtext.</p>
+      <p class="logo-note"><b>Logo:</b> top-left corner across all three ratios, scaling down slightly as the canvas gets taller.</p>
+      <p class="text-note"><b>Text boxes:</b> real box &mdash; the bottom band (white, ~94% opacity) is an actual panel across all three ratios; keep it behind both the headline and subtext in the final composite.</p>
       
       </div></details>
       </div>
@@ -1122,8 +1447,8 @@
       </div>
       <details class="option-detail"><summary>Prompts &amp; layout notes<span class="toggle">+</span></summary><div class="option-detail-body">
       <p class="option-c-note">The sunburst is a conic-gradient overlay applied in post over the same flagship render &mdash; still no new AI generation needed.</p>
-      <p class="logo-note"><b>Logo:</b> top-left, clear of the sunburst and medallion.</p>
-      <p class="text-note"><b>Text boxes:</b> mixed &mdash; the "10%" medallion is a real solid white disc, keep it. "Back. Every Sale." below is grid-only, on the sunburst directly.</p>
+      <p class="logo-note"><b>Logo:</b> top-left corner across all three ratios, kept clear of the radial sunburst pattern and the centered medallion.</p>
+      <p class="text-note"><b>Text boxes:</b> mixed &mdash; the round medallion holding &ldquo;10%&rdquo; is a real solid white disc (painted directly, not a wireframe placeholder), keep it. The &ldquo;Back. Every Sale.&rdquo; line beneath has no background &mdash; grid-only, sits on the sunburst pattern directly.</p>
       
       </div></details>
       </div>
@@ -1141,7 +1466,8 @@
       <span class="chev">&#9662;</span>
     </summary>
     <div class="month-body">
-      <p class="month-tldr">Proves the brand plays the long game across all three priority sports &mdash; one visual system, three sports, one line of equipment swapped per sport.</p>
+      <p class="month-thesis">With identity and community established, the brand proves it plays the long game across all three priority sports at once. Rather than three separate ideas, this month runs one visual system three times — same composition and lighting instructions, one line of equipment swapped per sport. That's the efficient way to prove range without diluting the system.</p>
+      <p class="nike-note">Stage parallel: signature lines and decades-long athlete deals &mdash; loyalty over transactions.</p>
       <div class="design-strip">
         <div><b>Accent</b><span class="accent-dot"></span>Gold</div>
         <div><b>Mood</b>Matched light across time &mdash; continuity as the visual idea</div>
@@ -1153,23 +1479,12 @@
         <span class="sport-pill live"><span class="dot"></span>Baseball &mdash; live</span>
       </div>
 
-      <div class="campaign-compact">
-        <span class="cd-chip"><b>Cadence</b>2 variants, retarget + CRM</span>
-        <span class="cd-chip"><b>KPI</b>Renewal rate</span>
-        <span class="cd-chip"><b>Audience</b>Existing customers/leads</span>
+      <div class="campaign-detail">
+        <div><b>Run window</b><span>December &mdash; still inside the lacrosse/baseball purchase window, and now also 1&ndash;2 months ahead of rugby's own spring 7s Nationals in mid-to-late January.</span></div>
+        <div><b>Cadence</b><span>2 ad variants, weighted toward the retargeting ad set + CRM email &mdash; not a broad-reach spend month.</span></div>
+        <div><b>Primary KPI</b><span>Renewal rate among Months 1&ndash;3 leads. This month is retention-facing, not acquisition-facing.</span></div>
+        <div><b>Audience</b><span>Existing customers, quote-requesters, and email list &mdash; not primarily cold Meta spend.</span></div>
       </div>
-      <details class="why-toggle">
-        <summary>Why this month<span class="toggle">+</span></summary>
-        <div class="why-toggle-body">
-          <p class="month-thesis">With identity and community established, the brand proves it plays the long game across all three priority sports at once. Rather than three separate ideas, this month runs one visual system three times — same composition and lighting instructions, one line of equipment swapped per sport. That's the efficient way to prove range without diluting the system.</p>
-          <p class="nike-note">Stage parallel: signature lines and decades-long athlete deals &mdash; loyalty over transactions.</p>
-          <div class="campaign-detail">
-            <div><b>Cadence</b><span>2 ad variants, weighted toward the retargeting ad set + CRM email &mdash; not a broad-reach spend month.</span></div>
-            <div><b>Primary KPI</b><span>Renewal rate among Months 1&ndash;3 leads. This month is retention-facing, not acquisition-facing.</span></div>
-            <div><b>Audience</b><span>Existing customers, quote-requesters, and email list &mdash; not primarily cold Meta spend.</span></div>
-          </div>
-        </div>
-      </details>
 
       <p class="month-label">The Concept</p>
       <div class="hero-post">
@@ -1183,7 +1498,12 @@
         <p class="concept-h">Two Generations, One Kit</p>
         <p class="concept-t">Not a vendor. A partner. Built for programs. Built to grow with them.</p>
         <p class="concept-visual"><b>Visual direction</b>Two ghost-mannequin athletes, youth build and adult build, in matching kits under matched stadium light, reading as one continuous scene rather than two photos.</p>
-        
+        <div class="prompt-row">
+          <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic 3D render of two translucent grey ghost-mannequin rugby athletes side by side in the same frame, both in matching solid navy kits, separated by a thin vertical line of light down the center — the mannequin on the left noticeably smaller/younger build, the one on the right an adult build, both in the same dynamic ready stance, lit with the same soft stadium light on a turf field so they read as one continuous scene, not two separate photos. Leave a narrow empty band across the bottom of the frame for a headline. Square 1:1 format. No text, no logos, no crests.</p></details>
+          <details class="prompt"><summary>1080&times;1350<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic two-mannequin concept, younger build and adult build in matching kits under matched stadium light. Reframe for a taller 4:5 canvas as a vertical stack instead of side-by-side: younger mannequin in the upper half, adult mannequin in the lower half, separated by a thin horizontal line of light. Leave a narrow empty band between the two for a headline. No text, no logos, no crests.</p></details>
+          <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic concept extended to three stages instead of two: a youth-build, a teen-build, and an adult-build ghost-mannequin, all in matching kits, arranged in a receding vertical line down a stadium tunnel from foreground (adult, largest) to background (youth, smallest), matched soft stadium lighting throughout to read as one continuous, unbroken scene. Leave a deep empty band across the very bottom of the frame for a headline, tagline, and CTA stacked. No text, no logos, no crests.</p></details>
+        </div>
+        <p class="comp-note">Compositing note: leave chest space blank on every mannequin for the QA logo — no exceptions for multi-figure compositions.</p>
 
         <p style="font-family:ui-monospace,monospace; font-size:11px; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); margin:18px 0 6px;">Reskin guide &mdash; same three prompts, swap this line only</p>
         <table class="reskin-table">
@@ -1195,25 +1515,17 @@
         <p class="cta-line">CTA: <b>BUILD A LONG-TERM PARTNERSHIP</b></p>
       </div>
 
-      <p class="month-label">Supporting Assets</p>
-      <div class="struct-grid">
-        <div class="struct-card">
-          <p class="struct-tag">Proof / stat card</p>
-          <p class="struct-h">Built to Renew, Not Just Sell.</p>
-          <p class="struct-s">Multi-year program partnerships across rugby, lacrosse, and baseball &mdash; same standard, every season it renews.</p>
-        </div>
-        <div class="struct-card">
-          <p class="struct-tag">Carousel ad &middot; 3 slides &middot; renewal format, sport-agnostic</p>
-          <div class="struct-slides">
-            <div><b>1.</b> &ldquo;Last Year, You Ordered a Kit.&rdquo;</div>
-            <div><b>2.</b> &ldquo;This Year, You Built a Program.&rdquo;</div>
-            <div><b>3.</b> &ldquo;Next Year, We're Still Here.&rdquo; &mdash; A generational partnership, not a one-time order.</div>
-          </div>
+      <div class="struct-card">
+        <p class="struct-tag">Carousel ad &middot; 3 slides &middot; renewal format, sport-agnostic</p>
+        <div class="struct-slides">
+          <div><b>1.</b> &ldquo;Last Year, You Ordered a Kit.&rdquo;</div>
+          <div><b>2.</b> &ldquo;This Year, You Built a Program.&rdquo;</div>
+          <div><b>3.</b> &ldquo;Next Year, We're Still Here.&rdquo; &mdash; A generational partnership, not a one-time order.</div>
         </div>
       </div>
 
       <p class="month-label">Choose a Layout</p>
-      <p class="section-sub" style="margin:0 0 16px;">Tap a tab to preview a direction.</p>
+      <p class="section-sub" style="margin:0 0 16px;">Tap a tab to preview that direction &mdash; only one shows at a time. Its prompts stay tucked behind a toggle until you want them.</p>
       <div class="design-options-group" id="m4-options">
       <div class="option-tabs"><button class="option-tab" data-option="A" onclick="showOptionTab('m4','A')">Option A <span class="tab-name">Statement, multi-figure variant</span><span class="tab-check">&#10003;</span></button><button class="option-tab" data-option="B" onclick="showOptionTab('m4','B')">Option B <span class="tab-name">Split, single-figure</span><span class="tab-check">&#10003;</span></button><button class="option-tab" data-option="C" onclick="showOptionTab('m4','C')">Option C <span class="tab-name">Ascending Diagonal, dynamic</span><span class="tab-check">&#10003;</span></button></div>
       <div class="design-option" data-option="A">
@@ -1241,6 +1553,7 @@
         </div><p class="tk-caption"><b>1080&times;1920</b></p></div>
       </div>
       <details class="option-detail"><summary>Prompts &amp; layout notes<span class="toggle">+</span></summary><div class="option-detail-body">
+      <p class="option-c-note">This is the concept's original composition &mdash; same prompt set as the concept card above, reproduced here so everything about this layout lives in one place.</p>
       <div class="prompt-row">
         <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic 3D render of two translucent grey ghost-mannequin rugby athletes side by side in the same frame, both in matching solid navy kits, separated by a thin vertical line of light down the center — the mannequin on the left noticeably smaller/younger build, the one on the right an adult build, both in the same dynamic ready stance, lit with the same soft stadium light on a turf field so they read as one continuous scene, not two separate photos. Leave a narrow empty band across the bottom of the frame for a headline. Square 1:1 format. No text, no logos, no crests.</p></details>
         <details class="prompt"><summary>1080&times;1350<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic two-mannequin concept, younger build and adult build in matching kits under matched stadium light. Reframe for a taller 4:5 canvas as a vertical stack instead of side-by-side: younger mannequin in the upper half, adult mannequin in the lower half, separated by a thin horizontal line of light. Leave a narrow empty band between the two for a headline. No text, no logos, no crests.</p></details>
@@ -1254,8 +1567,8 @@
         <tr><td>Lacrosse</td><td>&ldquo;matching solid-color lacrosse jerseys, shoulder pads, and helmets with the visor down&rdquo;</td></tr>
         <tr><td>Baseball</td><td>&ldquo;matching solid-color baseball uniforms and caps, one holding a bat at rest&rdquo;</td></tr>
       </table>
-      <p class="logo-note"><b>Logo:</b> top-left, scaling down on taller ratios.</p>
-      <p class="text-note"><b>Text boxes:</b> real box &mdash; bottom band (white, ~94% opacity), keep it behind the headline/subtext.</p>
+      <p class="logo-note"><b>Logo:</b> top-left corner across all three ratios, scaling down slightly as the canvas gets taller.</p>
+      <p class="text-note"><b>Text boxes:</b> real box &mdash; the bottom band (white, ~94% opacity) is an actual panel across all three ratios; keep it behind both the headline and subtext in the final composite.</p>
       
       </div></details>
       </div>
@@ -1292,8 +1605,8 @@
         <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic single ghost-mannequin athlete. Reframe for a tall 9:16 canvas: mannequin fills the top 42% of the frame, full width. Leave a deep lower portion for headline, tagline, and CTA stacked. No text, no logos, no crests.</p></details>
       </div>
       <p class="comp-note">Compositing note: same reskin guide as the concept card above applies &mdash; swap the kit description to lacrosse pads/helmet or baseball uniform/cap as needed.</p>
-      <p class="logo-note"><b>Logo:</b> top-right on square/portrait; shifts to top-left on the 9:16 crop (image band goes full-width).</p>
-      <p class="text-note"><b>Text boxes:</b> mixed &mdash; headline is grid-only (sits on the stadium backdrop); the line beneath has a real white ~50% panel. Same split across ratios.</p>
+      <p class="logo-note"><b>Logo:</b> top-right corner on the square and portrait image half; shifts to top-left on the 9:16 story crop, where the image band runs full-width at the top instead of on the left.</p>
+      <p class="text-note"><b>Text boxes:</b> mixed &mdash; the headline ("Not a Vendor. A Partner.") has no background and sits directly on the out-of-focus stadium backdrop, that's grid-only. The line beneath it does have a real panel (white, ~50% opacity) &mdash; keep that one. Same split across all three ratios.</p>
       
       </div></details>
       </div>
@@ -1334,8 +1647,8 @@
         <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic three-mannequin ascending-diagonal concept. Reframe for a tall 9:16 canvas: lengthen the diagonal so the youth figure sits low and the adult figure nearly reaches the top of the frame. Leave a narrow empty band across the very top for a headline, tagline, and CTA. No text, no logos, no crests.</p></details>
       </div>
       <p class="comp-note">Compositing note: leave chest space blank on every mannequin for the QA logo, same rule as every other concept, no exceptions for multi-figure compositions.</p>
-      <p class="logo-note"><b>Logo:</b> top-right on square/portrait; shifts to top-left on the 9:16 crop, clear of the diagonal card stack.</p>
-      <p class="text-note"><b>Text boxes:</b> grid only &mdash; headline floats at top, no panel. Youth/Teen/Adult card labels are planning labels only, not ad copy.</p>
+      <p class="logo-note"><b>Logo:</b> top-right corner on the square and portrait ratios; shifts to top-left on the 9:16 story crop &mdash; keep it clear of the ascending diagonal card stack in every ratio.</p>
+      <p class="text-note"><b>Text boxes:</b> grid only &mdash; the headline floats at the top with no panel behind it. The Youth/Teen/Adult labels inside the diagonal cards are planning labels identifying which mannequin size goes where, not copy that appears in the ad.</p>
       
       </div></details>
       </div>
@@ -1353,7 +1666,8 @@
       <span class="chev">&#9662;</span>
     </summary>
     <div class="month-body">
-      <p class="month-tldr">The closing chapter &mdash; QA states its full scale out loud. Rugby, lacrosse, and baseball lead the wall; the rest of the 10-sport roster shows the standard applies everywhere.</p>
+      <p class="month-thesis">The closing chapter. QA stops explaining itself sport-by-sport and states its full scale out loud. Rugby, lacrosse, and baseball lead the wall as the three sports with dedicated campaigns behind them; the rest of the roster appears in the same shot to show the standard applies everywhere, not just where the last five months focused.</p>
+      <p class="nike-note">Stage parallel: Nike as an institution &mdash; a brand people follow, bigger than its product category.</p>
       <div class="design-strip">
         <div><b>Accent</b><span class="accent-dot" style="background:linear-gradient(90deg,#1B2A4E,#9C2159,#2F5233,#B4863A);"></span>Full palette, one color per ad</div>
         <div><b>Mood</b>Wide, architectural, scaled</div>
@@ -1364,23 +1678,12 @@
         <span class="sport-pill">+ 7 more sports &mdash; in the network wall</span>
       </div>
 
-      <div class="campaign-compact">
-        <span class="cd-chip"><b>Cadence</b>1&ndash;2 concepts, short flight</span>
-        <span class="cd-chip"><b>KPI</b>Reach + brand favorability</span>
-        <span class="cd-chip"><b>Audience</b>Broad remarketing + lookalike</span>
+      <div class="campaign-detail">
+        <div><b>Run window</b><span>January&ndash;February &mdash; lands as lacrosse and baseball seasons open (late Jan/early Feb) and rugby's spring 7s peaks, so the closing network statement runs during live proof instead of before it.</span></div>
+        <div><b>Cadence</b><span>1&ndash;2 ad concepts total, short flight &mdash; a single culminating statement, not a sustained push.</span></div>
+        <div><b>Primary KPI</b><span>Reach + brand favorability lift. This sets the table for the next 5-month arc more than it drives immediate leads.</span></div>
+        <div><b>Audience</b><span>Broad &mdash; full-account remarketing plus a lookalike audience built from everyone who engaged across Months 1&ndash;4.</span></div>
       </div>
-      <details class="why-toggle">
-        <summary>Why this month<span class="toggle">+</span></summary>
-        <div class="why-toggle-body">
-          <p class="month-thesis">The closing chapter. QA stops explaining itself sport-by-sport and states its full scale out loud. Rugby, lacrosse, and baseball lead the wall as the three sports with dedicated campaigns behind them; the rest of the roster appears in the same shot to show the standard applies everywhere, not just where the last five months focused.</p>
-          <p class="nike-note">Stage parallel: Nike as an institution &mdash; a brand people follow, bigger than its product category.</p>
-          <div class="campaign-detail">
-            <div><b>Cadence</b><span>1&ndash;2 ad concepts total, short flight &mdash; a single culminating statement, not a sustained push.</span></div>
-            <div><b>Primary KPI</b><span>Reach + brand favorability lift. This sets the table for the next 5-month arc more than it drives immediate leads.</span></div>
-            <div><b>Audience</b><span>Broad &mdash; full-account remarketing plus a lookalike audience built from everyone who engaged across Months 1&ndash;4.</span></div>
-          </div>
-        </div>
-      </details>
 
       <p class="month-label">The Concept</p>
       <div class="hero-post">
@@ -1394,7 +1697,12 @@
         <p class="concept-h">One Standard</p>
         <p class="concept-t">More than a jersey company. Manufacturing. Community. Ten sports. One standard.</p>
         <p class="concept-visual"><b>Visual direction</b>A single ghost-mannequin athlete standing small within a vast, symmetric structural space &mdash; scale communicated through architecture and layout, not a crowd of logos.</p>
-        
+        <div class="prompt-row">
+          <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic wide shot of a translucent grey ghost-mannequin rugby athlete standing small and centered within a vast, symmetric industrial space that reads as part manufacturing floor, part stadium concourse — exposed structural beams, repeating overhead lighting rigs receding in a grid toward the mannequin, cool even light, minimal and architectural, sports-brand aesthetic. The mannequin occupies a small fraction of the frame to emphasize the scale of the space around it. Leave a wide empty band across the top of the frame for a headline, and a narrower band across the bottom for a tagline and CTA. Square 1:1 format. No text, no logos, no crests.</p></details>
+          <details class="prompt"><summary>1080&times;1350<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic architectural concept — small mannequin within a vast symmetric structural grid, cool even light. Reframe for a taller 4:5 canvas: emphasize the vertical height of the space, structural beams and lighting rigs extending further up the frame, mannequin positioned in the lower third. Leave a wide empty band across the top half of the frame for a headline and tagline stacked. No text, no logos, no crests.</p></details>
+          <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic architectural concept, reframed as an extreme tall 9:16 canvas looking up and along the structural grid — beams and lighting rigs stretching far up the frame, mannequin tiny at the very bottom of the frame for scale. Leave a very deep empty vertical space above the mannequin for a stacked headline, tagline, and CTA. No text, no logos, no crests.</p></details>
+        </div>
+        <p class="comp-note">Compositing note: leave chest space blank for the QA logo; confirm before co-branding Print Athletic or Generational Rugby marks into this placement — don't assume.</p>
         <p class="cta-line">CTA: <b>SEE THE FULL NETWORK</b></p>
       </div>
 
@@ -1406,26 +1714,18 @@
         <p class="comp-note">Compositing note: reuse the original Champions Wall background prompt (see Meta Ads ChatGPT Brief.txt) — this is a compositing exercise, not a new generation.</p>
       </div>
 
-      <p class="month-label">Supporting Assets</p>
-      <div class="struct-grid">
-        <div class="struct-card">
-          <p class="struct-tag">Proof / stat card</p>
-          <p class="struct-h">10 Sports. One Standard.</p>
-          <p class="struct-s">From rugby's first season to baseball's newest roster &mdash; manufacturing, story, and gear held to the same bar, everywhere.</p>
-        </div>
-        <div class="struct-card">
-          <p class="struct-tag">Carousel ad &middot; 4 slides &middot; ecosystem tour</p>
-          <div class="struct-slides">
-            <div><b>1.</b> &ldquo;We Manufacture It.&rdquo; &mdash; Print Athletic builds the fabric.</div>
-            <div><b>2.</b> &ldquo;We Tell Its Story.&rdquo; &mdash; Generational Rugby carries the culture.</div>
-            <div><b>3.</b> &ldquo;We Outfit Ten Sports.&rdquo; &mdash; One standard, every one of them.</div>
-            <div><b>4.</b> &ldquo;This Is Quarter Athletic.&rdquo; &mdash; Not a jersey company. A network built on truth.</div>
-          </div>
+      <div class="struct-card">
+        <p class="struct-tag">Carousel ad &middot; 4 slides &middot; ecosystem tour</p>
+        <div class="struct-slides">
+          <div><b>1.</b> &ldquo;We Manufacture It.&rdquo; &mdash; Print Athletic builds the fabric.</div>
+          <div><b>2.</b> &ldquo;We Tell Its Story.&rdquo; &mdash; Generational Rugby carries the culture.</div>
+          <div><b>3.</b> &ldquo;We Outfit Ten Sports.&rdquo; &mdash; One standard, every one of them.</div>
+          <div><b>4.</b> &ldquo;This Is Quarter Athletic.&rdquo; &mdash; Not a jersey company. A network built on truth.</div>
         </div>
       </div>
 
       <p class="month-label">Choose a Layout</p>
-      <p class="section-sub" style="margin:0 0 16px;">Tap a tab to preview a direction.</p>
+      <p class="section-sub" style="margin:0 0 16px;">Tap a tab to preview that direction &mdash; only one shows at a time. Its prompts stay tucked behind a toggle until you want them.</p>
       <div class="design-options-group" id="m5-options">
       <div class="option-tabs"><button class="option-tab" data-option="A" onclick="showOptionTab('m5','A')">Option A <span class="tab-name">Statement, wide/architectural</span><span class="tab-check">&#10003;</span></button><button class="option-tab" data-option="B" onclick="showOptionTab('m5','B')">Option B <span class="tab-name">Split, grounded alternative</span><span class="tab-check">&#10003;</span></button><button class="option-tab" data-option="C" onclick="showOptionTab('m5','C')">Option C <span class="tab-name">Fractured Mosaic, dynamic</span><span class="tab-check">&#10003;</span></button></div>
       <div class="design-option" data-option="A">
@@ -1449,14 +1749,15 @@
         </div><p class="tk-caption"><b>1080&times;1920</b><br>Deep top band, tiny subject</p></div>
       </div>
       <details class="option-detail"><summary>Prompts &amp; layout notes<span class="toggle">+</span></summary><div class="option-detail-body">
+      <p class="option-c-note">This is the concept's original composition &mdash; same prompt set as the concept card above, reproduced here so everything about this layout lives in one place.</p>
       <div class="prompt-row">
         <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A photorealistic wide shot of a translucent grey ghost-mannequin rugby athlete standing small and centered within a vast, symmetric industrial space that reads as part manufacturing floor, part stadium concourse — exposed structural beams, repeating overhead lighting rigs receding in a grid toward the mannequin, cool even light, minimal and architectural, sports-brand aesthetic. The mannequin occupies a small fraction of the frame to emphasize the scale of the space around it. Leave a wide empty band across the top of the frame for a headline, and a narrower band across the bottom for a tagline and CTA. Square 1:1 format. No text, no logos, no crests.</p></details>
         <details class="prompt"><summary>1080&times;1350<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic architectural concept — small mannequin within a vast symmetric structural grid, cool even light. Reframe for a taller 4:5 canvas: emphasize the vertical height of the space, structural beams and lighting rigs extending further up the frame, mannequin positioned in the lower third. Leave a wide empty band across the top half of the frame for a headline and tagline stacked. No text, no logos, no crests.</p></details>
         <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic architectural concept, reframed as an extreme tall 9:16 canvas looking up and along the structural grid — beams and lighting rigs stretching far up the frame, mannequin tiny at the very bottom of the frame for scale. Leave a very deep empty vertical space above the mannequin for a stacked headline, tagline, and CTA. No text, no logos, no crests.</p></details>
       </div>
       <p class="comp-note">Compositing note: leave chest space blank for the QA logo; confirm before co-branding Print Athletic or Generational Rugby marks into this placement &mdash; don't assume.</p>
-      <p class="logo-note"><b>Logo:</b> no dedicated corner &mdash; full-width bands leave no clear space. Tuck it small, bottom-left of the copy band, on every ratio.</p>
-      <p class="text-note"><b>Text boxes:</b> real box &mdash; square crop has two bands (white ~94% for headline, ~70% for subtext); portrait/story have one deep ~94% band, headline only.</p>
+      <p class="logo-note"><b>Logo:</b> no dedicated corner zone here &mdash; the full-width text band(s) leave no clear space. On the square crop, tuck a small logo bottom-left of the lower copy band; on portrait and story, where one deep band covers most of the frame, place it small in that band's bottom-left corner instead of on the photo itself.</p>
+      <p class="text-note"><b>Text boxes:</b> real box &mdash; every text line here sits on an actual panel. Square crop: two real bands, a white ~94% opacity band for the headline and a lighter white ~70% opacity band for the subtext. Portrait and story crops: one deep white ~94% opacity band holds just the headline (no separate subtext band at those ratios).</p>
       
       </div></details>
       </div>
@@ -1493,8 +1794,8 @@
         <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic architectural space and small mannequin. Reframe for a tall 9:16 canvas: mannequin and structural grid fill the top 42% of the frame. Leave a deep lower portion for headline, tagline, and CTA stacked. No text, no logos, no crests.</p></details>
       </div>
       <p class="comp-note">Compositing note: leave chest space blank for the QA logo; confirm before co-branding Print Athletic or Generational Rugby marks &mdash; don't assume.</p>
-      <p class="logo-note"><b>Logo:</b> top-right on square/portrait; shifts to top-left on the 9:16 crop (image band goes full-width).</p>
-      <p class="text-note"><b>Text boxes:</b> mixed &mdash; headline is grid-only (sits on the architectural space); the line beneath has a real white ~50% panel. Same split across ratios.</p>
+      <p class="logo-note"><b>Logo:</b> top-right corner on the square and portrait image half; shifts to top-left on the 9:16 story crop, where the image band runs full-width at the top instead of on the left.</p>
+      <p class="text-note"><b>Text boxes:</b> mixed &mdash; the headline ("More Than a Jersey Company.") has no background and sits directly on the empty architectural space, that's grid-only. The line beneath it does have a real panel (white, ~50% opacity) &mdash; keep that one. Same split across all three ratios.</p>
       
       </div></details>
       </div>
@@ -1538,8 +1839,8 @@
         <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same photorealistic architectural space and small mannequin. Reframe for a tall 9:16 canvas looking up along the structural grid, mannequin tiny at the bottom for scale. No text, no logos, no crests.</p></details>
       </div>
       <p class="comp-note">Compositing note: the fracture-panel seams and tint block are built in Canva/Photoshop from one clean render &mdash; not a separate AI generation per shard.</p>
-      <p class="logo-note"><b>Logo:</b> top-left, on the solid accent shard for legibility against the busy seams.</p>
-      <p class="text-note"><b>Text boxes:</b> real box &mdash; headline sits on a white ~94% panel across the fracture seams, consistent across ratios.</p>
+      <p class="logo-note"><b>Logo:</b> top-left corner across all three ratios, sitting on the solid accent-color shard so it stays legible against a flat field rather than a busy seam.</p>
+      <p class="text-note"><b>Text boxes:</b> real box &mdash; the headline sits on an actual white panel (~94% opacity) placed across the fracture seams so it reads cleanly regardless of which shard is behind it, consistent across all three ratios.</p>
       
       </div></details>
       </div>
@@ -3096,6 +3397,17 @@
     });
   }
 
+  function showSportTab(monthId, sport){
+    var group = document.getElementById(monthId + '-options');
+    if(!group) return;
+    group.querySelectorAll('.sport-tab').forEach(function(btn){
+      btn.classList.toggle('active', btn.getAttribute('data-sport') === sport);
+    });
+    group.querySelectorAll('.sport-panel').forEach(function(el){
+      el.classList.toggle('sport-active', el.getAttribute('data-sport') === sport);
+    });
+  }
+
   function showFlightTab(monthId, flight){
     var month = document.getElementById(monthId);
     if(!month) return;
@@ -3152,6 +3464,7 @@
       var chosen = null;
       try{ chosen = localStorage.getItem(storageKey(monthId)); }catch(e){}
       showOptionTab(monthId, chosen || 'A');
+      if(g.querySelector('.sport-tab')) showSportTab(monthId, 'football');
     });
   }
 
