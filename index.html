@@ -2397,7 +2397,7 @@
       <div class="design-options-group" id="t2-options" data-active-subject="1">
       <p class="subject-tabs-label">Designing for</p>
       <div class="subject-tabs"><button class="subject-tab active" data-subject="1" onclick="showSubjectTab('t2','1')">Coach &middot; Football</button><button class="subject-tab" data-subject="2" onclick="showSubjectTab('t2','2')">Athlete &middot; Swimming</button></div>
-      <div class="option-tabs"><button class="option-tab" data-option="A" onclick="showOptionTab('t2','A')">Option A <span class="tab-name">Card Overlay</span><span class="tab-check">&#10003;</span></button><button class="option-tab" data-option="B" onclick="showOptionTab('t2','B')">Option B <span class="tab-name">Split, screenshot / photo</span><span class="tab-check">&#10003;</span></button><button class="option-tab" data-option="C" onclick="showOptionTab('t2','C')">Option C <span class="tab-name">Starburst Radar, dynamic</span><span class="tab-check">&#10003;</span></button></div>
+      <div class="option-tabs"><button class="option-tab" data-option="A" onclick="showOptionTab('t2','A')">Option A <span class="tab-name">Card Overlay</span><span class="tab-check">&#10003;</span></button><button class="option-tab" data-option="B" onclick="showOptionTab('t2','B')">Option B <span class="tab-name">Split, screenshot / photo</span><span class="tab-check">&#10003;</span></button><button class="option-tab" data-option="C" onclick="showOptionTab('t2','C')">Option C <span class="tab-name">Starburst Radar, dynamic</span><span class="tab-check">&#10003;</span></button><button class="option-tab" data-option="D" onclick="showOptionTab('t2','D')">Option D <span class="tab-name">Convergence Lock, dynamic</span><span class="tab-check">&#10003;</span></button></div>
       <div class="design-option" data-option="A">
         <div class="design-option-head">
           <span class="design-option-title">Option A <span>&mdash; Card Overlay</span></span>
@@ -2523,7 +2523,55 @@
       <p class="comp-note">Compositing note: the real Match Factors card drops into the reserved glowing panel as an actual screenshot &mdash; the conic-ring glow is pure AI background art, never applied to the real UI screenshot itself.</p>
       <p class="logo-note"><b>Logo:</b> top-left, clear of the radiating conic-ring glow.</p>
       <p class="text-note"><b>Text boxes:</b> mixed &mdash; the glowing UI-card panel is a real element (dark fill, colored border, glow), keep it. The tagline below is grid-only, on the glow directly.</p>
-      
+
+      </div></details>
+      </div>
+
+      <div class="design-option" data-option="D">
+        <div class="design-option-head">
+          <span class="design-option-title">Option D <span>&mdash; Convergence Lock, dynamic</span></span>
+          <button class="choose-btn" onclick="chooseDesign('t2','D')">Choose This Design</button>
+        </div>
+      <p class="option-c-note">Four thin lines converge from the corners toward a single locked-on card &mdash; a targeting-reticle read instead of Option C's radiating rings, still one card, no stacking.</p>
+      <div class="tk-set">
+        <div class="tk-unit" data-subject-item="1" style="--accent:var(--ts-blue);"><div class="tk-canvas r-square tk-dyn" style="background:#0B0B0E;">
+          <div style="position:absolute; top:6%; left:6%; width:32%; height:2px; background:linear-gradient(to right, var(--ts-blue), transparent); transform:rotate(30deg); transform-origin:left center;"></div>
+          <div style="position:absolute; top:6%; right:6%; width:32%; height:2px; background:linear-gradient(to left, var(--ts-blue), transparent); transform:rotate(-30deg); transform-origin:right center;"></div>
+          <div style="position:absolute; bottom:6%; left:6%; width:32%; height:2px; background:linear-gradient(to right, var(--ts-blue), transparent); transform:rotate(-30deg); transform-origin:left center;"></div>
+          <div style="position:absolute; bottom:6%; right:6%; width:32%; height:2px; background:linear-gradient(to left, var(--ts-blue), transparent); transform:rotate(30deg); transform-origin:right center;"></div>
+          <div class="tk-zone tk-logo" style="top:4%; left:4%; right:auto; width:26%; height:6%; border-color:rgba(255,255,255,.35); z-index:3;"><span class="tk-label" style="color:#fff;">Logo</span></div>
+          <div style="position:absolute; top:32%; left:26%; right:26%; height:32%; background:rgba(20,20,24,.92); border:1px solid var(--ts-blue); border-radius:4px; display:flex; align-items:center; justify-content:center; z-index:2; box-shadow:0 0 22px color-mix(in srgb, var(--ts-blue) 45%, transparent);"><span class="tk-label" style="color:#fff; font-size:7px;">Match Factors card</span></div>
+          <div style="position:absolute; bottom:6%; left:8%; right:8%; text-align:center; z-index:2;"><span class="tk-label" style="font-size:9px; color:var(--ts-blue);">See Why It Matched.</span></div>
+        </div><p class="tk-caption"><b>1080&times;1080</b></p></div>
+        <div class="tk-unit" data-subject-item="1" style="--accent:var(--ts-blue);"><div class="tk-canvas r-portrait tk-dyn" style="background:#0B0B0E;">
+          <div style="position:absolute; top:5%; left:5%; width:30%; height:2px; background:linear-gradient(to right, var(--ts-blue), transparent); transform:rotate(24deg); transform-origin:left center;"></div>
+          <div style="position:absolute; top:5%; right:5%; width:30%; height:2px; background:linear-gradient(to left, var(--ts-blue), transparent); transform:rotate(-24deg); transform-origin:right center;"></div>
+          <div style="position:absolute; bottom:5%; left:5%; width:30%; height:2px; background:linear-gradient(to right, var(--ts-blue), transparent); transform:rotate(-24deg); transform-origin:left center;"></div>
+          <div style="position:absolute; bottom:5%; right:5%; width:30%; height:2px; background:linear-gradient(to left, var(--ts-blue), transparent); transform:rotate(24deg); transform-origin:right center;"></div>
+          <div class="tk-zone tk-logo" style="top:3%; left:4%; right:auto; width:30%; height:4.5%; border-color:rgba(255,255,255,.35); z-index:3;"><span class="tk-label" style="color:#fff;">Logo</span></div>
+          <div style="position:absolute; top:30%; left:20%; right:20%; height:30%; background:rgba(20,20,24,.92); border:1px solid var(--ts-blue); border-radius:4px; display:flex; align-items:center; justify-content:center; z-index:2; box-shadow:0 0 22px color-mix(in srgb, var(--ts-blue) 45%, transparent);"><span class="tk-label" style="color:#fff; font-size:6.5px;">Match Factors card</span></div>
+          <div style="position:absolute; bottom:5%; left:8%; right:8%; text-align:center; z-index:2;"><span class="tk-label" style="font-size:8.5px; color:var(--ts-blue);">See Why It Matched.</span></div>
+        </div><p class="tk-caption"><b>1080&times;1350</b></p></div>
+        <div class="tk-unit" style="--accent:var(--ts-gold);"><div class="tk-canvas r-story tk-dyn" style="background:#0B0B0E;">
+          <div style="position:absolute; top:5%; left:5%; width:26%; height:2px; background:linear-gradient(to right, var(--ts-gold), transparent); transform:rotate(20deg); transform-origin:left center;"></div>
+          <div style="position:absolute; top:5%; right:5%; width:26%; height:2px; background:linear-gradient(to left, var(--ts-gold), transparent); transform:rotate(-20deg); transform-origin:right center;"></div>
+          <div style="position:absolute; top:34%; left:5%; width:20%; height:2px; background:linear-gradient(to right, var(--ts-gold), transparent); transform:rotate(-14deg); transform-origin:left center;"></div>
+          <div style="position:absolute; top:34%; right:5%; width:20%; height:2px; background:linear-gradient(to left, var(--ts-gold), transparent); transform:rotate(14deg); transform-origin:right center;"></div>
+          <div class="tk-zone tk-logo" style="top:3%; left:5%; right:auto; width:34%; height:3.5%; border-color:rgba(255,255,255,.35); z-index:3;"><span class="tk-label" style="color:#fff;">Logo</span></div>
+          <div style="position:absolute; top:24%; left:16%; right:16%; height:26%; background:rgba(20,20,24,.92); border:1px solid var(--ts-gold); border-radius:4px; display:flex; align-items:center; justify-content:center; z-index:2; box-shadow:0 0 22px color-mix(in srgb, var(--ts-gold) 45%, transparent);"><span class="tk-label" style="color:#fff; font-size:6px;">Match Preview card</span></div>
+          <div style="position:absolute; bottom:4%; left:8%; right:8%; text-align:center; z-index:2;"><span class="tk-label" style="font-size:7.5px; color:var(--ts-gold);">This Is What Coaches See.</span></div>
+        </div><p class="tk-caption"><b>1080&times;1920</b> &middot; athlete companion, gold</p></div>
+      </div>
+      <details class="option-detail"><summary>Prompts &amp; layout notes<span class="toggle">+</span></summary><div class="option-detail-body">
+      <div class="prompt-row">
+        <details class="prompt"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A stylized dark near-black background with four thin accent-blue lines converging inward from each of the four corners toward a reserved rectangular panel dead-center, like a camera focus-lock or targeting reticle, small tick-mark brightening where each line originates at the corner, moody sports-tech aesthetic, no photography, no rings or radial gradients. Square 1:1 format. No text, no logos, no UI elements.</p></details>
+        <details class="prompt"><summary>1080&times;1350<span class="toggle">+</span></summary><p class="prompt-body">Same converging-lines lock composition, same accent-blue lines and corner tick-marks. Reframe for a taller 4:5 canvas: the four lines converge toward a panel reservation centered in the upper two-thirds of the frame, leaving room below for a headline. No text, no logos, no UI elements.</p></details>
+        <details class="prompt"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same converging-lines lock concept, warm gold instead of blue for the athlete-companion variant. Reframe for a tall 9:16 canvas: lines converge toward a panel positioned in the upper half of the frame, deep empty space below for headline, tagline, and CTA. No text, no logos, no UI elements.</p></details>
+      </div>
+      <p class="comp-note">Compositing note: the real Match Factors/Match Preview card drops into the reserved center panel as an actual screenshot &mdash; the converging lines and corner tick-marks are pure AI background art, never applied to the real UI screenshot itself.</p>
+      <p class="logo-note"><b>Logo:</b> top-left, clear of the converging lines.</p>
+      <p class="text-note"><b>Text boxes:</b> mixed &mdash; the locked-on center panel is a real element (dark fill, colored border, glow), keep it. The tagline below is grid-only, sitting directly on the dark converging-line background.</p>
+
       </div></details>
       </div>
       <p class="chosen-note">You're going with <b></b> for this month.</p>
@@ -2651,7 +2699,7 @@
       <div class="design-options-group" id="t3-options" data-active-subject="1">
       <p class="subject-tabs-label">Designing for</p>
       <div class="subject-tabs"><button class="subject-tab active" data-subject="1" onclick="showSubjectTab('t3','1')">Athlete &middot; Cross Country</button><button class="subject-tab" data-subject="2" onclick="showSubjectTab('t3','2')">Coach &middot; Basketball</button></div>
-      <div class="option-tabs"><button class="option-tab" data-option="A" onclick="showOptionTab('t3','A')">Option A <span class="tab-name">Product Flat-Lay</span><span class="tab-check">&#10003;</span></button><button class="option-tab" data-option="B" onclick="showOptionTab('t3','B')">Option B <span class="tab-name">Card Overlay, athlete on-field</span><span class="tab-check">&#10003;</span></button><button class="option-tab" data-option="C" onclick="showOptionTab('t3','C')">Option C <span class="tab-name">Scattered Unbox, dynamic</span><span class="tab-check">&#10003;</span></button></div>
+      <div class="option-tabs"><button class="option-tab" data-option="A" onclick="showOptionTab('t3','A')">Option A <span class="tab-name">Product Flat-Lay</span><span class="tab-check">&#10003;</span></button><button class="option-tab" data-option="B" onclick="showOptionTab('t3','B')">Option B <span class="tab-name">Card Overlay, athlete on-field</span><span class="tab-check">&#10003;</span></button><button class="option-tab" data-option="C" onclick="showOptionTab('t3','C')">Option C <span class="tab-name">Scattered Unbox, dynamic</span><span class="tab-check">&#10003;</span></button><button class="option-tab" data-option="D" onclick="showOptionTab('t3','D')">Option D <span class="tab-name">Reveal Sweep, dynamic</span><span class="tab-check">&#10003;</span></button></div>
       <div class="design-option" data-option="A">
         <div class="design-option-head">
           <span class="design-option-title">Option A <span>&mdash; Product Flat-Lay</span></span>
@@ -2779,7 +2827,47 @@
       <p class="comp-note">Compositing note: the real verification card, dashboard card, and physical merch photography drop into the tilted element reservations &mdash; the AI render provides only the shadow/lighting staging, never the card content itself.</p>
       <p class="logo-note"><b>Logo:</b> top-left, tucked above the scattered card elements.</p>
       <p class="text-note"><b>Text boxes:</b> mixed &mdash; tilted "Swag bag"/"Verified card"/"Tag" (or "Coach polo"/"Dashboard card") elements are real cards, keep them. Headline is grid-only, on the dark canvas.</p>
-      
+
+      </div></details>
+      </div>
+
+      <div class="design-option" data-option="D">
+        <div class="design-option-head">
+          <span class="design-option-title">Option D <span>&mdash; Reveal Sweep, dynamic</span></span>
+          <button class="choose-btn" onclick="chooseDesign('t3','D')">Choose This Design</button>
+        </div>
+      <p class="option-c-note">A single diagonal light-sweep splits the frame &mdash; one card, caught mid-reveal at the seam where shadow gives way to light, instead of Option C's tumbled pile of tilted cards.</p>
+      <div class="tk-set">
+        <div class="tk-unit" data-subject-item="1" style="--accent:var(--ts-gold);"><div class="tk-canvas r-square tk-dyn" style="background:#0B0B0E; overflow:hidden;">
+          <div style="position:absolute; inset:-20%; background:linear-gradient(118deg, #0B0B0E 0%, #0B0B0E 44%, color-mix(in srgb, var(--ts-gold) 30%, #1c1c21) 54%, color-mix(in srgb, var(--ts-gold) 55%, #26261f) 100%);"></div>
+          <div class="tk-zone tk-logo" style="top:4%; left:4%; right:auto; width:26%; height:6%; border-color:rgba(255,255,255,.35); z-index:2;"><span class="tk-label" style="color:#fff;">Logo</span></div>
+          <div style="position:absolute; top:38%; left:30%; right:16%; height:26%; background:rgba(20,20,24,.92); border:1px solid var(--ts-gold); border-radius:4px; display:flex; align-items:center; justify-content:center; z-index:2; box-shadow:0 0 22px color-mix(in srgb, var(--ts-gold) 45%, transparent);"><span class="tk-label" style="color:#fff; font-size:6.5px;">Verified profile card</span></div>
+          <div style="position:absolute; bottom:6%; left:8%; right:8%; text-align:center; z-index:2;"><span class="tk-label" style="font-size:9px; color:var(--ts-gold);">More Than a Profile.</span></div>
+        </div><p class="tk-caption"><b>1080&times;1080</b></p></div>
+        <div class="tk-unit" data-subject-item="1" style="--accent:var(--ts-gold);"><div class="tk-canvas r-portrait tk-dyn" style="background:#0B0B0E; overflow:hidden;">
+          <div style="position:absolute; inset:-20%; background:linear-gradient(128deg, #0B0B0E 0%, #0B0B0E 40%, color-mix(in srgb, var(--ts-gold) 30%, #1c1c21) 52%, color-mix(in srgb, var(--ts-gold) 55%, #26261f) 100%);"></div>
+          <div class="tk-zone tk-logo" style="top:3%; left:4%; right:auto; width:30%; height:4.5%; border-color:rgba(255,255,255,.35); z-index:2;"><span class="tk-label" style="color:#fff;">Logo</span></div>
+          <div style="position:absolute; top:34%; left:22%; right:14%; height:22%; background:rgba(20,20,24,.92); border:1px solid var(--ts-gold); border-radius:4px; display:flex; align-items:center; justify-content:center; z-index:2; box-shadow:0 0 22px color-mix(in srgb, var(--ts-gold) 45%, transparent);"><span class="tk-label" style="color:#fff; font-size:6px;">Verified profile card</span></div>
+          <div style="position:absolute; bottom:5%; left:8%; right:8%; text-align:center; z-index:2;"><span class="tk-label" style="font-size:8.5px; color:var(--ts-gold);">More Than a Profile.</span></div>
+        </div><p class="tk-caption"><b>1080&times;1350</b></p></div>
+        <div class="tk-unit" style="--accent:var(--ts-blue);"><div class="tk-canvas r-story tk-dyn" style="background:#0B0B0E; overflow:hidden;">
+          <div style="position:absolute; inset:-20%; background:linear-gradient(134deg, #0B0B0E 0%, #0B0B0E 38%, color-mix(in srgb, var(--ts-blue) 30%, #1c1c21) 50%, color-mix(in srgb, var(--ts-blue) 55%, #1c2430) 100%);"></div>
+          <div class="tk-zone tk-logo" style="top:3%; left:5%; right:auto; width:34%; height:3.5%; border-color:rgba(255,255,255,.35); z-index:2;"><span class="tk-label" style="color:#fff;">Logo</span></div>
+          <div style="position:absolute; top:30%; left:18%; right:12%; height:20%; background:rgba(20,20,24,.92); border:1px solid var(--ts-blue); border-radius:4px; display:flex; align-items:center; justify-content:center; z-index:2; box-shadow:0 0 22px color-mix(in srgb, var(--ts-blue) 45%, transparent);"><span class="tk-label" style="color:#fff; font-size:6px;">Coach + polo</span></div>
+          <div style="position:absolute; bottom:4%; left:8%; right:8%; text-align:center; z-index:2;"><span class="tk-label" style="font-size:7.5px; color:var(--ts-blue);">Free Forever Comes With a Polo</span></div>
+        </div><p class="tk-caption"><b>1080&times;1920</b> &middot; coach-polo companion</p></div>
+      </div>
+      <details class="option-detail"><summary>Prompts &amp; layout notes<span class="toggle">+</span></summary><div class="option-detail-body">
+      <p class="option-c-note">The square/portrait ratios are the athlete version; the 9:16 story ratio is the coach-polo companion &mdash; each toggles with "Designing for" above.</p>
+      <div class="prompt-row">
+        <details class="prompt" data-subject-item="1"><summary>1080&times;1080<span class="toggle">+</span></summary><p class="prompt-body">A stylized near-black background crossed by a single diagonal light-sweep: the upper-left two-thirds stay a flat, dim near-black shadow with no detail, while the lower-right third brightens into a warm gold glow as if a beam of light just swept across and is still catching that corner. Reserve a rectangular panel right at the seam where shadow meets light, as if it's the object being revealed. Bold graphic aesthetic, no photography, no scattered elements. Square 1:1 format. No text, no logos, no UI elements.</p></details>
+        <details class="prompt" data-subject-item="1"><summary>1080&times;1350<span class="toggle">+</span></summary><p class="prompt-body">Same diagonal light-sweep reveal, same warm gold glow catching the lower-right. Reframe for a taller 4:5 canvas: steepen the sweep angle so more of the frame stays in shadow, panel reservation sitting just inside the lit edge. No text, no logos, no UI elements.</p></details>
+        <details class="prompt" data-subject-item="2"><summary>1080&times;1920<span class="toggle">+</span></summary><p class="prompt-body">Same diagonal light-sweep concept, cool blue glow instead of gold for the coach-polo companion. Reframe for a tall 9:16 canvas: sweep runs the full height, panel reservation sitting at the light seam in the upper half, deep shadowed space below for headline, tagline, and CTA. No text, no logos, no UI elements.</p></details>
+      </div>
+      <p class="comp-note">Compositing note: the real Verified profile card (gold) or Coach dashboard card (blue) drops into the reserved panel right at the light seam as an actual screenshot &mdash; the sweep itself is pure AI background art, one card only, never a second scattered element.</p>
+      <p class="logo-note"><b>Logo:</b> top-left, sitting in the shadow side of the sweep for contrast.</p>
+      <p class="text-note"><b>Text boxes:</b> mixed &mdash; the revealed card panel is a real element (dark fill, colored border, glow), keep it. The headline below is grid-only, sitting directly on the lit portion of the sweep.</p>
+
       </div></details>
       </div>
       <p class="chosen-note">You're going with <b></b> for this month.</p>
